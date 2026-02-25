@@ -1,1345 +1,2688 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beanz Consulting — Building Global Capabilities</title>
-    <meta name="description" content="Beanz Consulting helps Fortune 500 companies and high-growth enterprises set up, scale, and transform Global Capability Centers, supply chains, and operations.">
-    <meta name="keywords" content="GCC Advisory, Supply Chain Consulting, Operational Excellence, Executive Coaching, Global Capability Center, India">
-    <meta name="author" content="Beanz Consulting">
-    <meta property="og:title" content="Beanz Consulting — Building Global Capabilities">
-    <meta property="og:description" content="We help enterprises set up, scale, and transform GCCs, supply chains, and operations.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://beanz.in">
-    <meta property="og:image" content="https://beanz.in/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Beanz Consulting — Building Global Capabilities">
-    <meta name="twitter:description" content="We help enterprises set up, scale, and transform GCCs, supply chains, and operations.">
-    <meta name="twitter:image" content="https://beanz.in/og-image.jpg">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DZMPX4XJM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7DZMPX4XJM');
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beanz Consulting — Building Global Capabilities</title>
+<meta name="description" content="Beanz Consulting helps Fortune 500 companies set up, scale, and transform Global Capability Centers, supply chains, and operations. Founded by an IIT Bombay alumnus with 20+ years of Fortune 500 experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   CSS CUSTOM PROPERTIES
+   ======================================== */
+:root {
+  /* Primary palette — deep navy trust */
+  --navy-900: #0a1628;
+  --navy-800: #0f2240;
+  --navy-700: #162d50;
+  --navy-600: #1c3a66;
+  --navy-500: #24507f;
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  /* Warm accent — heritage gold */
+  --gold-500: #c8973e;
+  --gold-400: #d4a84f;
+  --gold-300: #e0be72;
+  --gold-200: #ecdaa5;
+  --gold-100: #f7f0dc;
 
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  /* Neutrals */
+  --white: #ffffff;
+  --gray-50: #f8f9fb;
+  --gray-100: #f0f2f5;
+  --gray-200: #e2e5eb;
+  --gray-300: #c8cdd6;
+  --gray-400: #9aa2b1;
+  --gray-500: #6b7589;
+  --gray-600: #4a5568;
+  --gray-700: #2d3748;
+  --gray-800: #1a202c;
 
-        :root {
-            --ink: #0D1B2A;
-            --slate: #1B2838;
-            --steel: #415A77;
-            --mist: #778DA9;
-            --cloud: #E0E1DD;
-            --ivory: #F7F6F3;
-            --white: #FFFFFF;
-            --amber: #C8793E;
-            --amber-deep: #A8612D;
-            --teal: #0A7E8C;
-            --teal-light: #E8F5F6;
-            --serif: 'DM Serif Display', Georgia, serif;
-            --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-            --mono: 'JetBrains Mono', monospace;
-        }
+  /* Success green for metrics */
+  --green-500: #38a169;
+  --green-100: #e6f7ed;
 
-        html { scroll-behavior: smooth; }
+  /* Type scale */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
 
-        body {
-            font-family: var(--sans);
-            color: var(--slate);
-            line-height: 1.7;
-            background: var(--white);
-            overflow-x: hidden;
-        }
-
-        /* ─── NAV ─── */
-        .nav {
-            position: fixed; top: 0; width: 100%; z-index: 100;
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,0.04);
-            transition: box-shadow 0.3s;
-        }
-        .nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.06); }
-        .nav-inner {
-            max-width: 1280px; margin: 0 auto;
-            padding: 1.1rem 2.5rem;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .nav-logo {
-            font-family: var(--serif); font-size: 1.85rem; color: var(--ink);
-            text-decoration: none; letter-spacing: -0.5px;
-        }
-        .nav-logo em { color: var(--amber); font-style: italic; }
-        .nav-links { display: flex; list-style: none; gap: 2.2rem; align-items: center; }
-        .nav-links a {
-            text-decoration: none; color: var(--steel); font-size: 0.88rem;
-            font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--ink); }
-        .nav-cta {
-            background: var(--ink) !important; color: var(--white) !important;
-            padding: 0.65rem 1.5rem; border-radius: 4px;
-            transition: background 0.3s, transform 0.3s !important;
-        }
-        .nav-cta:hover { background: var(--amber) !important; transform: translateY(-1px); }
-
-        /* Hamburger */
-        .menu-btn {
-            display: none; background: none; border: none; cursor: pointer;
-            width: 30px; height: 22px; position: relative; z-index: 200;
-        }
-        .menu-btn span {
-            display: block; width: 100%; height: 2.5px; background: var(--ink);
-            border-radius: 2px; transition: all 0.35s cubic-bezier(0.77,0.2,0.05,1);
-            position: absolute; left: 0;
-        }
-        .menu-btn span:nth-child(1) { top: 0; }
-        .menu-btn span:nth-child(2) { top: 50%; transform: translateY(-50%); }
-        .menu-btn span:nth-child(3) { bottom: 0; }
-        .menu-btn.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
-        .menu-btn.open span:nth-child(2) { opacity: 0; }
-        .menu-btn.open span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
-
-        .overlay {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 90;
-            opacity: 0; pointer-events: none; transition: opacity 0.3s;
-        }
-        .overlay.active { opacity: 1; pointer-events: auto; }
-
-        /* ─── HERO ─── */
-        .hero {
-            margin-top: 72px;
-            min-height: calc(100vh - 72px);
-            display: grid; grid-template-columns: 1fr 1fr;
-            background: var(--ink);
-            position: relative; overflow: hidden;
-        }
-        .hero::after {
-            content: ''; position: absolute; inset: 0;
-            background:
-                radial-gradient(ellipse at 70% 20%, rgba(200,121,62,0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 80%, rgba(10,126,140,0.06) 0%, transparent 50%);
-        }
-        .hero-content {
-            padding: 6rem 2.5rem 6rem 4rem;
-            display: flex; flex-direction: column; justify-content: center;
-            position: relative; z-index: 2;
-        }
-        .hero-badge {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            background: rgba(200,121,62,0.15); color: var(--amber);
-            padding: 0.4rem 1rem; border-radius: 2px;
-            font-size: 0.75rem; font-weight: 700; letter-spacing: 2px;
-            text-transform: uppercase; margin-bottom: 2rem; width: fit-content;
-        }
-        .hero-badge::before {
-            content: ''; width: 6px; height: 6px; background: var(--amber);
-            border-radius: 50%; animation: pulse 2s infinite;
-        }
-        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-        .hero h1 {
-            font-family: var(--serif); font-size: clamp(2.4rem, 4vw, 3.8rem);
-            color: var(--white); line-height: 1.12; margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-        }
-        .hero h1 em { color: var(--amber); font-style: italic; }
-        .hero-desc {
-            font-size: 1.1rem; color: var(--mist); line-height: 1.8;
-            margin-bottom: 2rem; max-width: 520px;
-        }
-        .hero-creds {
-            display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;
-        }
-        .cred {
-            font-size: 0.82rem; color: var(--cloud); font-weight: 500;
-            display: flex; align-items: center; gap: 0.5rem;
-        }
-        .cred::before {
-            content: ''; width: 18px; height: 1px; background: var(--amber);
-        }
-        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn {
-            padding: 0.9rem 2rem; font-size: 0.9rem; font-weight: 600;
-            text-decoration: none; border-radius: 4px; cursor: pointer;
-            transition: all 0.3s; border: none; font-family: var(--sans);
-            letter-spacing: 0.3px;
-        }
-        .btn-amber { background: var(--amber); color: var(--white); }
-        .btn-amber:hover { background: var(--amber-deep); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(200,121,62,0.3); }
-        .btn-ghost { background: transparent; color: var(--cloud); border: 1.5px solid rgba(255,255,255,0.2); }
-        .btn-ghost:hover { border-color: var(--white); color: var(--white); }
-
-        .hero-right {
-            display: flex; flex-direction: column; justify-content: center;
-            align-items: center; padding: 4rem 3rem;
-            position: relative; z-index: 2;
-        }
-        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; width: 100%; max-width: 400px; }
-        .stat-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 8px; padding: 2rem 1.5rem; text-align: center;
-            transition: all 0.4s;
-        }
-        .stat-card:hover {
-            background: rgba(255,255,255,0.07);
-            border-color: rgba(200,121,62,0.3);
-            transform: translateY(-4px);
-        }
-        .stat-num {
-            font-family: var(--mono); font-size: 2.2rem; font-weight: 700;
-            color: var(--amber); margin-bottom: 0.5rem;
-        }
-        .stat-label { font-size: 0.82rem; color: var(--mist); line-height: 1.4; }
-
-        /* ─── TRUST BAR ─── */
-        .trust-bar {
-            background: var(--ivory); padding: 2.5rem 2rem;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .trust-inner {
-            max-width: 1280px; margin: 0 auto;
-            display: flex; align-items: center; justify-content: center;
-            gap: 3rem; flex-wrap: wrap;
-        }
-        .trust-label {
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
-            color: var(--mist); font-weight: 600;
-        }
-        .trust-logos {
-            display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap;
-            justify-content: center;
-        }
-        .trust-logo {
-            font-size: 0.9rem; font-weight: 700; color: var(--steel);
-            opacity: 0.5; letter-spacing: 1px;
-        }
-
-        /* ─── SECTIONS COMMON ─── */
-        section { padding: 6rem 2.5rem; }
-        .container { max-width: 1280px; margin: 0 auto; }
-        .section-label {
-            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 3px;
-            color: var(--amber); font-weight: 700; margin-bottom: 1rem;
-        }
-        .section-title {
-            font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.8rem);
-            color: var(--ink); line-height: 1.2; margin-bottom: 1rem;
-        }
-        .section-desc {
-            font-size: 1.05rem; color: var(--steel); max-width: 600px; line-height: 1.8;
-        }
-
-        /* ─── SERVICES ─── */
-        .services { background: var(--white); }
-        .services-header {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-            margin-bottom: 4rem; align-items: end;
-        }
-        .services-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
-        }
-        .svc {
-            padding: 2.5rem 2rem; border-radius: 8px; border: 1px solid var(--cloud);
-            background: var(--white); transition: all 0.4s; position: relative;
-            cursor: default;
-        }
-        .svc:hover {
-            border-color: var(--amber);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-            transform: translateY(-6px);
-        }
-        .svc-num {
-            font-family: var(--mono); font-size: 0.75rem; color: var(--mist);
-            margin-bottom: 1.5rem; letter-spacing: 1px;
-        }
-        .svc h3 {
-            font-family: var(--serif); font-size: 1.35rem; color: var(--ink);
-            margin-bottom: 0.8rem; line-height: 1.3;
-        }
-        .svc p { font-size: 0.9rem; color: var(--steel); line-height: 1.7; margin-bottom: 1.2rem; }
-        .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-        .svc-tag {
-            font-size: 0.7rem; padding: 0.25rem 0.6rem; border-radius: 2px;
-            background: var(--ivory); color: var(--steel); font-weight: 500;
-        }
-
-        /* ─── WHY BEANZ ─── */
-        .why-beanz {
-            background: var(--white);
-            border-top: 1px solid rgba(0,0,0,0.04);
-        }
-        .beanz-grid {
-            display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: center;
-        }
-        .beanz-illustration {
-            background: var(--ivory); border-radius: 16px; padding: 2rem;
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-        .beanz-story .section-desc {
-            font-family: var(--serif); font-size: 1.3rem; color: var(--ink); line-height: 1.5;
-        }
-        @media (max-width: 1024px) {
-            .beanz-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .beanz-visual { order: -1; }
-        }
-
-        /* ─── ABOUT / FOUNDER ─── */
-        .about { background: var(--ivory); }
-        .about-grid {
-            display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: center;
-        }
-        .about-visual {
-            position: relative;
-        }
-        .about-card {
-            background: var(--ink); border-radius: 12px; padding: 3.5rem 2.5rem;
-            color: var(--white); position: relative; overflow: hidden;
-        }
-        .about-card::before {
-            content: ''; position: absolute; top: -50%; right: -30%;
-            width: 300px; height: 300px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(200,121,62,0.15), transparent);
-        }
-        .about-card h3 {
-            font-family: var(--serif); font-size: 2rem; margin-bottom: 0.3rem;
-            position: relative;
-        }
-        .about-card .role {
-            color: var(--amber); font-size: 0.85rem; font-weight: 600;
-            margin-bottom: 1.5rem; position: relative;
-        }
-        .about-card .quals {
-            list-style: none; position: relative;
-        }
-        .about-card .quals li {
-            padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);
-            font-size: 0.9rem; color: var(--cloud); display: flex; align-items: center; gap: 0.8rem;
-        }
-        .about-card .quals li::before {
-            content: ''; width: 4px; height: 4px; background: var(--amber); border-radius: 50%; flex-shrink: 0;
-        }
-        .floating-stat {
-            position: absolute; bottom: -1.5rem; right: -1rem;
-            background: var(--white); border-radius: 8px; padding: 1.2rem 1.8rem;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1); z-index: 2;
-        }
-        .floating-stat .num {
-            font-family: var(--mono); font-size: 1.8rem; font-weight: 700;
-            color: var(--amber);
-        }
-        .floating-stat .lbl { font-size: 0.75rem; color: var(--steel); }
-
-        .about-content .section-desc { margin-bottom: 2rem; }
-        .exp-list { list-style: none; }
-        .exp-list li {
-            padding: 1rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);
-            display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; align-items: start;
-        }
-        .exp-marker {
-            width: 8px; height: 8px; border-radius: 50%; border: 2px solid var(--amber);
-            margin-top: 0.5rem;
-        }
-        .exp-list h4 { font-size: 0.95rem; color: var(--ink); margin-bottom: 0.2rem; }
-        .exp-list p { font-size: 0.85rem; color: var(--steel); }
-
-        /* ─── RESULTS ─── */
-        .results { background: var(--ink); color: var(--white); }
-        .results-header { text-align: center; margin-bottom: 4rem; }
-        .results-header .section-label { color: var(--amber); }
-        .results-header .section-title { color: var(--white); }
-        .results-header .section-desc { color: var(--mist); margin: 0 auto; }
-        .results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-        .result-card {
-            text-align: center; padding: 2.5rem 1.5rem;
-            border: 1px solid rgba(255,255,255,0.06); border-radius: 8px;
-            transition: all 0.4s;
-        }
-        .result-card:hover {
-            background: rgba(255,255,255,0.04);
-            border-color: rgba(200,121,62,0.3);
-        }
-        .result-num {
-            font-family: var(--mono); font-size: 2.8rem; font-weight: 700;
-            color: var(--amber); margin-bottom: 0.5rem;
-        }
-        .result-label { font-size: 0.88rem; color: var(--mist); line-height: 1.5; }
-
-        /* ─── QUOTE ─── */
-        .quote-section {
-            background: var(--ivory); padding: 5rem 2.5rem;
-        }
-        .quote-inner {
-            max-width: 800px; margin: 0 auto; text-align: center;
-        }
-        .quote-mark {
-            font-family: var(--serif); font-size: 5rem; color: var(--amber);
-            line-height: 1; margin-bottom: 1rem; opacity: 0.4;
-        }
-        .quote-text {
-            font-family: var(--serif); font-size: 1.5rem; color: var(--ink);
-            line-height: 1.6; font-style: italic; margin-bottom: 2rem;
-        }
-        .quote-attr {
-            font-size: 0.85rem; color: var(--steel); font-weight: 600;
-        }
-        .quote-attr span { color: var(--amber); }
-
-        /* ─── CONTACT ─── */
-        .contact { background: var(--white); }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; }
-        .contact-info h2 {
-            font-family: var(--serif); font-size: 2.5rem; color: var(--ink);
-            line-height: 1.2; margin-bottom: 1.5rem;
-        }
-        .contact-info h2 em { color: var(--amber); font-style: italic; }
-        .contact-info p { color: var(--steel); margin-bottom: 2rem; line-height: 1.8; }
-        .contact-details { list-style: none; }
-        .contact-details li {
-            padding: 1rem 0; border-bottom: 1px solid rgba(0,0,0,0.05);
-            display: flex; gap: 1rem; align-items: center;
-        }
-        .contact-details .dt {
-            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px;
-            color: var(--mist); font-weight: 700; width: 80px;
-        }
-        .contact-details .dd { font-size: 0.95rem; color: var(--ink); font-weight: 500; }
-        .contact-details .dd a { color: var(--amber); text-decoration: none; }
-        .contact-details .dd a:hover { text-decoration: underline; }
-
-        .contact-form { }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-        .form-group { margin-bottom: 1rem; }
-        .form-group label {
-            display: block; font-size: 0.78rem; text-transform: uppercase;
-            letter-spacing: 1.5px; color: var(--steel); font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 0.9rem 1rem; border: 1.5px solid var(--cloud);
-            border-radius: 4px; font-family: var(--sans); font-size: 0.95rem;
-            color: var(--ink); background: var(--white); transition: border-color 0.3s;
-        }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none; border-color: var(--amber);
-        }
-        .form-group select {
-            appearance: none; cursor: pointer;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6' fill='%23415A77'/%3E%3C/svg%3E");
-            background-repeat: no-repeat; background-position: right 1rem center;
-        }
-        .form-group textarea { min-height: 130px; resize: vertical; }
-        .submit-btn {
-            width: 100%; padding: 1rem; background: var(--ink); color: var(--white);
-            border: none; border-radius: 4px; font-size: 0.9rem; font-weight: 700;
-            font-family: var(--sans); cursor: pointer; letter-spacing: 1px;
-            text-transform: uppercase; transition: all 0.3s;
-        }
-        .submit-btn:hover { background: var(--amber); transform: translateY(-2px); }
-
-        /* ─── FOOTER ─── */
-        .footer {
-            background: var(--slate); color: var(--cloud); padding: 4rem 2.5rem 2rem;
-        }
-        .footer-inner { max-width: 1280px; margin: 0 auto; }
-        .footer-top {
-            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        .footer-brand .f-logo {
-            font-family: var(--serif); font-size: 1.7rem; color: var(--white);
-            margin-bottom: 1rem;
-        }
-        .footer-brand .f-logo em { color: var(--amber); font-style: italic; }
-        .footer-brand p { font-size: 0.88rem; opacity: 0.7; line-height: 1.7; }
-        .footer h4 {
-            font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px;
-            color: var(--amber); margin-bottom: 1.2rem; font-weight: 700;
-        }
-        .footer ul { list-style: none; }
-        .footer ul li { margin-bottom: 0.7rem; }
-        .footer ul a {
-            color: var(--cloud); text-decoration: none; font-size: 0.88rem;
-            opacity: 0.7; transition: all 0.3s;
-        }
-        .footer ul a:hover { opacity: 1; color: var(--amber); }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding-top: 1.5rem; text-align: center;
-            font-size: 0.8rem; opacity: 0.5;
-        }
-
-        /* ─── ANIMATIONS ─── */
-        .reveal {
-            opacity: 0; transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .reveal-left.visible { opacity: 1; transform: translateX(0); }
-        .reveal-scale { opacity: 0; transform: scale(0.95); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .reveal-scale.visible { opacity: 1; transform: scale(1); }
-
-        /* ─── RESPONSIVE ─── */
-        @media (max-width: 1024px) {
-            .hero { grid-template-columns: 1fr; }
-            .hero-content { padding: 5rem 2.5rem 2rem; }
-            .hero-right { padding: 0 2.5rem 4rem; }
-            .services-header { grid-template-columns: 1fr; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .results-grid { grid-template-columns: repeat(2, 1fr); }
-            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .footer-top { grid-template-columns: 1fr 1fr; }
-            .no-do-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
-                background: var(--white); flex-direction: column; padding: 5rem 2rem;
-                gap: 0; z-index: 150; transition: right 0.35s cubic-bezier(0.77,0.2,0.05,1);
-                box-shadow: -10px 0 40px rgba(0,0,0,0.1);
-            }
-            .nav-links.open { right: 0; }
-            .nav-links li { width: 100%; }
-            .nav-links a {
-                display: block; padding: 1rem 0; font-size: 0.95rem;
-                border-bottom: 1px solid rgba(0,0,0,0.04);
-            }
-            .nav-cta { text-align: center; margin-top: 1rem; border-bottom: none; }
-            .menu-btn { display: block; }
-            section { padding: 4rem 1.5rem; }
-            .hero-content { padding: 3.5rem 1.5rem 2rem; }
-            .hero h1 { font-size: 2rem; }
-            .hero-right { padding: 0 1.5rem 3rem; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .services-grid { grid-template-columns: 1fr; }
-            .results-grid { grid-template-columns: 1fr 1fr; }
-            .form-row { grid-template-columns: 1fr; }
-            .footer-top { grid-template-columns: 1fr; }
-            .trust-inner { flex-direction: column; gap: 1rem; }
-            .quote-text { font-size: 1.2rem; }
-            .no-do-grid { grid-template-columns: 1fr !important; }
-        }
-
-/* ─── SERVICES PAGE V2 ─── */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --ink:#0D1B2A;--slate:#1B2838;--steel:#415A77;--mist:#778DA9;
-  --cloud:#E0E1DD;--ivory:#F7F6F3;--white:#FFFFFF;--amber:#C8793E;
-  --serif:'DM Serif Display',Georgia,serif;
-  --sans:'Plus Jakarta Sans',system-ui,sans-serif;
-  --mono:'JetBrains Mono',monospace;
-}
-body{font-family:var(--sans);color:var(--slate);line-height:1.7;background:var(--ivory);margin:0}
-
-/* ─── HERO ─── */
-.svc-hero{padding:6rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
-.svc-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 20%,rgba(200,121,62,0.04),transparent 60%);pointer-events:none}
-.svc-hero .label{font-size:.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--amber);font-weight:700;margin-bottom:1.2rem}
-.svc-hero h1{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--ink);line-height:1.15;margin-bottom:1.2rem;max-width:780px;margin-left:auto;margin-right:auto}
-.svc-hero h1 em{color:var(--amber);font-style:italic}
-.svc-hero .subtitle{font-size:1.1rem;color:var(--steel);line-height:1.8;max-width:640px;margin:0 auto 2.5rem}
-.svc-hero .anchor-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
-.svc-hero .anchor-strip a{font-size:.78rem;font-weight:600;color:var(--steel);text-decoration:none;padding:.5rem 1.1rem;border:1px solid var(--cloud);border-radius:20px;transition:all .25s}
-.svc-hero .anchor-strip a:hover{border-color:var(--amber);color:var(--amber);background:rgba(200,121,62,0.04)}
-
-/* ─── PHILOSOPHY STRIP ─── */
-.philosophy{background:var(--ink);padding:3.5rem 1.5rem;text-align:center}
-.philosophy .inner{max-width:820px;margin:0 auto}
-.philosophy p{font-family:var(--serif);font-size:clamp(1.15rem,2vw,1.4rem);color:var(--white);line-height:1.55;margin-bottom:.8rem}
-.philosophy p em{color:var(--amber);font-style:italic}
-.philosophy .note{font-size:.88rem;color:var(--mist);line-height:1.7}
-
-/* ─── SERVICE SECTIONS ─── */
-.svc-section{padding:5rem 1.5rem;border-bottom:1px solid var(--cloud)}
-.svc-section:nth-child(even){background:var(--white)}
-.svc-section .inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:4rem;align-items:start}
-.svc-section:nth-child(even) .inner{direction:rtl}
-.svc-section:nth-child(even) .inner > *{direction:ltr}
-
-/* Left column: service identity */
-.svc-id{position:sticky;top:2rem}
-.svc-num{font-family:var(--mono);font-size:.72rem;color:var(--amber);font-weight:700;letter-spacing:2px;margin-bottom:.6rem}
-.svc-name{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.1rem);color:var(--ink);line-height:1.2;margin-bottom:1rem}
-.svc-question{font-family:var(--serif);font-size:1.05rem;color:var(--steel);font-style:italic;line-height:1.5;padding-left:1.2rem;border-left:3px solid var(--amber);margin-bottom:1.5rem}
-.svc-tags{display:flex;flex-wrap:wrap;gap:.4rem}
-.svc-tag{font-size:.7rem;padding:.35rem .8rem;border-radius:4px;background:rgba(13,27,42,0.06);color:var(--steel);font-weight:600;letter-spacing:.3px}
-
-/* Right column: narrative */
-.svc-narrative p{font-size:1.02rem;color:var(--steel);line-height:1.9;margin-bottom:1.2rem}
-.svc-narrative p strong{color:var(--ink)}
-.svc-narrative .outcome-row{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.5rem 0}
-.outcome-chip{display:flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--white);padding:.55rem 1.1rem;border-radius:6px;font-size:.82rem;font-weight:600}
-.outcome-chip .icon{color:var(--amber);font-size:.9rem}
-.svc-narrative .pull{font-family:var(--serif);font-size:1.1rem;color:var(--ink);line-height:1.5;margin:1.5rem 0;padding:1.2rem 1.5rem;background:rgba(200,121,62,0.05);border-radius:8px;border-left:3px solid var(--amber)}
-
-/* ─── HOW WE WORK ─── */
-.how-we-work{padding:5rem 1.5rem;background:var(--white)}
-.how-we-work .inner{max-width:1000px;margin:0 auto;text-align:center}
-.how-we-work .label{font-size:.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--amber);font-weight:700;margin-bottom:1rem}
-.how-we-work h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);color:var(--ink);margin-bottom:.8rem}
-.how-we-work h2 em{color:var(--amber);font-style:italic}
-.how-we-work .desc{font-size:1.02rem;color:var(--steel);line-height:1.8;max-width:640px;margin:0 auto 3rem}
-
-.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.journey::before{content:'';position:absolute;top:38px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(to right,var(--amber),var(--cloud),var(--cloud),var(--amber))}
-.j-step{text-align:center;position:relative;z-index:1;padding:0 1rem}
-.j-dot{width:20px;height:20px;border-radius:50%;background:var(--amber);margin:28px auto 1.2rem;position:relative;box-shadow:0 0 0 6px rgba(200,121,62,0.12)}
-.j-phase{font-family:var(--mono);font-size:.65rem;color:var(--amber);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.4rem}
-.j-title{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:.5rem}
-.j-desc{font-size:.85rem;color:var(--steel);line-height:1.6}
-
-/* ─── WHAT WE DON'T DO ─── */
-.dont-do{padding:4rem 1.5rem;background:var(--ivory)}
-.dont-do .inner{max-width:900px;margin:0 auto}
-.dont-do .header{text-align:center;margin-bottom:2.5rem}
-.dont-do .label{font-size:.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--amber);font-weight:700;margin-bottom:.8rem}
-.dont-do h2{font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2rem);color:var(--ink);margin-bottom:.6rem}
-.dont-do .intro{font-size:.98rem;color:var(--steel);line-height:1.7}
-.dont-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.dont-item{background:var(--white);border:1px solid var(--cloud);border-radius:8px;padding:1.3rem;text-align:center;transition:all .25s}
-.dont-item:hover{border-color:var(--amber);transform:translateY(-2px)}
-.dont-item .x{font-size:1.1rem;margin-bottom:.4rem;color:var(--amber)}
-.dont-item .what{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.3rem}
-.dont-item .why{font-size:.78rem;color:var(--mist);line-height:1.5}
-
-/* ─── CTA ─── */
-.services-cta{background:var(--ink);padding:5rem 1.5rem;text-align:center}
-.services-cta .inner{max-width:700px;margin:0 auto}
-.services-cta p{font-family:var(--serif);font-size:clamp(1.3rem,2.5vw,1.7rem);color:var(--white);line-height:1.45;margin-bottom:2rem}
-.services-cta p em{color:var(--amber);font-style:italic}
-.cta-btn{display:inline-block;background:var(--amber);color:var(--white);padding:1rem 2.5rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.5px;transition:all .3s}
-.cta-btn:hover{background:#b86d35;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,121,62,0.3)}
-
-/* ─── RESPONSIVE ─── */
-@media(max-width:1024px){
-  .svc-section .inner,.svc-section:nth-child(even) .inner{grid-template-columns:1fr;direction:ltr;gap:2rem}
-  .svc-section:nth-child(even) .inner > *{direction:ltr}
-  .svc-id{position:relative;top:0}
-  .journey{grid-template-columns:repeat(2,1fr);gap:2rem}
-  .journey::before{display:none}
-}
-@media(max-width:640px){
-  .journey{grid-template-columns:1fr}
-  .dont-grid{grid-template-columns:1fr}
-  .svc-hero .anchor-strip{flex-direction:column;align-items:center}
+  /* Spacing */
+  --section-pad: clamp(4rem, 8vw, 7rem);
+  --container: min(1200px, 90vw);
 }
 
+/* ========================================
+   RESET & BASE
+   ======================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ─── ABOUT PAGE V4 ─── */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-    --ink:#0D1B2A;--slate:#1B2838;--steel:#415A77;--mist:#778DA9;
-    --cloud:#E0E1DD;--ivory:#F7F6F3;--white:#FFFFFF;--amber:#C8793E;
-    --serif:'DM Serif Display',Georgia,serif;
-    --sans:'Plus Jakarta Sans',system-ui,sans-serif;
-    --mono:'JetBrains Mono',monospace;
-}
-body{font-family:var(--sans);color:var(--slate);line-height:1.7;background:var(--ivory);margin:0}
-
-/* ─── WHY BEANZ BANNER ─── */
-.why-beanz{background:var(--ink);color:var(--white);padding:5rem 1.5rem;position:relative;overflow:hidden}
-.why-beanz::before{content:'';position:absolute;top:-30%;right:-5%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(200,121,62,0.06),transparent);pointer-events:none}
-.why-beanz .container{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:center}
-.wz-label{font-size:.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--amber);font-weight:700;margin-bottom:1rem}
-.beanz-text h2{font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.5rem);color:var(--white);line-height:1.25;margin-bottom:1.2rem}
-.beanz-text h2 em{color:var(--amber);font-style:italic}
-.beanz-text .lead{font-family:var(--serif);font-size:1.15rem;color:var(--cloud);line-height:1.6;margin-bottom:1rem}
-.beanz-text p{font-size:.95rem;color:var(--mist);line-height:1.85;margin-bottom:1rem}
-.beanz-quote{font-family:var(--serif);font-size:1.2rem;color:var(--white);line-height:1.4;padding-left:1.5rem;border-left:3px solid var(--amber);margin:1.5rem 0}
-.beanz-tagline{font-size:.82rem;font-weight:700;color:var(--amber);letter-spacing:1.5px;margin-top:1rem}
-.beanz-stages{display:flex;flex-direction:column;align-items:center;gap:1.8rem;position:relative}
-.beanz-stages::before{content:'';position:absolute;top:20px;bottom:20px;left:50%;width:1px;background:linear-gradient(to bottom,transparent,rgba(200,121,62,0.3),rgba(200,121,62,0.3),transparent)}
-.bstage{text-align:center;position:relative;z-index:1}
-.bstage-dot{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(200,121,62,0.35);display:flex;align-items:center;justify-content:center;margin:0 auto .4rem;background:rgba(200,121,62,0.05);font-size:1rem}
-.bstage-name{font-size:.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--mist);font-weight:600}
-
-/* ─── ABOUT ─── */
-.about-hero{padding:6rem 1.5rem 3rem;text-align:center}
-.about-hero .inner{max-width:820px;margin:0 auto}
-.about-hero .label{font-size:.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--amber);font-weight:700;margin-bottom:1.2rem}
-.about-hero h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--ink);line-height:1.15;margin-bottom:1rem}
-.about-hero h2 em{color:var(--amber);font-style:italic}
-.about-hero .subtitle{font-size:1.1rem;color:var(--steel);line-height:1.8}
-
-/* Photo + Story opener */
-.story-opener{padding:2rem 1.5rem 0}
-.story-opener .inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:360px 1fr;gap:3.5rem;align-items:start}
-.photo-wrapper{position:relative;position:sticky;top:2rem}
-.photo-frame{border-radius:14px;overflow:hidden;box-shadow:0 16px 50px rgba(13,27,42,0.14)}
-.photo-frame img{width:100%;display:block}
-.photo-accent{position:absolute;top:-10px;left:-10px;width:70px;height:70px;border:2px solid var(--amber);border-radius:10px;opacity:0.25;z-index:-1}
-.photo-badge{position:absolute;bottom:16px;left:16px;background:rgba(13,27,42,0.88);backdrop-filter:blur(8px);border-radius:8px;padding:.7rem 1.1rem;color:var(--white)}
-.photo-badge .name{font-family:var(--serif);font-size:1.05rem;margin-bottom:.1rem}
-.photo-badge .role{font-size:.72rem;color:var(--amber);font-weight:600;letter-spacing:.5px}
-
-/* Narrative prose */
-.narrative{max-width:1100px;margin:0 auto;padding:0 1.5rem}
-.narrative-wide{max-width:720px;margin-left:auto;margin-right:0}
-.story-opener .narrative-wide{padding-top:.5rem}
-.n-intro{font-size:1.2rem;color:var(--ink);line-height:1.7;margin-bottom:1.2rem;font-weight:500}
-.n-body{font-size:1.02rem;color:var(--steel);line-height:1.9;margin-bottom:1.2rem}
-.n-body .co{font-weight:700;color:var(--ink)}
-.n-italic{font-family:var(--serif);font-size:1.05rem;color:var(--ink);font-style:italic;line-height:1.6;margin-bottom:1.5rem}
-
-/* Stats strip */
-.stats-strip{display:flex;flex-wrap:wrap;gap:.8rem;padding:1.5rem 0;margin:1rem 0 1.5rem}
-.ss-item{background:var(--white);border:1px solid rgba(0,0,0,0.05);border-radius:8px;padding:.7rem 1.2rem;display:flex;align-items:center;gap:.6rem}
-.ss-num{font-family:var(--mono);font-size:1rem;font-weight:700;color:var(--amber)}
-.ss-label{font-size:.78rem;color:var(--steel)}
-
-/* Pullquote */
-.pullquote{padding:3.5rem 1.5rem;text-align:center;background:var(--white);margin:2rem 0 0}
-.pullquote blockquote{font-family:var(--serif);font-size:clamp(1.2rem,2.2vw,1.55rem);color:var(--ink);line-height:1.45;max-width:780px;margin:0 auto;position:relative;padding:0 2rem}
-.pullquote blockquote::before{content:'\201C';font-size:4.5rem;color:var(--amber);opacity:0.15;position:absolute;top:-2rem;left:-.5rem;font-family:var(--serif);line-height:1}
-
-/* Continuation */
-.story-cont{padding:3.5rem 1.5rem 2rem;background:var(--white)}
-.story-cont .inner{max-width:720px;margin:0 auto}
-
-/* Advisor stats */
-.advisor-stats{display:flex;flex-wrap:wrap;gap:.8rem;padding:1.5rem 0;margin:1rem 0}
-
-/* Credentials */
-.creds-section{text-align:center;padding:2rem 1.5rem 3rem;background:var(--white)}
-.creds-section .inner{max-width:780px;margin:0 auto}
-.creds-section p{font-size:.95rem;color:var(--steel);line-height:1.85;margin-bottom:1.5rem}
-.creds-row{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
-.cred-chip{background:var(--ink);color:var(--cloud);font-size:.76rem;padding:.45rem 1.1rem;border-radius:20px;font-weight:500;letter-spacing:.3px}
-
-/* CTA */
-.about-cta{background:var(--ink);padding:5rem 1.5rem;text-align:center}
-.about-cta .inner{max-width:700px;margin:0 auto}
-.about-cta p{font-family:var(--serif);font-size:clamp(1.3rem,2.5vw,1.7rem);color:var(--white);line-height:1.45;margin-bottom:2rem}
-.about-cta p em{color:var(--amber);font-style:italic}
-.cta-btn{display:inline-block;background:var(--amber);color:var(--white);padding:1rem 2.5rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.5px;transition:all 0.3s}
-.cta-btn:hover{background:#b86d35;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,121,62,0.3)}
-
-@media(max-width:1024px){
-    .why-beanz .container{grid-template-columns:1fr;gap:2rem}
-    .beanz-stages{flex-direction:row;justify-content:center;gap:2rem}
-    .beanz-stages::before{display:none}
-    .story-opener .inner{grid-template-columns:1fr}
-    .photo-wrapper{max-width:360px;margin:0 auto;position:relative;top:0}
-    .narrative-wide{margin-left:auto;margin-right:auto}
-}
-@media(max-width:640px){
-    .stats-strip{flex-direction:column}
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-    </style>
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--gray-700);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; }
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.container { width: var(--container); margin: 0 auto; }
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-500);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-label::before {
+  content: '';
+  width: 2rem;
+  height: 2px;
+  background: var(--gold-500);
+  display: inline-block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  color: var(--navy-800);
+  margin-bottom: 1.5rem;
+}
+
+.section-title em {
+  color: var(--gold-500);
+  font-style: italic;
+}
+
+/* Fade-in animation */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.25rem 0;
+  transition: padding 0.3s ease, background-color 0.3s ease, transform 0.35s ease, border-color 0.3s ease;
+  background-color: #0a1628;
+  will-change: transform;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transform: translateY(0);
+}
+
+.nav.at-top {
+  background-color: transparent;
+  border-bottom-color: transparent;
+  padding: 1.25rem 0;
+  box-shadow: none;
+}
+
+.nav:not(.at-top) {
+  background-color: #0a1628;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.4);
+}
+
+.nav.nav-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.nav-inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  transition: font-size 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav:not(.at-top) .nav-logo {
+  font-size: 1.2rem;
+}
+
+.nav-logo span {
+  color: var(--gold-400);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.02em;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--gold-400);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  background: var(--gold-500) !important;
+  color: var(--white) !important;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.2s !important;
+}
+
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--gold-400) !important; transform: translateY(-1px); }
+
+/* Mobile hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 4px;
+}
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 50%, var(--navy-800) 100%);
+  overflow: hidden;
+}
+
+/* Geometric pattern overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(200, 151, 62, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(200, 151, 62, 0.05) 0%, transparent 50%);
+}
+
+/* Grid lines */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: var(--container);
+  margin: 0 auto;
+  padding: 8rem 0 4rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(200, 151, 62, 0.12);
+  border: 1px solid rgba(200, 151, 62, 0.25);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold-300);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.8s ease;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold-400);
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease 0.1s both;
+}
+
+.hero h1 em {
+  color: var(--gold-400);
+  font-style: italic;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.65);
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold-500);
+  color: var(--white);
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--gold-400);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(200, 151, 62, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--white);
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+}
+
+/* Hero right — credential card */
+.hero-right {
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.credential-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.credential-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.credential-card .subtitle {
+  font-size: 0.85rem;
+  color: var(--gold-400);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.credential-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cred-stat {
+  padding: 1rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.cred-stat .number {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--gold-400);
+  display: block;
+}
+
+.cred-stat .label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin-top: 0.25rem;
+}
+
+.credential-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cred-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================
+   LOGO TICKER
+   ======================================== */
+.logo-bar {
+  background: var(--navy-900);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 1.5rem 0;
+}
+
+.logo-bar-inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo-bar-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+.logo-list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.logo-item {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  transition: color 0.3s;
+}
+
+.logo-item:hover { color: rgba(255,255,255,0.5); }
+
+/* ========================================
+   WHY BEANZ
+   ======================================== */
+.why-beanz {
+  padding: var(--section-pad) 0;
+  background: var(--white);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 0.45fr 0.55fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.why-left .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.why-text {
+  color: var(--gray-600);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.why-quote {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--navy-700);
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 3px solid var(--gold-500);
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+
+.why-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.pillar {
+  padding: 1.75rem;
+  background: var(--gray-50);
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+.pillar:hover {
+  border-color: var(--gold-300);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  transform: translateY(-3px);
+}
+
+.pillar-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.pillar h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--navy-800);
+  margin-bottom: 0.5rem;
+}
+
+.pillar p {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+/* ========================================
+   ABOUT / FOUNDER
+   ======================================== */
+.about {
+  padding: var(--section-pad) 0;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.founder-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  border: 1px solid var(--gray-200);
+  position: sticky;
+  top: 6rem;
+}
+
+.founder-visual {
+  background: linear-gradient(135deg, var(--navy-800), var(--navy-600));
+  padding: 3rem;
+  text-align: center;
+}
+
+.founder-initials {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid var(--gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--gold-400);
+}
+
+.founder-visual h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+.founder-visual .role {
+  font-size: 0.85rem;
+  color: var(--gold-300);
+  font-weight: 500;
+}
+
+.founder-info {
+  padding: 2rem;
+}
+
+.founder-creds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.founder-cred {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--gray-600);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.founder-cred:last-child { border: none; }
+
+.founder-cred .icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--gold-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* About text */
+.about-content .section-title { margin-bottom: 2rem; }
+
+.about-narrative {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+}
+
+.about-narrative strong {
+  color: var(--navy-800);
+  font-weight: 600;
+}
+
+.about-highlight {
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--gold-500);
+  padding: 1.5rem 1.75rem;
+  margin: 2rem 0;
+}
+
+.about-highlight p {
+  font-size: 0.95rem;
+  color: var(--navy-700);
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+.about-stat {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+}
+
+.about-stat .num {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--navy-800);
+}
+
+.about-stat .lbl {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* ========================================
+   SERVICES
+   ======================================== */
+.services {
+  padding: var(--section-pad) 0;
+  background: var(--white);
+}
+
+.services-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3.5rem;
+}
+
+.services-header .section-label { justify-content: center; }
+.services-header .section-label::before { display: none; }
+
+.services-header .section-title { margin-bottom: 1rem; }
+
+.services-header p {
+  color: var(--gray-500);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 2.25rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gold-500);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.service-card:hover {
+  border-color: var(--gold-300);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+  background: var(--white);
+}
+
+.service-card:hover::before { transform: scaleX(1); }
+
+.service-num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold-500);
+  margin-bottom: 1.25rem;
+}
+
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--navy-800);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.service-card p {
+  font-size: 0.88rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.service-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--navy-600);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+}
+
+.service-card:hover .service-tag {
+  background: var(--gold-100);
+  border-color: var(--gold-200);
+}
+
+/* ========================================
+   CASE STUDIES / RESULTS
+   ======================================== */
+.results {
+  padding: var(--section-pad) 0;
+  background: var(--navy-900);
+  position: relative;
+  overflow: hidden;
+}
+
+.results::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.results-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.results-header .section-label { justify-content: center; }
+.results-header .section-label::before { display: none; }
+
+.results-header .section-title { color: var(--white); }
+
+.results-header p {
+  color: rgba(255,255,255,0.5);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.case-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.case-card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(200, 151, 62, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* Industry icon strip on left */
+.case-card-inner {
+  display: flex;
+  gap: 0;
+  height: 100%;
+}
+
+.case-accent {
+  width: 5px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--gold-500), var(--gold-300));
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+.case-card:hover .case-accent { opacity: 1; }
+
+.case-body {
+  padding: 2rem 2.25rem;
+  flex: 1;
+}
+
+.case-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.case-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  background: rgba(200, 151, 62, 0.1);
+  padding: 0.3rem 0.7rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.case-industry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.case-ind-tag {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+.case-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+}
+
+.case-card p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Bold stat blocks inside card */
+.case-stats-row {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin: 0 -2.25rem -2rem;
+}
+
+.case-stat-block {
+  flex: 1;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.3s;
+}
+
+.case-stat-block:last-child { border-right: none; }
+
+.case-card:hover .case-stat-block { background: rgba(255,255,255,0.02); }
+
+.case-stat-block .stat-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--gold-400);
+  display: block;
+  line-height: 1.2;
+}
+
+.case-stat-block .stat-desc {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.4);
+  font-weight: 500;
+  margin-top: 0.3rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* Outcome tags */
+.case-outcomes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-outcome {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.case-outcome::before {
+  content: '→';
+  font-size: 0.6rem;
+  color: var(--gold-400);
+}
+
+/* Big stats row */
+.results-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.result-stat {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+}
+
+.result-stat .big-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--gold-400);
+  display: block;
+}
+
+.result-stat .stat-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* ========================================
+   CASE STUDIES / RESULTS
+   ======================================== */
+.results {
+  padding: var(--section-pad) 0;
+  background: var(--navy-900);
+  position: relative;
+  overflow: hidden;
+}
+
+.results::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.results-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.results-header .section-label { justify-content: center; }
+.results-header .section-label::before { display: none; }
+
+.results-header .section-title { color: var(--white); }
+
+.results-header p {
+  color: rgba(255,255,255,0.5);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.case-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.case-card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(200, 151, 62, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.case-card-inner {
+  display: flex;
+  gap: 0;
+  height: 100%;
+}
+
+.case-accent {
+  width: 5px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--gold-500), var(--gold-300));
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+.case-card:hover .case-accent { opacity: 1; }
+
+.case-body {
+  padding: 2rem 2.25rem;
+  flex: 1;
+}
+
+.case-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.case-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  background: rgba(200, 151, 62, 0.1);
+  padding: 0.3rem 0.7rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.case-industry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.case-ind-tag {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+.case-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+}
+
+.case-card p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.case-stats-row {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin: 0 -2.25rem -2rem;
+}
+
+.case-stat-block {
+  flex: 1;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.3s;
+}
+
+.case-stat-block:last-child { border-right: none; }
+
+.case-card:hover .case-stat-block { background: rgba(255,255,255,0.02); }
+
+.case-stat-block .stat-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--gold-400);
+  display: block;
+  line-height: 1.2;
+}
+
+.case-stat-block .stat-desc {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.4);
+  font-weight: 500;
+  margin-top: 0.3rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.case-outcomes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-outcome {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.case-outcome::before {
+  content: '→';
+  font-size: 0.6rem;
+  color: var(--gold-400);
+}
+
+.results-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.result-stat {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+}
+
+.result-stat .big-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--gold-400);
+  display: block;
+}
+
+.result-stat .stat-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* ========================================
+   APPROACH
+   ======================================== */
+.approach {
+  padding: var(--section-pad) 0;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+}
+
+.approach-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.approach-header .section-label { justify-content: center; }
+.approach-header .section-label::before { display: none; }
+
+.approach-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+/* Connecting line */
+.approach-steps::before {
+  content: '';
+  position: absolute;
+  top: 2.25rem;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-500), var(--gold-300), var(--gold-500));
+  opacity: 0.3;
+}
+
+.step {
+  text-align: center;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.step-number {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gold-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--gold-500);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s;
+}
+
+.step:hover .step-number {
+  background: var(--gold-500);
+  color: var(--white);
+  box-shadow: 0 8px 25px rgba(200, 151, 62, 0.3);
+}
+
+.step h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--navy-800);
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+/* ========================================
+   WHAT WE DON'T DO
+   ======================================== */
+.not-do {
+  padding: 3.5rem 0;
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+}
+
+.not-do-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.not-do-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--navy-800);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.not-do-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.not-do-item {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--gray-400);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  text-decoration: line-through;
+  text-decoration-color: rgba(0,0,0,0.15);
+}
+
+/* ========================================
+   CONTACT
+   ======================================== */
+.contact {
+  padding: var(--section-pad) 0;
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.45fr 0.55fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-left .section-title { margin-bottom: 1.5rem; }
+
+.contact-text {
+  font-size: 1rem;
+  color: var(--gray-500);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-400);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.contact-info-item .info-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.contact-info-item .info-value {
+  font-size: 0.95rem;
+  color: var(--navy-800);
+  font-weight: 500;
+}
+
+/* Form */
+.contact-form {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+.contact-form h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--navy-800);
+  margin-bottom: 0.5rem;
+}
+
+.contact-form .form-sub {
+  font-size: 0.88rem;
+  color: var(--gray-500);
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group.full { grid-column: 1 / -1; }
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--gray-800);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(200, 151, 62, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%236b7589' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form-submit {
+  width: 100%;
+  background: var(--navy-900);
+  color: var(--white);
+  padding: 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form-submit:hover {
+  background: var(--navy-700);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(10, 22, 40, 0.2);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: var(--navy-900);
+  padding: 3.5rem 0 2rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand .nav-logo {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.footer-brand p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 1.25rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col ul a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.4);
+  transition: color 0.3s;
+}
+
+.footer-col ul a:hover { color: var(--gold-400); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .why-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .founder-card { position: static; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .case-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--navy-900);
+    padding: 1.5rem 5vw 2rem;
+    gap: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .hero { min-height: auto; padding: 8rem 0 3rem; }
+  .hero-content { padding: 0; }
+
+  .services-grid { grid-template-columns: 1fr; }
+  .case-grid { grid-template-columns: 1fr; }
+  .case-stats-row { flex-wrap: wrap; }
+  .case-stat-block { min-width: 33%; }
+  .results-stats { grid-template-columns: repeat(2, 1fr); }
+  .approach-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .approach-steps::before { display: none; }
+  .about-stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .why-pillars { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .logo-bar-inner { flex-direction: column; gap: 1rem; }
+  .not-do-inner { flex-direction: column; gap: 1rem; text-align: center; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+
+  .credential-stats { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
+<!-- ==========================================
+     NAVIGATION
+     ========================================== -->
 <nav class="nav" id="nav">
-    <div class="nav-inner">
-        <a href="#" class="nav-logo">Beanz <em>Consulting.</em></a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#why-beanz">Why Beanz</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
-        </ul>
-        <button class="menu-btn" id="menuBtn" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Beanz <span>Consulting.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#why-beanz">Why Beanz</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
-<div class="overlay" id="overlay"></div>
 
-<!-- ═══ HERO ═══ -->
-<section class="hero">
-    <div class="hero-content">
+<!-- ==========================================
+     HERO
+     ========================================== -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-grid">
+      <div class="hero-left">
         <h1>Building Global Capabilities.<br><em>Delivering Operational Excellence.</em></h1>
-        <p class="hero-desc">We help Fortune 500 companies and high-growth enterprises set up, scale, and transform Global Capability Centers, supply chains, and operations.</p>
-        <div class="hero-creds">
-            <span class="cred">IIT Bombay Alumni</span>
-            <span class="cred">20+ Years Fortune 500</span>
-            <span class="cred">Gallup Certified Coach</span>
-            <span class="cred">APICS CPIM</span>
+        <p class="hero-sub">We help Fortune 500 companies and high-growth enterprises set up, scale, and transform Global Capability Centers, supply chains, and operations — with the practitioner's lens most advisory firms can't offer.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Schedule a Consultation →</a>
+          <a href="#services" class="btn-secondary">Explore Services</a>
         </div>
-        <div class="hero-actions">
-            <a href="#contact" class="btn btn-amber">Schedule a Consultation</a>
-            <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-right">
+        <div class="credential-card">
+          <h3>Viraj Mehta</h3>
+          <div class="subtitle">Founder &amp; Principal Advisor</div>
+          <div class="credential-stats">
+            <div class="cred-stat">
+              <span class="number">2,000+</span>
+              <span class="label">Team Members Scaled</span>
+            </div>
+            <div class="cred-stat">
+              <span class="number">20+</span>
+              <span class="label">Functions Established</span>
+            </div>
+            <div class="cred-stat">
+              <span class="number">$6M+</span>
+              <span class="label">Savings Delivered</span>
+            </div>
+            <div class="cred-stat">
+              <span class="number">10+</span>
+              <span class="label">GCC Startups Consulted</span>
+            </div>
+          </div>
+          <div class="credential-badges">
+            <span class="cred-badge">IIT Bombay</span>
+            <span class="cred-badge">20+ Yrs Fortune 500</span>
+            <span class="cred-badge">Gallup Coach</span>
+            <span class="cred-badge">APICS CPIM</span>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="hero-right">
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-num">2000+</div>
-                <div class="stat-label">Team Members Scaled</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-num">20+</div>
-                <div class="stat-label">Functions Established</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-num">$6M+</div>
-                <div class="stat-label">Savings Delivered</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-num">10</div>
-                <div class="stat-label">GCC Startups Consulted</div>
-            </div>
-        </div>
-    </div>
+  </div>
 </section>
 
-<!-- ═══ TRUST BAR ═══ -->
-<div class="trust-bar">
-    <div class="trust-inner">
-        <span class="trust-label">Experience With</span>
-        <div class="trust-logos">
-            <span class="trust-logo">KRAFT HEINZ</span>
-            <span class="trust-logo">GENERAL MILLS</span>
-            <span class="trust-logo">P&G</span>
-            <span class="trust-logo">BCG</span>
-            <span class="trust-logo">SYNFINY</span>
-        </div>
+<!-- ==========================================
+     LOGO BAR
+     ========================================== -->
+<div class="logo-bar">
+  <div class="logo-bar-inner">
+    <span class="logo-bar-label">Experience With</span>
+    <div class="logo-list">
+      <span class="logo-item">Kraft Heinz</span>
+      <span class="logo-item">General Mills</span>
+      <span class="logo-item">P&amp;G</span>
+      <span class="logo-item">BCG</span>
+      <span class="logo-item">Synfiny</span>
     </div>
+  </div>
 </div>
 
-
-<!-- ═══ WHY BEANZ + ABOUT (v4 locked) ═══ -->
+<!-- ==========================================
+     WHY BEANZ
+     ========================================== -->
 <section class="why-beanz" id="why-beanz">
-    <div class="container">
-        <div class="beanz-text">
-            <div class="wz-label">Our Philosophy</div>
-            <h2>Why <em>Beanz?</em></h2>
-            <p class="lead">Every enduring enterprise begins with a single, well-planted bean.</p>
-            <p>We founded Beanz Consulting on a simple conviction: sustainable transformation starts with getting the fundamentals right. The right foundation, the right people, the right systems — planted with precision and nurtured with discipline.</p>
-            <div class="beanz-quote">When the roots are strong,<br>the tree takes care of itself.</div>
-            <p>We don't offer quick fixes or borrowed templates. We build from the ground up — ensuring every capability we establish is designed to endure and compound over time.</p>
-            <div class="beanz-tagline">FROM BEAN TO SCALE — THAT'S THE BEANZ APPROACH.</div>
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-left reveal">
+        <div class="section-label">Our Philosophy</div>
+        <h2 class="section-title">Why <em>Beanz?</em></h2>
+        <p class="why-text">Every enduring enterprise begins with a single, well-planted bean. We founded Beanz Consulting on a simple conviction: sustainable transformation starts with getting the fundamentals right.</p>
+        <p class="why-text">The right foundation, the right people, the right systems — planted with precision and nurtured with discipline.</p>
+        <blockquote class="why-quote">When the roots are strong, the tree takes care of itself.</blockquote>
+        <p class="why-text">We don't offer quick fixes or borrowed templates. We build from the ground up — ensuring every capability we establish is designed to endure and compound over time.</p>
+      </div>
+      <div class="why-right reveal" style="animation-delay: 0.2s;">
+        <div class="why-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🫘</div>
+            <h4>Foundation</h4>
+            <p>Every great capability starts with the right bean — planted with intent, not expediency.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌿</div>
+            <h4>Roots</h4>
+            <p>Strong systems, governance, and culture form the invisible architecture of enduring centres.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌳</div>
+            <h4>Growth</h4>
+            <p>Capability compounds. We design organisations that grow stronger with scale, not weaker.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🏔️</div>
+            <h4>Endurance</h4>
+            <p>We optimise for time to self-sufficiency — our work outlasts our engagement.</p>
+          </div>
         </div>
-        <div class="beanz-stages">
-            <div class="bstage"><div class="bstage-dot">🫘</div><div class="bstage-name">Bean</div></div>
-            <div class="bstage"><div class="bstage-dot">🌿</div><div class="bstage-name">Roots</div></div>
-            <div class="bstage"><div class="bstage-dot">🌳</div><div class="bstage-name">Growth</div></div>
-            <div class="bstage"><div class="bstage-dot">🏔️</div><div class="bstage-name">Endurance</div></div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- ═══ ABOUT ═══ -->
-<div class="about-hero" id="about">
-    <div class="inner">
-        <div class="label">Meet the Founder</div>
-        <h2>Most consultants talk about GCCs.<br><em>Viraj has actually built one.</em></h2>
-        <p class="subtitle">An IIT Bombay alumnus and engineer at heart — two decades inside the machine, now helping others build their own. Including where others haven't looked yet.</p>
-    </div>
-</div>
-
-<div class="story-opener">
-    <div class="inner">
-        <div class="photo-wrapper">
-            <div class="photo-accent"></div>
-            <div class="photo-frame">
-                <img src="viraj-photo.jpg" alt="Viraj Mehta B. — Founder, Beanz Consulting" />
-                <div class="photo-badge">
-                    <div class="name">Viraj Mehta B.</div>
-                    <div class="role">Founder & Principal Advisor</div>
-                </div>
+<!-- ==========================================
+     ABOUT / FOUNDER
+     ========================================== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="founder-card">
+          <div class="founder-visual">
+            <img src="viraj-photo.jpg" alt="Viraj Mehta — Founder, Beanz Consulting" style="width:100%;border-radius:12px;">
+            <h3>Viraj Mehta</h3>
+            <div class="role">Founder &amp; Principal Advisor</div>
+          </div>
+          <div class="founder-info">
+            <div class="founder-creds">
+              <div class="founder-cred">
+                <span class="icon">🎓</span>
+                <span>IIT Bombay Alumnus</span>
+              </div>
+              <div class="founder-cred">
+                <span class="icon">🏢</span>
+                <span>Ex — Kraft Heinz · General Mills · P&amp;G</span>
+              </div>
+              <div class="founder-cred">
+                <span class="icon">🧭</span>
+                <span>Gallup Certified Strengths Coach</span>
+              </div>
+              <div class="founder-cred">
+                <span class="icon">📊</span>
+                <span>APICS CPIM Certified</span>
+              </div>
+              <div class="founder-cred">
+                <span class="icon">🤝</span>
+                <span>Advisor to BCG &amp; Synfiny</span>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="narrative-wide">
-            <p class="n-intro">An IIT Bombay alumnus and engineer at heart, Viraj spent twenty years inside the machine.</p>
-            <p class="n-body">Not advising from the outside. Not reviewing decks in a boardroom. But building, scaling, and fixing things from the inside — across three continents, multiple Fortune 500 companies, and some of the most complex supply chain and capability challenges in the industry.</p>
+      </div>
 
-            <p class="n-body">It started at <span class="co">Procter & Gamble</span>, where he cut his teeth across procurement, contract manufacturing, core manufacturing, planning, and logistics. He helped launch P&G's Planning Service Centres (GCC) in China and Singapore from scratch — while working within the company's rigorous Integrated Work Systems framework. This is where the engineer learned to think in systems.</p>
+      <div class="about-content reveal" style="animation-delay: 0.15s;">
+        <div class="section-label">Meet the Founder</div>
+        <h2 class="section-title">Most consultants talk about GCCs. <em>Viraj has actually built one.</em></h2>
 
-            <p class="n-body">At <span class="co">General Mills</span>, he took charge of the entire IMEA and India supply chain — launching 9 sites in 18 months and driving S&OP excellence across the region. This is where the operator learned to move fast without breaking things.</p>
+        <p class="about-narrative">An IIT Bombay alumnus and engineer at heart — Viraj spent <strong>twenty years inside the machine</strong>. Not advising from the outside. Not reviewing decks in a boardroom. But building, scaling, and fixing things from the inside — across three continents, multiple Fortune 500 companies, and some of the most complex supply chain and capability challenges in the industry.</p>
 
-            <p class="n-body">Then came the big one. <span class="co">Kraft Heinz</span> handed him a blank page and a mandate: build India's first-ever Global Capability Center. Not in Bangalore or Hyderabad — but in a tier-2 city, where the right talent existed but nobody was looking. He built a centre with an installed capacity of 1,000+ people across 20+ centres of excellence. In the first three years of the startup, the results spoke for themselves — under 5% attrition against an industry average of 20%, employee engagement scores above 85%, and the highest Net Promoter Score in the organisation's global GBS history.</p>
+        <p class="about-narrative">It started at <strong>Procter &amp; Gamble</strong>, where he cut his teeth across procurement, contract manufacturing, planning, and logistics. He helped launch P&amp;G's Planning Service Centres (GCC) in China and Singapore from scratch.</p>
 
-            <div class="stats-strip">
-                <div class="ss-item"><span class="ss-num">1,000+</span><span class="ss-label">Installed Capacity</span></div>
-                <div class="ss-item"><span class="ss-num">&lt;5%</span><span class="ss-label">Attrition</span></div>
-                <div class="ss-item"><span class="ss-num">85%+</span><span class="ss-label">Engagement</span></div>
-                <div class="ss-item"><span class="ss-num">9 Sites</span><span class="ss-label">in 18 Months</span></div>
+        <p class="about-narrative">At <strong>General Mills</strong>, he took charge of the entire IMEA and India supply chain — launching 9 sites in 18 months and driving S&amp;OP excellence across the region.</p>
+
+        <div class="about-highlight">
+          <p>Then came the big one. Kraft Heinz handed him a blank page and a mandate: <strong>build Kraft Heinz's first-ever Global Capability Center</strong>. Not in Bangalore or Hyderabad — but in a tier-2 city. He built a centre with 1,000+ installed capacity across 20+ Centres of Excellence, achieving under 5% attrition against an industry average of 20%.</p>
+        </div>
+
+        <div class="about-stats-grid">
+          <div class="about-stat">
+            <div class="num">1,000+</div>
+            <div class="lbl">Installed Capacity</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">&lt;5%</div>
+            <div class="lbl">Attrition Rate</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">85%+</div>
+            <div class="lbl">Engagement Score</div>
+          </div>
+        </div>
+
+        <p class="about-narrative">Today, Viraj runs Beanz Consulting — helping companies build for themselves, the right way, in the right place. In just the last two years, he has advised <strong>10+ global enterprises</strong> — with the instinct of someone who's sat in the chair, made the calls, and knows exactly what it takes to make a GCC actually work.</p>
+
+        <a href="#contact" class="btn-primary" style="margin-top: 1rem;">Start a Conversation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     SERVICES
+     ========================================== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">We don't sell services.<br>We build <em>capabilities.</em></h2>
+      <p>Every engagement is designed to leave your organisation stronger and more self-sufficient — without us staying forever.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">SERVICE 01</div>
+        <h3>GCC Advisory</h3>
+        <p>From feasibility and location strategy to organisational design, culture architecture, and governance — we advise across the full GCC lifecycle.</p>
+        <div class="service-tags">
+          <span class="service-tag">Setup &amp; Startup</span>
+          <span class="service-tag">Location Strategy</span>
+          <span class="service-tag">Talent Architecture</span>
+          <span class="service-tag">Attrition Control</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal" style="animation-delay: 0.1s;">
+        <div class="service-num">SERVICE 02</div>
+        <h3>Supply Chain Transformation</h3>
+        <p>We design networks that actually work — with the right cost structure, service levels, and balance between resilience and efficiency.</p>
+        <div class="service-tags">
+          <span class="service-tag">Network Design</span>
+          <span class="service-tag">S&amp;OP Excellence</span>
+          <span class="service-tag">TCO Reduction</span>
+          <span class="service-tag">Planning &amp; Logistics</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal" style="animation-delay: 0.2s;">
+        <div class="service-num">SERVICE 03</div>
+        <h3>Operational Excellence &amp; Lean</h3>
+        <p>Loss analysis, daily management systems, and HPO design — transforming how your teams think, measure, and improve permanently.</p>
+        <div class="service-tags">
+          <span class="service-tag">Lean Manufacturing</span>
+          <span class="service-tag">Loss Analysis</span>
+          <span class="service-tag">HPO Design</span>
+          <span class="service-tag">Daily Management</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal" style="animation-delay: 0.05s;">
+        <div class="service-num">SERVICE 04</div>
+        <h3>Executive Coaching &amp; Leadership</h3>
+        <p>As a Gallup Certified Strengths Coach, Viraj works directly with C-suite executives and high-potential managers to unlock performance.</p>
+        <div class="service-tags">
+          <span class="service-tag">CliftonStrengths</span>
+          <span class="service-tag">1:1 Coaching</span>
+          <span class="service-tag">Team Development</span>
+          <span class="service-tag">Leadership Programmes</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal" style="animation-delay: 0.15s;">
+        <div class="service-num">SERVICE 05</div>
+        <h3>Organisational Transformation</h3>
+        <p>Strengthening culture, building operating rhythms, and designing governance for fast-growing organisations scaling without breakage.</p>
+        <div class="service-tags">
+          <span class="service-tag">Culture Design</span>
+          <span class="service-tag">Change Mgmt</span>
+          <span class="service-tag">GBS Blueprint</span>
+          <span class="service-tag">Org Design</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal" style="animation-delay: 0.25s;">
+        <div class="service-num">SERVICE 06</div>
+        <h3>Trainings &amp; Academies</h3>
+        <p>Structured capability programmes — with curricula, assessments, progression paths, and real impact metrics that compound over time.</p>
+        <div class="service-tags">
+          <span class="service-tag">Supply Chain Academy</span>
+          <span class="service-tag">Lean Training</span>
+          <span class="service-tag">Custom Programmes</span>
+          <span class="service-tag">Capability Uplift</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CASE STUDIES / RESULTS
+     ========================================== -->
+<section class="results" id="results">
+  <div class="container results-inner">
+    <div class="results-header reveal">
+      <div class="section-label">Case Studies</div>
+      <h2 class="section-title">Impact that speaks <em>for itself.</em></h2>
+      <p>Real outcomes from real engagements across industries — built from the inside, not borrowed from a framework.</p>
+    </div>
+
+    <div class="case-grid">
+
+      <!-- CASE STUDY 1: Supply Chain Academy -->
+      <div class="case-card reveal">
+        <div class="case-card-inner">
+          <div class="case-accent"></div>
+          <div class="case-body">
+            <div class="case-top">
+              <div class="case-label">Capability Building</div>
+              <div class="case-industry">
+                <span class="case-ind-tag">Conglomerate</span>
+                <span class="case-ind-tag">Multi-BU</span>
+              </div>
             </div>
+            <h3>Live Supply Chain Academy for a Multinational Conglomerate</h3>
+            <p>Designed a comprehensive supply chain academy from scratch for one of the world's largest diversified conglomerates — creating a live, enterprise-wide capability engine deployed across business units and geographies.</p>
+            <div class="case-outcomes">
+              <span class="case-outcome">Custom Curricula Design</span>
+              <span class="case-outcome">Assessment Framework</span>
+              <span class="case-outcome">Progression Pathways</span>
+              <span class="case-outcome">Cross-BU Standardisation</span>
+            </div>
+            <div class="case-stats-row">
+              <div class="case-stat-block">
+                <span class="stat-num">10,000+</span>
+                <span class="stat-desc">Employees Impacted</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Ground-Up</span>
+                <span class="stat-desc">Built From Scratch</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Live</span>
+                <span class="stat-desc">In Active Deployment</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-<!-- Pullquote breather -->
-<div class="pullquote">
-    <blockquote>Two decades. Three continents. One consistent thread: Viraj doesn't just advise on operations — he's the person companies call when something needs to actually get built.</blockquote>
-</div>
-
-<!-- Continuation: The Advisor -->
-<div class="story-cont">
-    <div class="inner">
-        <p class="n-body">Today, Viraj runs Beanz Consulting — and the mandate has flipped. After two decades of building for others, he now helps companies build for themselves, the right way, in the right place.</p>
-
-        <p class="n-body">In just the last two years, he has advised <strong>10+ global enterprises</strong> — and counting. Not with borrowed frameworks or recycled slide decks, but with the instinct of someone who's sat in the chair, made the calls, and knows exactly what it takes to make a GCC actually work. From location study and talent architecture to pay structures, culture design, and attrition control.</p>
-
-        <p class="n-body">Having built a GCC from the ground up in a tier-2 city, Viraj also brings a perspective most advisors simply don't have — that the right location isn't always the obvious one. Sometimes the strongest talent, the best retention, and the deepest cultural alignment are found outside the usual metros.</p>
-
-        <p class="n-body">His work extends beyond GCC setups. He leads organisational transformation engagements — designing customised leadership development programmes, strengthening culture, and improving employee morale for fast-growing organisations navigating the complexity that comes with rapid scale. He recently designed and delivered a Supply Chain Academy for a leading conglomerate — standardising talent capability across the organisation and building a structured path to upgrade it to the next level.</p>
-
-        <div class="stats-strip">
-            <div class="ss-item"><span class="ss-num">10+</span><span class="ss-label">Global Clients</span></div>
-            <div class="ss-item"><span class="ss-num">2,000+</span><span class="ss-label">People Scaled</span></div>
-            <div class="ss-item"><span class="ss-num">$6M+</span><span class="ss-label">Savings Delivered</span></div>
+      <!-- CASE STUDY 2: GCC Location Strategy -->
+      <div class="case-card reveal" style="animation-delay: 0.1s;">
+        <div class="case-card-inner">
+          <div class="case-accent"></div>
+          <div class="case-body">
+            <div class="case-top">
+              <div class="case-label">GCC Advisory</div>
+              <div class="case-industry">
+                <span class="case-ind-tag">Health</span>
+                <span class="case-ind-tag">Insurance</span>
+                <span class="case-ind-tag">Energy</span>
+                <span class="case-ind-tag">Banking</span>
+              </div>
+            </div>
+            <h3>GCC Location Strategy &amp; Deployment for Multiple Fortune 500s</h3>
+            <p>Designed end-to-end GCC location strategies and deployed them for Fortune 500 companies across four distinct industries — each with unique talent, regulatory, and operational considerations.</p>
+            <div class="case-outcomes">
+              <span class="case-outcome">Location Feasibility</span>
+              <span class="case-outcome">Talent Landscape Analysis</span>
+              <span class="case-outcome">Regulatory Navigation</span>
+              <span class="case-outcome">Deployment Execution</span>
+            </div>
+            <div class="case-stats-row">
+              <div class="case-stat-block">
+                <span class="stat-num">4</span>
+                <span class="stat-desc">Industries Served</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Fortune 500</span>
+                <span class="stat-desc">Client Profile</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">End-to-End</span>
+                <span class="stat-desc">Strategy to Deployment</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-<!-- Credentials -->
-<div class="creds-section">
-    <div class="inner">
-
-        <div class="creds-row">
-            <span class="cred-chip">IIT Bombay Alumnus</span>
-            <span class="cred-chip">Gallup Certified Strengths Coach</span>
-            <span class="cred-chip">APICS CPIM</span>
-            <span class="cred-chip">Ex — Kraft Heinz · General Mills · P&G</span>
-            <span class="cred-chip">Advisor — BCG & Synfiny</span>
+      <!-- CASE STUDY 3: Leadership Upgradation -->
+      <div class="case-card reveal" style="animation-delay: 0.15s;">
+        <div class="case-card-inner">
+          <div class="case-accent"></div>
+          <div class="case-body">
+            <div class="case-top">
+              <div class="case-label">Leadership &amp; Coaching</div>
+              <div class="case-industry">
+                <span class="case-ind-tag">High-Growth Startup</span>
+              </div>
+            </div>
+            <h3>Leadership Upgradation for a 10x Growth Startup</h3>
+            <p>Led a sustained leadership development programme for a fast-scaling startup growing at 10x year-over-year — keeping leaders upgraded, aligned, and equipped to handle exponential growth and expanding accountability.</p>
+            <div class="case-outcomes">
+              <span class="case-outcome">CliftonStrengths Coaching</span>
+              <span class="case-outcome">Accountability Frameworks</span>
+              <span class="case-outcome">Leadership Readiness</span>
+              <span class="case-outcome">Scale-Ready Culture</span>
+            </div>
+            <div class="case-stats-row">
+              <div class="case-stat-block">
+                <span class="stat-num">10x</span>
+                <span class="stat-desc">YoY Growth Managed</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Sustained</span>
+                <span class="stat-desc">Ongoing Programme</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">C-Suite</span>
+                <span class="stat-desc">To Mid-Management</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-
-<!-- CTA -->
-<div class="about-cta">
-    <div class="inner">
-        <p>If you're building something that needs to <em>actually work</em> — in the right place, with the right people — connect with Beanz Consulting and get started.</p>
-        <a href="#contact" class="cta-btn">Start a Conversation →</a>
-    </div>
-</div>
-
-
-<!-- ═══ SERVICES (v2) ═══ -->
-
-<!-- ═══ HERO ═══ -->
-<section class="svc-hero" id="services">
-  <div class="label">What We Do</div>
-  <h1>We don't sell services.<br>We build <em>capabilities.</em></h1>
-  <p class="subtitle">Every engagement is designed to leave your organisation stronger, more self-sufficient, and operating at a level you didn't think was possible — without us staying forever.</p>
-  <div class="anchor-strip">
-    <a href="#gcc">GCC Advisory</a>
-    <a href="#supplychain">Supply Chain</a>
-    <a href="#opex">Operational Excellence</a>
-    <a href="#coaching">Executive Coaching</a>
-    <a href="#org">Org Transformation</a>
-    <a href="#training">Trainings & Academies</a>
-  </div>
-</section>
-
-<!-- ═══ PHILOSOPHY STRIP ═══ -->
-<div class="philosophy">
-  <div class="inner">
-    <p>Most consulting firms optimise for <em>engagement length.</em><br>We optimise for <em>time to self-sufficiency.</em></p>
-    <p class="note">Our work is rooted in two decades of building, not advising. We've sat in the chair, made the calls, and know the difference between a framework that looks good on a slide and one that actually survives Monday morning.</p>
-  </div>
-</div>
-
-<!-- ═══ SERVICE 01: GCC ADVISORY ═══ -->
-<section class="svc-section" id="gcc">
-  <div class="inner">
-    <div class="svc-id">
-      <div class="svc-num">SERVICE 01</div>
-      <div class="svc-name">GCC Advisory</div>
-      <div class="svc-question">Building a Global Capability Center? Or struggling to get more from the one you already have?</div>
-      <div class="svc-tags">
-        <span class="svc-tag">Setup & Startup</span>
-        <span class="svc-tag">Location Strategy</span>
-        <span class="svc-tag">Scaling & Maturity</span>
-        <span class="svc-tag">Talent Architecture</span>
-        <span class="svc-tag">Culture Design</span>
-        <span class="svc-tag">Attrition Control</span>
       </div>
+
+      <!-- CASE STUDY 4: Manufacturing Excellence -->
+      <div class="case-card reveal" style="animation-delay: 0.2s;">
+        <div class="case-card-inner">
+          <div class="case-accent"></div>
+          <div class="case-body">
+            <div class="case-top">
+              <div class="case-label">Operational Excellence</div>
+              <div class="case-industry">
+                <span class="case-ind-tag">European MNC</span>
+                <span class="case-ind-tag">Manufacturing</span>
+              </div>
+            </div>
+            <h3>Manufacturing Capability Transformation for a Global European Giant</h3>
+            <p>Led end-to-end manufacturing capability transformation for a major European multinational — embedding Lean, loss analysis, and value stream mapping culture across the plant to drive measurable gains in efficiency and effectiveness.</p>
+            <div class="case-outcomes">
+              <span class="case-outcome">Lean Deployment</span>
+              <span class="case-outcome">Loss Analysis</span>
+              <span class="case-outcome">Value Stream Mapping</span>
+              <span class="case-outcome">Daily Management Systems</span>
+            </div>
+            <div class="case-stats-row">
+              <div class="case-stat-block">
+                <span class="stat-num">Lean</span>
+                <span class="stat-desc">Culture Embedded</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">VSM</span>
+                <span class="stat-desc">End-to-End Mapping</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Plant-Wide</span>
+                <span class="stat-desc">Efficiency &amp; Effectiveness</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="svc-narrative">
-      <p>This is where Beanz Consulting was born — and where our experience runs deepest. Our founder built a GCC from a blank page to 1,000+ installed capacity across 20+ Centres of Excellence, with under 5% attrition against an industry average of 20%.</p>
-      <p>We advise across the <strong>full GCC lifecycle</strong> — from feasibility and location strategy (including tier-2 cities where the right talent exists but nobody's looking) to organisational design, pay benchmarking, culture architecture, and the governance models that determine whether your centre becomes a strategic asset or an expensive back office.</p>
-      <p>We also work with companies whose existing GCCs aren't delivering the value they should — whether it's climbing attrition, flat engagement, or a centre that still feels like a cost line.</p>
-      <div class="outcome-row">
-        <div class="outcome-chip"><span class="icon">→</span> 0-to-1 GCC Builds</div>
-        <div class="outcome-chip"><span class="icon">→</span> Tier-2 Location Expertise</div>
-        <div class="outcome-chip"><span class="icon">→</span> Attrition Turnarounds</div>
-        <div class="outcome-chip"><span class="icon">→</span> Maturity Acceleration</div>
+
+    <div class="results-stats reveal">
+      <div class="result-stat">
+        <span class="big-num">2,000+</span>
+        <span class="stat-label">Team Members Scaled</span>
+      </div>
+      <div class="result-stat">
+        <span class="big-num">20+</span>
+        <span class="stat-label">Functions Established</span>
+      </div>
+      <div class="result-stat">
+        <span class="big-num">$6M+</span>
+        <span class="stat-label">Savings Delivered</span>
+      </div>
+      <div class="result-stat">
+        <span class="big-num">10+</span>
+        <span class="stat-label">Global Clients Advised</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICE 02: SUPPLY CHAIN ═══ -->
-<section class="svc-section" id="supplychain">
-  <div class="inner">
-    <div class="svc-id">
-      <div class="svc-num">SERVICE 02</div>
-      <div class="svc-name">Supply Chain Transformation</div>
-      <div class="svc-question">Is your supply chain a competitive advantage — or just a cost line you're trying to manage?</div>
-      <div class="svc-tags">
-        <span class="svc-tag">Network Design</span>
-        <span class="svc-tag">S&OP Excellence</span>
-        <span class="svc-tag">Co-Manufacturing</span>
-        <span class="svc-tag">TCO Reduction</span>
-        <span class="svc-tag">Planning & Logistics</span>
-      </div>
+<!-- ==========================================
+     CASE STUDIES / RESULTS
+     ========================================== -->
+<section class="results" id="results">
+  <div class="container results-inner">
+    <div class="results-header reveal">
+      <div class="section-label">Case Studies</div>
+      <h2 class="section-title">Impact that speaks <em>for itself.</em></h2>
+      <p>Real outcomes from real engagements across industries — built from the inside, not borrowed from a framework.</p>
     </div>
-    <div class="svc-narrative">
-      <p>Our founder spent nearly two decades inside the supply chains of P&G, General Mills, and Kraft Heinz — not reviewing them from the outside, but running them. Procurement, planning, logistics, contract manufacturing, S&OP across three continents.</p>
-      <p>That operating experience shapes everything we do. We design <strong>networks that actually work</strong> — with the right cost structure, service levels, and balance between resilience and efficiency. Whether you're redesigning your supply network, fixing a broken S&OP process, or trying to take 15% out of your total cost of ownership — we bring the practitioner's lens most advisory firms can't.</p>
-      <div class="outcome-row">
-        <div class="outcome-chip"><span class="icon">→</span> End-to-End Network Design</div>
-        <div class="outcome-chip"><span class="icon">→</span> S&OP Implementation</div>
-        <div class="outcome-chip"><span class="icon">→</span> Cost Reduction Programmes</div>
+
+    <div class="case-grid">
+
+      <!-- CASE STUDY 1: Supply Chain Academy -->
+      <div class="case-card reveal">
+        <div class="case-card-inner">
+          <div class="case-accent"></div>
+          <div class="case-body">
+            <div class="case-top">
+              <div class="case-label">Capability Building</div>
+              <div class="case-industry">
+                <span class="case-ind-tag">Conglomerate</span>
+                <span class="case-ind-tag">Multi-BU</span>
+              </div>
+            </div>
+            <h3>Live Supply Chain Academy for a Multinational Conglomerate</h3>
+            <p>Designed a comprehensive supply chain academy from scratch for one of the world's largest diversified conglomerates — creating a live, enterprise-wide capability engine deployed across business units and geographies.</p>
+            <div class="case-outcomes">
+              <span class="case-outcome">Custom Curricula Design</span>
+              <span class="case-outcome">Assessment Framework</span>
+              <span class="case-outcome">Progression Pathways</span>
+              <span class="case-outcome">Cross-BU Standardisation</span>
+            </div>
+            <div class="case-stats-row">
+              <div class="case-stat-block">
+                <span class="stat-num">10,000+</span>
+                <span class="stat-desc">Employees Impacted</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Ground-Up</span>
+                <span class="stat-desc">Built From Scratch</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Live</span>
+                <span class="stat-desc">In Active Deployment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 2: GCC Location Strategy -->
+      <div class="case-card reveal">
+        <div class="case-card-inner">
+          <div class="case-accent"></div>
+          <div class="case-body">
+            <div class="case-top">
+              <div class="case-label">GCC Advisory</div>
+              <div class="case-industry">
+                <span class="case-ind-tag">Health</span>
+                <span class="case-ind-tag">Insurance</span>
+                <span class="case-ind-tag">Energy</span>
+                <span class="case-ind-tag">Banking</span>
+              </div>
+            </div>
+            <h3>GCC Location Strategy &amp; Deployment for Multiple Fortune 500s</h3>
+            <p>Designed end-to-end GCC location strategies and deployed them for Fortune 500 companies across four distinct industries — each with unique talent, regulatory, and operational considerations.</p>
+            <div class="case-outcomes">
+              <span class="case-outcome">Location Feasibility</span>
+              <span class="case-outcome">Talent Landscape Analysis</span>
+              <span class="case-outcome">Regulatory Navigation</span>
+              <span class="case-outcome">Deployment Execution</span>
+            </div>
+            <div class="case-stats-row">
+              <div class="case-stat-block">
+                <span class="stat-num">4</span>
+                <span class="stat-desc">Industries Served</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Fortune 500</span>
+                <span class="stat-desc">Client Profile</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">End-to-End</span>
+                <span class="stat-desc">Strategy to Deployment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 3: Leadership Upgradation -->
+      <div class="case-card reveal">
+        <div class="case-card-inner">
+          <div class="case-accent"></div>
+          <div class="case-body">
+            <div class="case-top">
+              <div class="case-label">Leadership &amp; Coaching</div>
+              <div class="case-industry">
+                <span class="case-ind-tag">High-Growth Startup</span>
+              </div>
+            </div>
+            <h3>Leadership Upgradation for a 10x Growth Startup</h3>
+            <p>Led a sustained leadership development programme for a fast-scaling startup growing at 10x year-over-year — keeping leaders upgraded, aligned, and equipped to handle exponential growth and expanding accountability.</p>
+            <div class="case-outcomes">
+              <span class="case-outcome">CliftonStrengths Coaching</span>
+              <span class="case-outcome">Accountability Frameworks</span>
+              <span class="case-outcome">Leadership Readiness</span>
+              <span class="case-outcome">Scale-Ready Culture</span>
+            </div>
+            <div class="case-stats-row">
+              <div class="case-stat-block">
+                <span class="stat-num">10x</span>
+                <span class="stat-desc">YoY Growth Managed</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Sustained</span>
+                <span class="stat-desc">Ongoing Programme</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">C-Suite</span>
+                <span class="stat-desc">To Mid-Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 4: Manufacturing Excellence -->
+      <div class="case-card reveal">
+        <div class="case-card-inner">
+          <div class="case-accent"></div>
+          <div class="case-body">
+            <div class="case-top">
+              <div class="case-label">Operational Excellence</div>
+              <div class="case-industry">
+                <span class="case-ind-tag">European MNC</span>
+                <span class="case-ind-tag">Manufacturing</span>
+              </div>
+            </div>
+            <h3>Manufacturing Capability Transformation for a Global European Giant</h3>
+            <p>Led end-to-end manufacturing capability transformation for a major European multinational — embedding Lean, loss analysis, and value stream mapping culture across the plant to drive measurable gains in efficiency and effectiveness.</p>
+            <div class="case-outcomes">
+              <span class="case-outcome">Lean Deployment</span>
+              <span class="case-outcome">Loss Analysis</span>
+              <span class="case-outcome">Value Stream Mapping</span>
+              <span class="case-outcome">Daily Management Systems</span>
+            </div>
+            <div class="case-stats-row">
+              <div class="case-stat-block">
+                <span class="stat-num">Lean</span>
+                <span class="stat-desc">Culture Embedded</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">VSM</span>
+                <span class="stat-desc">End-to-End Mapping</span>
+              </div>
+              <div class="case-stat-block">
+                <span class="stat-num">Plant-Wide</span>
+                <span class="stat-desc">Efficiency &amp; Effectiveness</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="results-stats reveal">
+      <div class="result-stat">
+        <span class="big-num">2,000+</span>
+        <span class="stat-label">Team Members Scaled</span>
+      </div>
+      <div class="result-stat">
+        <span class="big-num">20+</span>
+        <span class="stat-label">Functions Established</span>
+      </div>
+      <div class="result-stat">
+        <span class="big-num">$6M+</span>
+        <span class="stat-label">Savings Delivered</span>
+      </div>
+      <div class="result-stat">
+        <span class="big-num">10+</span>
+        <span class="stat-label">Global Clients Advised</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICE 03: OPERATIONAL EXCELLENCE ═══ -->
-<section class="svc-section" id="opex">
-  <div class="inner">
-    <div class="svc-id">
-      <div class="svc-num">SERVICE 03</div>
-      <div class="svc-name">Operational Excellence & Lean</div>
-      <div class="svc-question">Your operations are running — but are they running at their potential?</div>
-      <div class="svc-tags">
-        <span class="svc-tag">Lean Manufacturing</span>
-        <span class="svc-tag">Loss Analysis</span>
-        <span class="svc-tag">Daily Management Systems</span>
-        <span class="svc-tag">HPO Design</span>
-        <span class="svc-tag">Culture Transformation</span>
-      </div>
+<!-- ==========================================
+     APPROACH
+     ========================================== -->
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="approach-header reveal">
+      <div class="section-label">Our Approach</div>
+      <h2 class="section-title">How we <em>actually</em> work</h2>
     </div>
-    <div class="svc-narrative">
-      <p>Operational excellence isn't a project — it's a way of working. We learned this inside P&G's Integrated Work Systems and have been applying those principles across industries ever since.</p>
-      <p>We work on the shop floor and in the boardroom. <strong>Loss analysis</strong> to find where value is leaking. <strong>Daily management systems</strong> to make performance visible. <strong>HPO design</strong> to build the structures and rhythms that make excellence sustainable — not dependent on heroics. The goal is to transform how your teams think, measure, and improve — permanently.</p>
-      <div class="outcome-row">
-        <div class="outcome-chip"><span class="icon">→</span> Sustained Cost Reduction</div>
-        <div class="outcome-chip"><span class="icon">→</span> Throughput & Quality Gains</div>
-        <div class="outcome-chip"><span class="icon">→</span> Self-Sustaining Systems</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══ SERVICE 04: EXECUTIVE COACHING ═══ -->
-<section class="svc-section" id="coaching">
-  <div class="inner">
-    <div class="svc-id">
-      <div class="svc-num">SERVICE 04</div>
-      <div class="svc-name">Executive Coaching & Leadership Development</div>
-      <div class="svc-question">Your leaders are capable. But are they unlocking the full potential of their teams?</div>
-      <div class="svc-tags">
-        <span class="svc-tag">Gallup CliftonStrengths</span>
-        <span class="svc-tag">1:1 Executive Coaching</span>
-        <span class="svc-tag">Team Development</span>
-        <span class="svc-tag">Leadership Programmes</span>
+    <div class="approach-steps reveal">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h4>Diagnose</h4>
+        <p>Deep assessment of your current state, pain points, and untapped potential. We listen before we prescribe.</p>
       </div>
-    </div>
-    <div class="svc-narrative">
-      <p>Great centres are built by great people. As a Gallup Certified Strengths Coach, our founder works directly with C-suite executives, senior leaders, and high-potential managers to unlock performance through a strengths-based approach.</p>
-      <p>Every engagement begins with <strong>CliftonStrengths assessments</strong> and is tailored to the individual's context — their role, team dynamics, and organisational challenges. We also design and deliver <strong>multi-cohort leadership development programmes</strong> that build leadership muscle across the organisation, not just at the top.</p>
-      <div class="outcome-row">
-        <div class="outcome-chip"><span class="icon">→</span> Strengths-Based Leadership</div>
-        <div class="outcome-chip"><span class="icon">→</span> Team Alignment</div>
-        <div class="outcome-chip"><span class="icon">→</span> Measurable Engagement Lift</div>
+      <div class="step">
+        <div class="step-number">02</div>
+        <h4>Design</h4>
+        <p>Tailored strategy built around your specific context — not a recycled template from another client.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">03</div>
+        <h4>Deliver</h4>
+        <p>Shoulder-to-shoulder implementation. We don't hand off a plan and disappear — we build it with you.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">04</div>
+        <h4>Sustain</h4>
+        <p>Knowledge transfer and governance systems that ensure the work outlasts our engagement.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICE 05: ORG TRANSFORMATION ═══ -->
-<section class="svc-section" id="org">
-  <div class="inner">
-    <div class="svc-id">
-      <div class="svc-num">SERVICE 05</div>
-      <div class="svc-name">Organisational Transformation</div>
-      <div class="svc-question">Growing fast is exciting. Growing fast without breaking things? That takes design.</div>
-      <div class="svc-tags">
-        <span class="svc-tag">Culture Strengthening</span>
-        <span class="svc-tag">Employee Morale</span>
-        <span class="svc-tag">Change Management</span>
-        <span class="svc-tag">Org Design</span>
-        <span class="svc-tag">Shared Services & GBS</span>
-      </div>
-    </div>
-    <div class="svc-narrative">
-      <p>Some organisations don't need a GCC or a supply chain overhaul — they need someone to help them navigate the complexity that comes with rapid scale. Culture is fraying, leadership is stretched, and the systems that worked at 200 people are buckling at 2,000.</p>
-      <p>We lead <strong>organisational transformation engagements</strong> that go beyond restructuring — strengthening culture intentionally, building operating rhythms, and designing governance systems that let fast-growing organisations scale without losing what made them special. This also extends to <strong>GBS design and optimisation</strong> — shared services blueprints, process standardisation, and service centre operating models that deliver real efficiency.</p>
-      <div class="outcome-row">
-        <div class="outcome-chip"><span class="icon">→</span> Culture by Design</div>
-        <div class="outcome-chip"><span class="icon">→</span> GBS Blueprint & Launch</div>
-        <div class="outcome-chip"><span class="icon">→</span> Scale Without Breakage</div>
+<!-- ==========================================
+     WHAT WE DON'T DO
+     ========================================== -->
+<section class="not-do">
+  <div class="container">
+    <div class="not-do-inner">
+      <div class="not-do-title">What we don't do →</div>
+      <div class="not-do-list">
+        <span class="not-do-item">BPO / Body Shopping</span>
+        <span class="not-do-item">Order Management Outsourcing</span>
+        <span class="not-do-item">Staff Augmentation</span>
+        <span class="not-do-item">Project Supervision Only</span>
+        <span class="not-do-item">Liaison Services</span>
+        <span class="not-do-item">Temporary Staffing</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICE 06: TRAININGS ═══ -->
-<section class="svc-section" id="training">
-  <div class="inner">
-    <div class="svc-id">
-      <div class="svc-num">SERVICE 06</div>
-      <div class="svc-name">Trainings & Academies</div>
-      <div class="svc-question">Your people are your edge. But is there a structured path to make them sharper?</div>
-      <div class="svc-tags">
-        <span class="svc-tag">Supply Chain Academy</span>
-        <span class="svc-tag">Lean Training</span>
-        <span class="svc-tag">Leadership Workshops</span>
-        <span class="svc-tag">Custom Programmes</span>
-      </div>
-    </div>
-    <div class="svc-narrative">
-      <p>We recently designed and delivered a <strong>Supply Chain Academy</strong> for a leading conglomerate — standardising talent capability across the organisation and building a structured path to the next level. That's the kind of work we do here.</p>
-      <p>We build <strong>structured capability programmes</strong> — with curricula, assessments, progression paths, and real impact metrics — that become a permanent part of your development infrastructure. Whether it's Lean operations, supply chain fundamentals, leadership essentials, or a fully custom academy — we build programmes that compound over time, not just tick a training box.</p>
-      <div class="outcome-row">
-        <div class="outcome-chip"><span class="icon">→</span> Custom Academy Design</div>
-        <div class="outcome-chip"><span class="icon">→</span> Capability Standardisation</div>
-        <div class="outcome-chip"><span class="icon">→</span> Measurable Skill Uplift</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ HOW WE WORK ═══ -->
-<section class="how-we-work">
-  <div class="inner">
-    <div class="label">Our Approach</div>
-    <h2>How we <em>actually</em> work</h2>
-    <p class="desc">Every engagement follows a clear, four-phase approach — designed to move from insight to impact efficiently, with full transparency at every stage.</p>
-    <div class="journey">
-      <div class="j-step">
-        <div class="j-dot"></div>
-        <div class="j-phase">Phase 01</div>
-        <div class="j-title">Diagnose</div>
-        <div class="j-desc">Deep assessment of your current state, pain points, and untapped potential. We listen before we prescribe.</div>
-      </div>
-      <div class="j-step">
-        <div class="j-dot"></div>
-        <div class="j-phase">Phase 02</div>
-        <div class="j-title">Design</div>
-        <div class="j-desc">Tailored strategy and roadmap built around your specific context — not a recycled template from another client.</div>
-      </div>
-      <div class="j-step">
-        <div class="j-dot"></div>
-        <div class="j-phase">Phase 03</div>
-        <div class="j-title">Deliver</div>
-        <div class="j-desc">Shoulder-to-shoulder implementation. We don't hand off a plan and disappear — we build it with you.</div>
-      </div>
-      <div class="j-step">
-        <div class="j-dot"></div>
-        <div class="j-phase">Phase 04</div>
-        <div class="j-title">Sustain</div>
-        <div class="j-desc">Knowledge transfer, capability building, and governance systems that ensure the work outlasts our engagement.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ WHAT WE DON'T DO ═══ -->
-<section class="dont-do">
-  <div class="inner">
-    <div class="header">
-      <div class="label">A Clear Line</div>
-      <h2>What we don't do</h2>
-      <p class="intro">We focus on strategic transformation and capability building. If you need any of the following, we're probably not the right fit — and we'd rather be upfront about it.</p>
-    </div>
-    <div class="dont-grid">
-      <div class="dont-item">
-        <div class="x">✕</div>
-        <div class="what">BPO / Body Shopping</div>
-        <div class="why">We build capabilities, not rent resources</div>
-      </div>
-      <div class="dont-item">
-        <div class="x">✕</div>
-        <div class="what">Order Management Outsourcing</div>
-        <div class="why">We design systems, not run operations</div>
-      </div>
-      <div class="dont-item">
-        <div class="x">✕</div>
-        <div class="what">Staff Augmentation</div>
-        <div class="why">We develop leaders, not fill seats</div>
-      </div>
-      <div class="dont-item">
-        <div class="x">✕</div>
-        <div class="what">Project Supervision Only</div>
-        <div class="why">We execute transformation, not just oversee</div>
-      </div>
-      <div class="dont-item">
-        <div class="x">✕</div>
-        <div class="what">Liaison Services</div>
-        <div class="why">We create value, not connections</div>
-      </div>
-      <div class="dont-item">
-        <div class="x">✕</div>
-        <div class="what">Temporary Staffing</div>
-        <div class="why">We build permanent capabilities</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<!-- ═══ CONTACT ═══ -->
+<!-- ==========================================
+     CONTACT
+     ========================================== -->
 <section class="contact" id="contact">
-    <div class="container">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <div class="section-label">Get In Touch</div>
-                <h2>Ready to transform your <em>operations?</em></h2>
-                <p>Schedule a complimentary consultation to explore how we can help you build global capabilities and drive sustainable growth.</p>
-                <ul class="contact-details">
-                    <li>
-                        <span class="dt">Email</span>
-                        <span class="dd"><a href="mailto:connect@beanz.in">connect@beanz.in</a></span>
-                    </li>
-                    <li>
-                        <span class="dt">Location</span>
-                        <span class="dd">India</span>
-                    </li>
-                </ul>
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Ready to transform your <em>operations?</em></h2>
+        <p class="contact-text">Schedule a complimentary consultation to explore how we can help you build global capabilities and drive sustainable growth. Whether you're building from scratch or fixing what's not working — we bring the practitioner's perspective.</p>
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value"><a href="mailto:connect@beanz.in">connect@beanz.in</a></div>
             </div>
-            <form class="contact-form" action="https://formsubmit.co/connect@beanz.in" method="POST">
-                <!-- FormSubmit config -->
-                <input type="hidden" name="_subject" value="New inquiry from Beanz Consulting website">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="">
-                <input type="text" name="_honey" style="display:none">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Full Name *</label>
-                        <input type="text" name="Full Name" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" name="Email" placeholder="you@company.com" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Company *</label>
-                        <input type="text" name="Company" placeholder="Company name" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Service Interest *</label>
-                        <select name="Service Interest" required>
-                            <option value="">Select a service...</option>
-                            <option>GCC Advisory</option>
-                            <option>Supply Chain Transformation</option>
-                            <option>Operational Excellence & Lean</option>
-                            <option>Executive Coaching & Leadership</option>
-                            <option>Organisational Transformation</option>
-                            <option>Trainings & Academies</option>
-                            <option>General Inquiry</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Message *</label>
-                    <textarea name="Message" placeholder="Tell us about your requirements..." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message →</button>
-            </form>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="info-label">Location</div>
+              <div class="info-value">India</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">🌐</div>
+            <div>
+              <div class="info-label">Website</div>
+              <div class="info-value">www.beanz.in</div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="reveal" style="animation-delay: 0.15s;">
+        <div class="contact-form">
+          <h3>Start a Conversation</h3>
+          <p class="form-sub">Tell us about your challenge — we'll take it from there.</p>
+
+          <form action="https://formsubmit.co/connect@beanz.in" method="POST">
+            <input type="hidden" name="_subject" value="New inquiry from Beanz Consulting website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="Full Name" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="Email" placeholder="name@company.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="company">Company *</label>
+                <input type="text" id="company" name="Company" placeholder="Your company" required>
+              </div>
+              <div class="form-group">
+                <label for="service">Service Interest *</label>
+                <select id="service" name="Service Interest" required>
+                  <option value="" disabled selected>Select a service...</option>
+                  <option>GCC Advisory</option>
+                  <option>Supply Chain Transformation</option>
+                  <option>Operational Excellence &amp; Lean</option>
+                  <option>Executive Coaching &amp; Leadership</option>
+                  <option>Organisational Transformation</option>
+                  <option>Trainings &amp; Academies</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full" style="margin-bottom: 1rem;">
+              <label for="message">Message *</label>
+              <textarea id="message" name="Message" placeholder="Tell us about your challenge, timeline, and what you're looking to achieve..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message →</button>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- ==========================================
+     FOOTER
+     ========================================== -->
 <footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <div class="f-logo">Beanz <em>Consulting.</em></div>
-                <p>Strategic growth through operational excellence. Transforming global operations for Fortune 500 companies and high-growth enterprises.</p>
-            </div>
-            <div>
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Executive Coaching</a></li>
-                    <li><a href="#services">Operational Excellence</a></li>
-                    <li><a href="#services">Supply Chain</a></li>
-                    <li><a href="#services">GCC Advisory</a></li>
-                    <li><a href="#services">Shared Services</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#why-beanz">Why Beanz</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="#contact">Contact Form</a></li>
-                    <li><a href="mailto:connect@beanz.in">Email Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Beanz Consulting. All rights reserved.
-        </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Beanz <span>Consulting.</span></a>
+        <p>Strategic growth through operational excellence. Transforming global operations for Fortune 500 companies and high-growth enterprises.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">GCC Advisory</a></li>
+          <li><a href="#services">Supply Chain</a></li>
+          <li><a href="#services">Operational Excellence</a></li>
+          <li><a href="#services">Executive Coaching</a></li>
+          <li><a href="#services">Org Transformation</a></li>
+          <li><a href="#services">Trainings &amp; Academies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why-beanz">Why Beanz</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#contact">Contact Form</a></li>
+          <li><a href="mailto:connect@beanz.in">Email Us</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Beanz Consulting. All rights reserved.</p>
+      <p>Beanz Enterprises — Building Global Capabilities</p>
+    </div>
+  </div>
 </footer>
 
+<!-- ==========================================
+     JAVASCRIPT
+     ========================================== -->
 <script>
-// ─── Mobile Menu ───
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
-const overlay = document.getElementById('overlay');
+// Nav scroll effect — hide on scroll down, show on scroll up
+const nav = document.getElementById('nav');
+let lastScrollY = 0;
+let ticking = false;
 
-function toggleMenu() {
-    menuBtn.classList.toggle('open');
-    navLinks.classList.toggle('open');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
-}
-function closeMenu() {
-    menuBtn.classList.remove('open');
-    navLinks.classList.remove('open');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-}
-menuBtn.addEventListener('click', toggleMenu);
-overlay.addEventListener('click', closeMenu);
-document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeMenu));
-window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
+// Start with at-top class
+if (window.scrollY <= 20) nav.classList.add('at-top');
 
-// ─── Navbar scroll ───
+function updateNav() {
+  const currentScrollY = window.scrollY;
+  
+  // Transparent only at very top
+  nav.classList.toggle('at-top', currentScrollY <= 20);
+  
+  // Hide/show on scroll direction (only after scrolling past hero)
+  if (currentScrollY > 200) {
+    if (currentScrollY > lastScrollY + 5) {
+      nav.classList.add('nav-hidden');
+    } else if (currentScrollY < lastScrollY - 5) {
+      nav.classList.remove('nav-hidden');
+    }
+  } else {
+    nav.classList.remove('nav-hidden');
+  }
+  
+  lastScrollY = currentScrollY;
+  ticking = false;
+}
+
 window.addEventListener('scroll', () => {
-    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+  if (!ticking) {
+    requestAnimationFrame(updateNav);
+    ticking = true;
+  }
 });
 
-// ─── Smooth scroll ───
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-        e.preventDefault();
-        const t = document.querySelector(a.getAttribute('href'));
-        if (t) window.scrollTo({ top: t.offsetTop - 72, behavior: 'smooth' });
-    });
+// Mobile toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
 });
 
-// ─── Intersection Observer animations ───
-const obs = new IntersectionObserver((ent
+// Close mobile menu on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// Scroll reveal
+const revealElements = document.querySelectorAll('.reveal');
+revealElements.forEach(el => el.classList.add('animate'));
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+revealElements.forEach(el => observer.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Counter animation on scroll
+const countElements = document.querySelectorAll('.big-num, .number, .num');
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.counted) {
+      entry.target.dataset.counted = 'true';
+      const text = entry.target.textContent;
+      const match = text.match(/[\d.]+/);
+      if (match) {
+        const target = parseFloat(match[0]);
+        const prefix = text.slice(0, text.indexOf(match[0]));
+        const suffix = text.slice(text.indexOf(match[0]) + match[0].length);
+        let current = 0;
+        const increment = target / 40;
+        const isDecimal = match[0].includes('.');
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+ 
