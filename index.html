@@ -2168,7 +2168,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
           <h3>Start a Conversation</h3>
           <p class="form-sub">Tell us about your challenge — we'll take it from there.</p>
 
-          <form id="contactForm" action="https://formsubmit.co/connect@beanz.in" method="POST">
+          <form id="contactForm" action="https://formsubmit.co/ajax/connect@beanz.in" method="POST">
             <input type="hidden" name="_subject" value="New inquiry from Beanz Consulting website">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -2378,8 +2378,9 @@ if (contactForm) {
       body: new FormData(contactForm),
       headers: { 'Accept': 'application/json' }
     })
-    .then(response => {
-      if (response.ok || response.status === 200) {
+    .then(response => response.json())
+    .then(data => {
+      if (data.success === "true" || data.success === true) {
         contactForm.reset();
         toastOverlay.classList.add('show');
       } else {
