@@ -1590,6 +1590,274 @@ button { font-family: inherit; cursor: pointer; border: none; }
   background: var(--navy-700);
 }
 
+/* ========================================
+   CAREERS SECTION
+   ======================================== */
+.careers-intro {
+  padding: var(--section-pad) 0;
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 50%, var(--navy-800) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.careers-intro::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(200, 151, 62, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(200, 151, 62, 0.05) 0%, transparent 50%);
+}
+.careers-intro::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.careers-intro-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+.careers-intro .section-label { color: var(--gold-300); }
+.careers-intro .section-label::before { background: var(--gold-300); }
+.careers-intro .section-title { color: var(--white); }
+.careers-intro-sub {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.6);
+  margin-top: 1.25rem;
+  max-width: 540px;
+}
+.culture-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+}
+.culture-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--gold-400);
+  margin-bottom: 1.75rem;
+}
+.culture-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.culture-value:last-child { border-bottom: none; }
+.culture-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(200, 151, 62, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: var(--gold-400);
+}
+.culture-value h4 {
+  font-size: 0.88rem;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.culture-value p {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* Why Join */
+.why-join {
+  padding: var(--section-pad) 0;
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+}
+.why-join-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 3rem;
+}
+.why-join-header .section-label { justify-content: center; }
+.why-join-header .section-label::before { display: none; }
+.why-join-header p {
+  font-size: 1rem;
+  color: var(--gray-500);
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.perk-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 2.25rem;
+  transition: all 0.3s;
+}
+.perk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(10, 22, 40, 0.08);
+  border-color: var(--gold-200);
+}
+.perk-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: var(--gold-400);
+  margin-bottom: 1.25rem;
+}
+.perk-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--navy-800);
+  margin-bottom: 0.6rem;
+}
+.perk-card p {
+  font-size: 0.88rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+/* Apply Section */
+.apply-section {
+  padding: var(--section-pad) 0;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+}
+.apply-grid {
+  display: grid;
+  grid-template-columns: 0.42fr 0.58fr;
+  gap: 4rem;
+  align-items: start;
+}
+.apply-left .section-title { margin-bottom: 1.5rem; }
+.apply-text {
+  font-size: 1rem;
+  color: var(--gray-500);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.apply-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.apply-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+.check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--gold-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--gold-500);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.apply-form {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+.apply-form h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--navy-800);
+  margin-bottom: 0.5rem;
+}
+.apply-form .form-sub {
+  font-size: 0.88rem;
+  color: var(--gray-500);
+  margin-bottom: 2rem;
+}
+
+/* File upload */
+.file-upload-area {
+  border: 2px dashed var(--gray-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+.file-upload-area:hover {
+  border-color: var(--gold-400);
+  background: var(--gold-100);
+}
+.file-upload-area.has-file {
+  border-color: var(--green-500);
+  background: var(--green-100);
+}
+.file-upload-area input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.upload-icon {
+  font-size: 1.5rem;
+  color: var(--gray-400);
+  margin-bottom: 0.5rem;
+}
+.file-upload-area.has-file .upload-icon { color: var(--green-500); }
+.upload-text {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+.upload-text strong { color: var(--gold-500); }
+.file-name {
+  font-size: 0.82rem;
+  color: var(--green-500);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+/* Careers responsive */
+@media (max-width: 1024px) {
+  .careers-intro-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .apply-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .perks-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .perks-grid { grid-template-columns: 1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -1606,6 +1874,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#results">Results</a></li>
+      <li><a href="#careers">Careers</a></li>
       <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -2215,6 +2484,177 @@ button { font-family: inherit; cursor: pointer; border: none; }
 </section>
 
 <!-- ==========================================
+     CAREERS — INTRO
+     ========================================== -->
+<section class="careers-intro" id="careers">
+  <div class="container">
+    <div class="careers-intro-inner">
+      <div>
+        <div class="section-label">Careers</div>
+        <div class="section-title">We Don't Fill Seats. <em>We Find Exceptional People.</em></div>
+        <p class="careers-intro-sub">Beanz Consulting is always on the lookout for sharp minds, bold thinkers, and domain experts — whether you're a driven intern ready to dive deep, or a seasoned independent advisor who wants to shape how Fortune 500 companies build global capabilities.</p>
+      </div>
+      <div>
+        <div class="culture-card">
+          <h3>The Beanz Way</h3>
+          <div class="culture-value">
+            <div class="culture-icon">⚡</div>
+            <div>
+              <h4>Practitioner-Led, Not Ivory Tower</h4>
+              <p>You'll work on real problems — not PowerPoint graveyards.</p>
+            </div>
+          </div>
+          <div class="culture-value">
+            <div class="culture-icon">🌍</div>
+            <div>
+              <h4>Global Exposure From Day One</h4>
+              <p>GCCs, supply chains, Fortune 500 CXOs — the deep end, immediately.</p>
+            </div>
+          </div>
+          <div class="culture-value">
+            <div class="culture-icon">🚀</div>
+            <div>
+              <h4>Small Team, Outsized Impact</h4>
+              <p>No layers. No bureaucracy. Your work ships fast and matters.</p>
+            </div>
+          </div>
+          <div class="culture-value">
+            <div class="culture-icon">🎯</div>
+            <div>
+              <h4>Strengths-Based Culture</h4>
+              <p>Gallup-coached leadership that plays to your unique strengths.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CAREERS — WHY JOIN
+     ========================================== -->
+<section class="why-join">
+  <div class="container">
+    <div class="why-join-header">
+      <div class="section-label">Why Beanz</div>
+      <div class="section-title">Built for People Who <em>Want More</em></div>
+      <p>We're not a body shop. We're a boutique firm where every person shapes client outcomes, builds intellectual capital, and grows fast.</p>
+    </div>
+    <div class="perks-grid">
+      <div class="perk-card">
+        <div class="perk-icon">📈</div>
+        <h3>High-Stakes, Real Work</h3>
+        <p>No busywork. You'll research real markets, draft real proposals, and contribute to engagements with actual Fortune 500 decision-makers.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon">🤝</div>
+        <h3>Flexible Engagement</h3>
+        <p>Internships, project-based advisory, or ongoing collaboration — we structure engagements around mutual fit, not rigid job descriptions.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon">💡</div>
+        <h3>Intellectual Playground</h3>
+        <p>Transfer pricing, SEZ strategy, org design, operational excellence — the problems here are multi-dimensional and endlessly fascinating.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CAREERS — APPLICATION FORM
+     ========================================== -->
+<section class="apply-section" id="apply">
+  <div class="container">
+    <div class="apply-grid">
+      <div class="apply-left">
+        <div class="section-label">Apply</div>
+        <div class="section-title">Ready to <em>Make Your Move?</em></div>
+        <p class="apply-text">Drop us your details and tell us what makes you tick. We review every single application personally — no bots, no auto-rejections. If there's a fit, you'll hear from us.</p>
+        <ul class="apply-checklist">
+          <li>
+            <span class="check-icon">✓</span>
+            <span>Every application reviewed by the founding team</span>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <span>Every application is reviewed personally and responded to</span>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <span>No cookie-cutter interviews — we have real conversations</span>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <span>Open to non-traditional backgrounds and career paths</span>
+          </li>
+        </ul>
+      </div>
+      <div class="apply-form">
+        <h3>Submit Your Application</h3>
+        <p class="form-sub">All fields marked * are required. We'll be in touch.</p>
+        <form id="careerForm" action="https://formsubmit.co/ajax/connect@beanz.in" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New Career Application — Beanz Consulting">
+          <input type="hidden" name="Form Source" value="Careers Page">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="careerName">Full Name *</label>
+              <input type="text" id="careerName" name="Full Name" placeholder="e.g. Priya Sharma" required>
+            </div>
+            <div class="form-group">
+              <label for="careerEmail">Email *</label>
+              <input type="email" id="careerEmail" name="Email" placeholder="priya@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="roleInterest">I'm Interested In *</label>
+              <select id="roleInterest" name="Role Interest" required>
+                <option value="" disabled selected>Select a role type...</option>
+                <option>Research &amp; Strategy Intern</option>
+                <option>Content &amp; Digital Marketing Intern</option>
+                <option>GCC &amp; Shared Services Advisor</option>
+                <option>Supply Chain &amp; Operations Advisor</option>
+                <option>Open Application</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="experience">Experience Level *</label>
+              <select id="experience" name="Experience Level" required>
+                <option value="" disabled selected>Select experience...</option>
+                <option>Student / Fresh Graduate</option>
+                <option>1–3 Years</option>
+                <option>4–8 Years</option>
+                <option>9–15 Years</option>
+                <option>15+ Years</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group full" style="margin-bottom: 1rem;">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input type="url" id="linkedin" name="LinkedIn" placeholder="https://linkedin.com/in/yourprofile">
+          </div>
+          <div class="form-group full" style="margin-bottom: 1rem;">
+            <label for="pitch">Your Pitch *</label>
+            <textarea id="pitch" name="Pitch" placeholder="Tell us what drives you, what you've accomplished, and what excites you about Beanz. Skip the corporate-speak — be yourself." required></textarea>
+          </div>
+          <div class="form-group full" style="margin-bottom: 1rem;">
+            <label>Resume / CV</label>
+            <div class="file-upload-area" id="fileUploadArea">
+              <div class="upload-icon">📄</div>
+              <div class="upload-text"><strong>Click to upload</strong> or drag &amp; drop<br>PDF, DOC, DOCX up to 5 MB</div>
+              <div class="file-name" id="fileName" style="display: none;"></div>
+              <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx">
+            </div>
+          </div>
+          <button type="submit" class="form-submit">Submit Application →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
      FOOTER
      ========================================== -->
 <footer class="footer">
@@ -2241,6 +2681,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
           <li><a href="#why-beanz">Why Beanz</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#results">Results</a></li>
+          <li><a href="#careers">Careers</a></li>
           <li><a href="#contact">Contact Form</a></li>
           <li><a href="mailto:connect@beanz.in">Email Us</a></li>
         </ul>
@@ -2261,8 +2702,18 @@ button { font-family: inherit; cursor: pointer; border: none; }
   <div class="form-toast">
     <div class="form-toast-icon">✓</div>
     <h3>Message Sent Successfully</h3>
-    <p>Thank you for reaching out. We'll review your inquiry and get back to you within 24 hours.</p>
+    <p>Thank you for reaching out to Beanz Consulting. We appreciate your interest and will get back to you shortly.</p>
     <button class="form-toast-close" id="formToastClose">Back to Site</button>
+  </div>
+</div>
+
+<!-- Careers Success Popup -->
+<div class="form-toast-overlay" id="careerToast">
+  <div class="form-toast">
+    <div class="form-toast-icon">✓</div>
+    <h3>Application Received!</h3>
+    <p>Thank you for your interest in joining Beanz Consulting. We review every application personally and will be in touch if there's a fit.</p>
+    <button class="form-toast-close" id="careerToastClose">Got It</button>
   </div>
 </div>
 
@@ -2426,6 +2877,91 @@ if (toastClose) {
 if (toastOverlay) {
   toastOverlay.addEventListener('click', (e) => {
     if (e.target === toastOverlay) toastOverlay.classList.remove('show');
+  });
+}
+
+// Career form — file upload visual feedback
+const fileInput = document.getElementById('resume');
+const fileUploadArea = document.getElementById('fileUploadArea');
+const fileNameEl = document.getElementById('fileName');
+
+if (fileInput) {
+  fileInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) {
+      fileUploadArea.classList.add('has-file');
+      fileNameEl.textContent = '📎 ' + e.target.files[0].name;
+      fileNameEl.style.display = 'block';
+    } else {
+      fileUploadArea.classList.remove('has-file');
+      fileNameEl.style.display = 'none';
+    }
+  });
+}
+
+// Career form submission
+const careerForm = document.getElementById('careerForm');
+const careerToast = document.getElementById('careerToast');
+const careerToastClose = document.getElementById('careerToastClose');
+
+if (careerForm) {
+  careerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = careerForm.querySelector('.form-submit');
+    const originalText = btn.textContent;
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    fetch(careerForm.action, {
+      method: 'POST',
+      body: new FormData(careerForm),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        careerForm.reset();
+        if (fileUploadArea) {
+          fileUploadArea.classList.remove('has-file');
+          fileNameEl.style.display = 'none';
+        }
+        careerToast.classList.add('show');
+        return;
+      }
+      return response.text().then(text => {
+        console.log('FormSubmit response:', response.status, text);
+        if (response.status >= 300 && response.status < 400) {
+          careerForm.reset();
+          if (fileUploadArea) {
+            fileUploadArea.classList.remove('has-file');
+            fileNameEl.style.display = 'none';
+          }
+          careerToast.classList.add('show');
+        } else {
+          alert('Something went wrong (status ' + response.status + '). Please email us at connect@beanz.in');
+        }
+      });
+    })
+    .catch(err => {
+      console.log('FormSubmit error:', err);
+      careerForm.reset();
+      if (fileUploadArea) {
+        fileUploadArea.classList.remove('has-file');
+        fileNameEl.style.display = 'none';
+      }
+      careerToast.classList.add('show');
+    })
+    .finally(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+    });
+  });
+}
+
+if (careerToastClose) {
+  careerToastClose.addEventListener('click', () => careerToast.classList.remove('show'));
+}
+if (careerToast) {
+  careerToast.addEventListener('click', (e) => {
+    if (e.target === careerToast) careerToast.classList.remove('show');
   });
 }
 </script>
