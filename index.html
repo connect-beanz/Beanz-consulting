@@ -2593,9 +2593,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
       <div class="apply-form">
         <h3>Submit Your Application</h3>
         <p class="form-sub">All fields marked * are required. We'll be in touch.</p>
-        <form id="careerForm" action="https://formsubmit.co/ajax/connect@beanz.in" method="POST" enctype="multipart/form-data">
+        <form id="careerForm" action="https://formsubmit.co/connect@beanz.in" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="_subject" value="New Career Application — Beanz Consulting">
           <input type="hidden" name="Form Source" value="Careers Page">
+          <input type="hidden" name="_next" value="https://www.beanz.in/?career=success#apply">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-row">
             <div class="form-group">
               <label for="careerName">Full Name *</label>
@@ -2898,62 +2900,15 @@ if (fileInput) {
   });
 }
 
-// Career form submission
-const careerForm = document.getElementById('careerForm');
+// Career form — show toast on redirect back from FormSubmit
 const careerToast = document.getElementById('careerToast');
 const careerToastClose = document.getElementById('careerToastClose');
 
-if (careerForm) {
-  careerForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = careerForm.querySelector('.form-submit');
-    const originalText = btn.textContent;
-    btn.textContent = 'Submitting...';
-    btn.disabled = true;
-
-    fetch(careerForm.action, {
-      method: 'POST',
-      body: new FormData(careerForm),
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        careerForm.reset();
-        if (fileUploadArea) {
-          fileUploadArea.classList.remove('has-file');
-          fileNameEl.style.display = 'none';
-        }
-        careerToast.classList.add('show');
-        return;
-      }
-      return response.text().then(text => {
-        console.log('FormSubmit response:', response.status, text);
-        if (response.status >= 300 && response.status < 400) {
-          careerForm.reset();
-          if (fileUploadArea) {
-            fileUploadArea.classList.remove('has-file');
-            fileNameEl.style.display = 'none';
-          }
-          careerToast.classList.add('show');
-        } else {
-          alert('Something went wrong (status ' + response.status + '). Please email us at connect@beanz.in');
-        }
-      });
-    })
-    .catch(err => {
-      console.log('FormSubmit error:', err);
-      careerForm.reset();
-      if (fileUploadArea) {
-        fileUploadArea.classList.remove('has-file');
-        fileNameEl.style.display = 'none';
-      }
-      careerToast.classList.add('show');
-    })
-    .finally(() => {
-      btn.textContent = originalText;
-      btn.disabled = false;
-    });
-  });
+if (window.location.search.includes('career=success')) {
+  careerToast.classList.add('show');
+  // Clean up the URL without reloading
+  const cleanUrl = window.location.origin + window.location.pathname + '#apply';
+  window.history.replaceState({}, '', cleanUrl);
 }
 
 if (careerToastClose) {
