@@ -2912,11 +2912,8 @@ if (careerForm) {
     btn.textContent = 'Submitting...';
     btn.disabled = true;
 
-    // Listen for iframe load — means FormSubmit has received the data
-    const iframe = document.getElementById('careerIframe');
-    iframe.addEventListener('load', function onLoad() {
-      iframe.removeEventListener('load', onLoad);
-      // Reset form and show success toast
+    // Show success toast after brief delay (form submits into hidden iframe)
+    setTimeout(function() {
       careerForm.reset();
       if (fileUploadArea) {
         fileUploadArea.classList.remove('has-file');
@@ -2925,7 +2922,7 @@ if (careerForm) {
       btn.textContent = 'Submit Application →';
       btn.disabled = false;
       careerToast.classList.add('show');
-    });
+    }, 2500);
   });
 }
 
