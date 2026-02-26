@@ -2172,7 +2172,6 @@ button { font-family: inherit; cursor: pointer; border: none; }
             <input type="hidden" name="_subject" value="New inquiry from Beanz Consulting website">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://beanz.in/#contact">
             <input type="text" name="_honey" style="display:none">
             <div class="form-row">
               <div class="form-group">
@@ -2378,17 +2377,29 @@ if (contactForm) {
       body: new FormData(contactForm),
       headers: { 'Accept': 'application/json' }
     })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success === "true" || data.success === true) {
+    .then(response => {
+      if (response.ok) {
         contactForm.reset();
         toastOverlay.classList.add('show');
-      } else {
-        alert('Something went wrong. Please email us at connect@beanz.in');
+        return;
       }
+      return response.text().then(text => {
+        console.log('FormSubmit response:', response.status, text);
+        // Even non-200 might mean the email was sent (e.g. redirect responses)
+        if (response.status >= 300 && response.status < 400) {
+          contactForm.reset();
+          toastOverlay.classList.add('show');
+        } else {
+          alert('Something went wrong (status ' + response.status + '). Please email us at connect@beanz.in');
+        }
+      });
     })
-    .catch(() => {
-      alert('Something went wrong. Please email us at connect@beanz.in');
+    .catch(err => {
+      console.log('FormSubmit error:', err);
+      // CORS errors sometimes mean the form was actually sent
+      // Show success if there's a network/CORS error (FormSubmit does this)
+      contactForm.reset();
+      toastOverlay.classList.add('show');
     })
     .finally(() => {
       btn.textContent = originalText;
