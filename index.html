@@ -2256,6 +2256,16 @@ button { font-family: inherit; cursor: pointer; border: none; }
 <!-- ==========================================
      JAVASCRIPT
      ========================================== -->
+<!-- Success Popup -->
+<div class="form-toast-overlay" id="formToast">
+  <div class="form-toast">
+    <div class="form-toast-icon">✓</div>
+    <h3>Message Sent Successfully</h3>
+    <p>Thank you for reaching out. We'll review your inquiry and get back to you within 24 hours.</p>
+    <button class="form-toast-close" id="formToastClose">Back to Site</button>
+  </div>
+</div>
+
 <script>
 // Nav scroll effect — hide on scroll down, show on scroll up
 const nav = document.getElementById('nav');
@@ -2419,16 +2429,6 @@ if (toastOverlay) {
   });
 }
 </script>
-
-<!-- Success Popup -->
-<div class="form-toast-overlay" id="formToast">
-  <div class="form-toast">
-    <div class="form-toast-icon">✓</div>
-    <h3>Message Sent Successfully</h3>
-    <p>Thank you for reaching out. We'll review your inquiry and get back to you within 24 hours.</p>
-    <button class="form-toast-close" id="formToastClose">Back to Site</button>
-  </div>
-</div>
 
 </body>
 </html>
