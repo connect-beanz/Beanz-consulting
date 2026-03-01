@@ -2693,10 +2693,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
           <h3>Submit Your Application</h3>
           <p>All fields marked * are required. We'll be in touch.</p>
         </div>
-        <form id="careersForm" aria-label="Career application form" action="https://formsubmit.co/ajax/connect@beanz.in" method="POST">
+        <form id="careersForm" aria-label="Career application form" action="https://formsubmit.co/connect@beanz.in" method="POST" enctype="multipart/form-data" target="careers-iframe">
           <input type="hidden" name="_subject" value="Careers Application — Beanz Consulting">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://beanz.in/#application-sent">
           <input type="text" name="_honey" style="display:none">
           <div class="form-row">
             <div class="form-group">
@@ -2981,58 +2982,40 @@ if (fileInput && fileDisplay) {
   });
 }
 
-// Careers form AJAX submission
+// Careers form submission via hidden iframe (supports file attachments)
 const careersForm = document.getElementById('careersForm');
-if (careersForm) {
-  careersForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+const careersIframe = document.getElementById('careersIframe');
+if (careersForm && careersIframe) {
+  let formSubmitted = false;
+
+  careersForm.addEventListener('submit', function() {
     const btn = careersForm.querySelector('.form-submit');
-    const originalText = btn.textContent;
     btn.textContent = 'Submitting...';
     btn.disabled = true;
+    formSubmitted = true;
+    // Form submits naturally to iframe via target="careers-iframe"
+  });
 
-    fetch(careersForm.action, {
-      method: 'POST',
-      body: new FormData(careersForm),
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        careersForm.reset();
-      resetFileDisplay();
-        toastOverlay.querySelector('h3').textContent = 'Application Received';
-        toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
-        toastOverlay.classList.add('show');
-        return;
-      }
-      return response.text().then(text => {
-        if (response.status >= 300 && response.status < 400) {
-          careersForm.reset();
-      resetFileDisplay();
-          toastOverlay.querySelector('h3').textContent = 'Application Received';
-          toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
-          toastOverlay.classList.add('show');
-        } else {
-          alert('Something went wrong. Please email us at connect@beanz.in');
-        }
-      });
-    })
-    .catch(err => {
-      careersForm.reset();
-      resetFileDisplay();
-      toastOverlay.querySelector('h3').textContent = 'Application Received';
-      toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
-      toastOverlay.classList.add('show');
-    })
-    .finally(() => {
-      btn.textContent = originalText;
-      btn.disabled = false;
-    });
+  careersIframe.addEventListener('load', function() {
+    if (!formSubmitted) return;
+    formSubmitted = false;
+
+    const btn = careersForm.querySelector('.form-submit');
+    btn.textContent = 'SUBMIT APPLICATION →';
+    btn.disabled = false;
+
+    careersForm.reset();
+    resetFileDisplay();
+
+    toastOverlay.querySelector('h3').textContent = 'Application Received';
+    toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
+    toastOverlay.classList.add('show');
   });
 }
 
 
 </script>
 
+<iframe name="careers-iframe" id="careersIframe" style="display:none" aria-hidden="true"></iframe>
 </body>
 </html>
