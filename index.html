@@ -2984,32 +2984,24 @@ if (fileInput && fileDisplay) {
 
 // Careers form submission via hidden iframe (supports file attachments)
 const careersForm = document.getElementById('careersForm');
-const careersIframe = document.getElementById('careersIframe');
-if (careersForm && careersIframe) {
-  let formSubmitted = false;
-
+if (careersForm) {
   careersForm.addEventListener('submit', function() {
     const btn = careersForm.querySelector('.form-submit');
     btn.textContent = 'Submitting...';
     btn.disabled = true;
-    formSubmitted = true;
+
     // Form submits naturally to iframe via target="careers-iframe"
-  });
+    // Show popup after brief delay to allow submission to complete
+    setTimeout(function() {
+      btn.textContent = 'SUBMIT APPLICATION →';
+      btn.disabled = false;
+      careersForm.reset();
+      resetFileDisplay();
 
-  careersIframe.addEventListener('load', function() {
-    if (!formSubmitted) return;
-    formSubmitted = false;
-
-    const btn = careersForm.querySelector('.form-submit');
-    btn.textContent = 'SUBMIT APPLICATION →';
-    btn.disabled = false;
-
-    careersForm.reset();
-    resetFileDisplay();
-
-    toastOverlay.querySelector('h3').textContent = 'Application Received';
-    toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
-    toastOverlay.classList.add('show');
+      toastOverlay.querySelector('h3').textContent = 'Application Received';
+      toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
+      toastOverlay.classList.add('show');
+    }, 2000);
   });
 }
 
