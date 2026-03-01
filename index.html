@@ -1721,6 +1721,48 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .careers-form-section input::placeholder,
 .careers-form-section textarea::placeholder { color: rgba(255,255,255,0.25); }
 
+.file-upload-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.file-upload-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.03);
+  border: 2px dashed rgba(255,255,255,0.12);
+  border-radius: 8px;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.file-upload-wrapper:hover .file-upload-display,
+.file-input:focus + .file-upload-display {
+  border-color: var(--gold-500);
+  background: rgba(200, 151, 62, 0.06);
+}
+
+.file-upload-display.has-file {
+  border-color: var(--gold-500);
+  background: rgba(200, 151, 62, 0.08);
+  border-style: solid;
+}
+
+.file-upload-icon { font-size: 1.4rem; }
+.file-upload-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+.file-upload-hint { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+
 /* ========================================
    FOOTER
    ======================================== */
@@ -1924,6 +1966,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
   background: var(--navy-700);
 }
 
+
 </style>
 </head>
 <body>
@@ -1947,58 +1990,6 @@ button { font-family: inherit; cursor: pointer; border: none; }
       <li><a href="#careers">Careers</a></li>
       <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-</header>
-
-<main>
-<!-- ==========================================
-     HERO
-     ========================================== -->
-<section class="hero" id="hero" aria-label="Introduction">
-  <div class="hero-content">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <h1>Building Global Capabilities.<br><em>Delivering Operational Excellence.</em></h1>
-        <p class="hero-sub">We help Fortune 500 companies and high-growth enterprises set up, scale, and transform Global Capability Centers, supply chains, and operations — with the practitioner's lens most advisory firms can't offer.</p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn-primary">Schedule a Consultation →</a>
-          <a href="#services" class="btn-secondary">Explore Services</a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="credential-card">
-          <div class="credential-name">Viraj Mehta</div>
-          <div class="subtitle">Founder &amp; Principal Advisor</div>
-          <div class="credential-stats">
-            <div class="cred-stat">
-              <span class="number">2,000+</span>
-              <span class="label">Team Members Scaled</span>
-            </div>
-            <div class="cred-stat">
-              <span class="number">20+</span>
-              <span class="label">Functions Established</span>
-            </div>
-            <div class="cred-stat">
-              <span class="number">$6M+</span>
-              <span class="label">Savings Delivered</span>
-            </div>
-            <div class="cred-stat">
-              <span class="number">10+</span>
-              <span class="label">GCC Startups Consulted</span>
-            </div>
-          </div>
-          <div class="credential-badges">
-            <span class="cred-badge">IIT Bombay</span>
-            <span class="cred-badge">20+ Yrs Fortune 500</span>
-            <span class="cred-badge">Gallup Coach</span>
-            <span class="cred-badge">APICS CPIM</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -2697,6 +2688,17 @@ button { font-family: inherit; cursor: pointer; border: none; }
             <label for="career-pitch">Why Beanz? *</label>
             <textarea id="career-pitch" name="Why Beanz" placeholder="Tell us what sets you apart — what you've built, what drives you, and why Beanz Consulting excites you..." required></textarea>
           </div>
+          <div class="form-group full" style="margin-bottom: 1rem;">
+            <label for="career-resume">Attach Resume / CV</label>
+            <div class="file-upload-wrapper">
+              <input type="file" id="career-resume" name="attachment" accept=".pdf,.doc,.docx" class="file-input">
+              <div class="file-upload-display" id="fileDisplay">
+                <span class="file-upload-icon">📎</span>
+                <span class="file-upload-text">Drop your resume here or click to browse</span>
+                <span class="file-upload-hint">PDF, DOC, DOCX — Max 5MB</span>
+              </div>
+            </div>
+          </div>
           <button type="submit" class="form-submit">Submit Application →</button>
         </form>
       </div>
@@ -2892,6 +2894,39 @@ if (toastOverlay) {
   });
 }
 
+// Resume file upload display
+const fileInput = document.getElementById('career-resume');
+const fileDisplay = document.getElementById('fileDisplay');
+function resetFileDisplay() {
+  if (fileDisplay) {
+    fileDisplay.classList.remove('has-file');
+    fileDisplay.querySelector('.file-upload-icon').textContent = '📎';
+    fileDisplay.querySelector('.file-upload-text').textContent = 'Drop your resume here or click to browse';
+    fileDisplay.querySelector('.file-upload-hint').textContent = 'PDF, DOC, DOCX — Max 5MB';
+  }
+}
+if (fileInput && fileDisplay) {
+  fileInput.addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) {
+        alert('File size must be under 5MB');
+        this.value = '';
+        return;
+      }
+      fileDisplay.classList.add('has-file');
+      fileDisplay.querySelector('.file-upload-icon').textContent = '✅';
+      fileDisplay.querySelector('.file-upload-text').textContent = file.name;
+      fileDisplay.querySelector('.file-upload-hint').textContent = (file.size / 1024 / 1024).toFixed(1) + ' MB';
+    } else {
+      fileDisplay.classList.remove('has-file');
+      fileDisplay.querySelector('.file-upload-icon').textContent = '📎';
+      fileDisplay.querySelector('.file-upload-text').textContent = 'Drop your resume here or click to browse';
+      fileDisplay.querySelector('.file-upload-hint').textContent = 'PDF, DOC, DOCX — Max 5MB';
+    }
+  });
+}
+
 // Careers form AJAX submission
 const careersForm = document.getElementById('careersForm');
 if (careersForm) {
@@ -2910,6 +2945,7 @@ if (careersForm) {
     .then(response => {
       if (response.ok) {
         careersForm.reset();
+      resetFileDisplay();
         toastOverlay.querySelector('h3').textContent = 'Application Received';
         toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
         toastOverlay.classList.add('show');
@@ -2918,6 +2954,7 @@ if (careersForm) {
       return response.text().then(text => {
         if (response.status >= 300 && response.status < 400) {
           careersForm.reset();
+      resetFileDisplay();
           toastOverlay.querySelector('h3').textContent = 'Application Received';
           toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
           toastOverlay.classList.add('show');
@@ -2928,6 +2965,7 @@ if (careersForm) {
     })
     .catch(err => {
       careersForm.reset();
+      resetFileDisplay();
       toastOverlay.querySelector('h3').textContent = 'Application Received';
       toastOverlay.querySelector('p').textContent = "Thank you for your interest in Beanz Consulting. We'll review your application and reach out if there's a fit.";
       toastOverlay.classList.add('show');
@@ -2938,6 +2976,8 @@ if (careersForm) {
     });
   });
 }
+
+
 </script>
 
 </body>
