@@ -1759,9 +1759,17 @@ button { font-family: inherit; cursor: pointer; border: none; }
   border-style: solid;
 }
 
-.file-upload-icon { font-size: 1.4rem; }
+.file-upload-icon { font-size: 1.6rem; }
 .file-upload-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
-.file-upload-hint { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+.file-upload-text strong { color: var(--gold-400); }
+.file-upload-hint { font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+
+.careers-submit {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
 /* ========================================
    FOOTER
@@ -2630,8 +2638,8 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
       <div class="careers-form-section reveal">
         <div class="careers-form-header">
-          <h3>Throw Your Hat In</h3>
-          <p>No open positions listed? We don't wait for openings — we keep the door open for the right people. Drop your details and tell us why you'd be a great fit.</p>
+          <h3>Submit Your Application</h3>
+          <p>All fields marked * are required. We'll be in touch.</p>
         </div>
         <form id="careersForm" aria-label="Career application form" action="https://formsubmit.co/ajax/connect@beanz.in" method="POST">
           <input type="hidden" name="_subject" value="Careers Application — Beanz Consulting">
@@ -2641,22 +2649,18 @@ button { font-family: inherit; cursor: pointer; border: none; }
           <div class="form-row">
             <div class="form-group">
               <label for="career-name">Full Name *</label>
-              <input type="text" id="career-name" name="Full Name" placeholder="Your full name" required>
+              <input type="text" id="career-name" name="Full Name" placeholder="e.g. Priya Sharma" required>
             </div>
             <div class="form-group">
               <label for="career-email">Email *</label>
-              <input type="email" id="career-email" name="Email" placeholder="name@email.com" required>
+              <input type="email" id="career-email" name="Email" placeholder="priya@example.com" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="career-phone">Phone</label>
-              <input type="tel" id="career-phone" name="Phone" placeholder="+91 XXXXX XXXXX">
-            </div>
-            <div class="form-group">
               <label for="career-track">I'm Interested In *</label>
               <select id="career-track" name="Track Interest" required>
-                <option value="" disabled selected>Select a track...</option>
+                <option value="" disabled selected>Select a role type...</option>
                 <option>Independent Advisor — GCC & Shared Services</option>
                 <option>Independent Advisor — Supply Chain</option>
                 <option>Independent Advisor — Operational Excellence</option>
@@ -2666,16 +2670,10 @@ button { font-family: inherit; cursor: pointer; border: none; }
                 <option>Other / Open Application</option>
               </select>
             </div>
-          </div>
-          <div class="form-row">
             <div class="form-group">
-              <label for="career-linkedin">LinkedIn Profile</label>
-              <input type="url" id="career-linkedin" name="LinkedIn" placeholder="https://linkedin.com/in/yourprofile">
-            </div>
-            <div class="form-group">
-              <label for="career-exp">Years of Experience *</label>
+              <label for="career-exp">Experience Level *</label>
               <select id="career-exp" name="Experience" required>
-                <option value="" disabled selected>Select...</option>
+                <option value="" disabled selected>Select experience...</option>
                 <option>Student / Fresh Graduate</option>
                 <option>1–3 Years</option>
                 <option>4–8 Years</option>
@@ -2685,21 +2683,25 @@ button { font-family: inherit; cursor: pointer; border: none; }
             </div>
           </div>
           <div class="form-group full" style="margin-bottom: 1rem;">
-            <label for="career-pitch">Why Beanz? *</label>
-            <textarea id="career-pitch" name="Why Beanz" placeholder="Tell us what sets you apart — what you've built, what drives you, and why Beanz Consulting excites you..." required></textarea>
+            <label for="career-linkedin">LinkedIn Profile</label>
+            <input type="url" id="career-linkedin" name="LinkedIn" placeholder="https://linkedin.com/in/yourprofile">
           </div>
           <div class="form-group full" style="margin-bottom: 1rem;">
-            <label for="career-resume">Attach Resume / CV</label>
+            <label for="career-pitch">Your Pitch *</label>
+            <textarea id="career-pitch" name="Your Pitch" placeholder="Tell us what drives you, what you've accomplished, and what excites you about Beanz. Skip the corporate-speak — be yourself." required></textarea>
+          </div>
+          <div class="form-group full" style="margin-bottom: 1rem;">
+            <label for="career-resume">Resume / CV</label>
             <div class="file-upload-wrapper">
               <input type="file" id="career-resume" name="attachment" accept=".pdf,.doc,.docx" class="file-input">
               <div class="file-upload-display" id="fileDisplay">
-                <span class="file-upload-icon">📎</span>
-                <span class="file-upload-text">Drop your resume here or click to browse</span>
-                <span class="file-upload-hint">PDF, DOC, DOCX — Max 5MB</span>
+                <span class="file-upload-icon">📄</span>
+                <span class="file-upload-text"><strong>Click to upload</strong> or drag & drop</span>
+                <span class="file-upload-hint">PDF, DOC, DOCX up to 5 MB</span>
               </div>
             </div>
           </div>
-          <button type="submit" class="form-submit">Submit Application →</button>
+          <button type="submit" class="form-submit careers-submit">SUBMIT APPLICATION →</button>
         </form>
       </div>
 
@@ -2900,9 +2902,9 @@ const fileDisplay = document.getElementById('fileDisplay');
 function resetFileDisplay() {
   if (fileDisplay) {
     fileDisplay.classList.remove('has-file');
-    fileDisplay.querySelector('.file-upload-icon').textContent = '📎';
-    fileDisplay.querySelector('.file-upload-text').textContent = 'Drop your resume here or click to browse';
-    fileDisplay.querySelector('.file-upload-hint').textContent = 'PDF, DOC, DOCX — Max 5MB';
+    fileDisplay.querySelector('.file-upload-icon').textContent = '📄';
+    fileDisplay.querySelector('.file-upload-text').innerHTML = '<strong>Click to upload</strong> or drag & drop';
+    fileDisplay.querySelector('.file-upload-hint').textContent = 'PDF, DOC, DOCX up to 5 MB';
   }
 }
 if (fileInput && fileDisplay) {
@@ -2920,9 +2922,9 @@ if (fileInput && fileDisplay) {
       fileDisplay.querySelector('.file-upload-hint').textContent = (file.size / 1024 / 1024).toFixed(1) + ' MB';
     } else {
       fileDisplay.classList.remove('has-file');
-      fileDisplay.querySelector('.file-upload-icon').textContent = '📎';
-      fileDisplay.querySelector('.file-upload-text').textContent = 'Drop your resume here or click to browse';
-      fileDisplay.querySelector('.file-upload-hint').textContent = 'PDF, DOC, DOCX — Max 5MB';
+      fileDisplay.querySelector('.file-upload-icon').textContent = '📄';
+      fileDisplay.querySelector('.file-upload-text').innerHTML = '<strong>Click to upload</strong> or drag & drop';
+      fileDisplay.querySelector('.file-upload-hint').textContent = 'PDF, DOC, DOCX up to 5 MB';
     }
   });
 }
