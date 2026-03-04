@@ -961,6 +961,23 @@ button { font-family: inherit; cursor: pointer; border: none; }
   border-color: var(--gold-200);
 }
 
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-500);
+  transition: color 0.3s, gap 0.3s;
+}
+
+.service-link:hover {
+  color: var(--navy-900);
+  gap: 0.5rem;
+}
+
 /* ========================================
    CASE STUDIES / RESULTS
    ======================================== */
@@ -2013,7 +2030,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
   <div class="hero-content">
     <div class="hero-grid">
       <div class="hero-left">
-        <h1>India's GCC Advisory Consultant.<br>Building Global Capability Centers That <em>Actually Work.</em></h1>
+        <h1>India's GCC Consultant. <em>Building Capabilities That Last.</em></h1>
         <p class="hero-sub">GCC setup, supply chain transformation, and operational excellence — we help Fortune 500 companies and high-growth enterprises build, scale, and run Global Capability Centers in India, with the practitioner's lens most advisory firms can't offer.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn-primary">Schedule a Consultation →</a>
@@ -2211,6 +2228,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
           <span class="service-tag">Talent Architecture</span>
           <span class="service-tag">Attrition Control</span>
         </div>
+        <a href="/gcc-advisory" class="service-link">Learn More →</a>
       </div>
 
       <div class="service-card reveal" style="animation-delay: 0.1s;">
@@ -2776,7 +2794,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
       <div class="footer-col">
         <h3>Services</h3>
         <ul>
-          <li><a href="#services">GCC Advisory</a></li>
+          <li><a href="/gcc-advisory">GCC Advisory</a></li>
           <li><a href="#services">Supply Chain</a></li>
           <li><a href="#services">Operational Excellence</a></li>
           <li><a href="#services">Executive Coaching</a></li>
