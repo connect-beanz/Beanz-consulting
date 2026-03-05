@@ -450,6 +450,14 @@ blockquote cite{font-size:.85rem;color:var(--gray-400);font-style:normal;display
   </div>
 </footer>
 
+<script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40);},{passive:true});
 const navToggle=document.getElementById('navToggle');
+const navLinks=document.getElementById('navLinks');
+navToggle.addEventListener('click',()=>navLinks.classList.toggle('active'));
+navLinks.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>navLinks.classList.remove('active'));});
+</script>
+
+</body>
+</html>

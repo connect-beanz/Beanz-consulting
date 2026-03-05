@@ -205,7 +205,7 @@ blockquote cite{font-size:.85rem;color:var(--gray-400);font-style:normal;display
 
 <!-- NAV -->
 <header>
-<nav class="nav" id="nav">
+<nav class="nav scrolled" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">Beanz <span>Consulting.</span></a>
     <ul class="nav-links" id="navLinks">
@@ -546,10 +546,19 @@ blockquote cite{font-size:.85rem;color:var(--gray-400);font-style:normal;display
   </div>
 </footer>
 
+<script>
 // Nav scroll
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
 
 // Mobile nav
 const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLi
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('active'));
+});
+</script>
+
+</body>
+</html>
