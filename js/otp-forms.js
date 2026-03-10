@@ -261,9 +261,9 @@
 
       // Note: we pass the already-stored OTP from token for server re-verification
       const payload = {
-        name: form.querySelector('input[name="name"], input[placeholder*="Name"]')?.value || '',
+        name: form.querySelector('input[name="Full Name"], input[name="name"], input[placeholder*="Name"]')?.value || '',
         email: emailField.value.trim(),
-        company: form.querySelector('input[name="company"], input[placeholder*="Company"]')?.value || '',
+        company: form.querySelector('input[name="Company"], input[name="company"], input[placeholder*="Company"]')?.value || '',
         service: form.querySelector('select')?.value || '',
         message: form.querySelector('textarea')?.value || '',
         otp: JSON.parse(atob(state.contact.token)).payload.split('|')[1],
@@ -424,4 +424,3 @@
   });
 
 })();
-
