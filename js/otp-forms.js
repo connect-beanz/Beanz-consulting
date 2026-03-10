@@ -370,8 +370,8 @@
         }
       }
 
-      const nameField = form.querySelector('input[name="name"], input[placeholder*="Name"]');
-      const linkedinField = form.querySelector('input[name="linkedin"], input[placeholder*="LinkedIn"]');
+      const nameField = form.querySelector('input[name="Full Name"], input[name="name"], input[placeholder*="Name"]');
+      const linkedinField = form.querySelector('input[name="LinkedIn"], input[name="linkedin"], input[placeholder*="LinkedIn"]');
       const pitchField = form.querySelector('textarea[name="pitch"], textarea[placeholder*="Pitch"], textarea');
       const interestSelect = form.querySelectorAll('select')[0];
       const experienceSelect = form.querySelectorAll('select')[1];
