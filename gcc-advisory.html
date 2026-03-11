@@ -622,7 +622,6 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 
   .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-900); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; z-index: 999; }
-  .nav-links.active { display: flex; }
   .nav-toggle { display: flex; }
   .gcc-hero { min-height: auto; padding: 8rem 0 3rem; }
   .gcc-stats { gap: 1.5rem; }
@@ -682,6 +681,20 @@ body { font-family: var(--font-body); }
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
 
+
+@media(max-width:480px){
+  :root{--section-pad:2.5rem}
+  .container{padding:0 1.2rem}
+  .gcc-hero{padding:6.5rem 0 3rem}
+  .gcc-hero h1{font-size:clamp(1.85rem,7vw,2.4rem)}
+  .gcc-hero-sub{font-size:.88rem}
+  .gcc-stats{gap:1rem}
+  .gcc-stat .num{font-size:1.5rem}
+  .service-grid{grid-template-columns:1fr!important}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-brand p{display:none}
+  .footer-bottom{flex-direction:column;gap:.5rem;text-align:center}
+}
 </style>
 </head>
 <body>
