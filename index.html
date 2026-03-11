@@ -162,16 +162,6 @@ button{font-family:inherit;cursor:pointer;border:none}
 .rec-verify:hover{opacity:.7}
 .rec-verify svg{width:9px;height:9px;fill:#0a66c2}
 
-/* ── DOWNLOAD CTA ─────────────────────────────────────────────────────── */
-.download{padding:3.25rem 0;background:var(--gold-500);position:relative;overflow:hidden}
-.download::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:60px 60px}
-.download-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.download-text p{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.68);margin-bottom:.45rem}
-.download-text h2{font-family:var(--font-display);font-size:clamp(1.3rem,2.5vw,1.9rem);color:var(--white);line-height:1.25;max-width:520px}
-.download-form{display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap}
-.download-input{padding:.8rem 1.15rem;border-radius:4px;border:1px solid rgba(255,255,255,.25);font-family:var(--font-body);font-size:.88rem;background:rgba(255,255,255,.18);color:var(--white);min-width:230px;outline:none}
-.download-input::placeholder{color:rgba(255,255,255,.55)}
-.download-input:focus{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.5)}
 
 /* ── CONTACT ─────────────────────────────────────────────────────────── */
 .contact{padding:var(--section-pad) 0;background:var(--white);border-top:1px solid var(--gray-200)}
@@ -238,8 +228,6 @@ button{font-family:inherit;cursor:pointer;border:none}
   .results-nums{grid-template-columns:repeat(2,1fr)}
   .rec-grid{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr;gap:3rem}
-  .download-inner{flex-direction:column;text-align:center}
-  .download-form{justify-content:center}
   .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
 }
 @media(max-width:1024px){
@@ -278,8 +266,6 @@ button{font-family:inherit;cursor:pointer;border:none}
   .result-num{padding:1.75rem 1rem}
   .result-num-big{font-size:2.25rem}
   .rec{padding:1.5rem}
-  .download-input{min-width:100%}
-  .download-form{flex-direction:column;width:100%}
   .voice-card{padding:1.75rem}
 
   .footer-brand p{display:none}
@@ -504,22 +490,6 @@ button{font-family:inherit;cursor:pointer;border:none}
   </div>
 </section>
 
-<!-- ⑥  DOWNLOAD CTA -->
-<div class="download">
-  <div class="container">
-    <div class="download-inner">
-      <div class="download-text reveal">
-        <p>Free Guide — BEANZ ACCORD™</p>
-        <h2>7 Signs Your GBS Vendor May Be Overcharging You</h2>
-      </div>
-      <div class="download-form reveal" style="animation-delay:.1s">
-        <input class="download-input" type="email" placeholder="Your work email" aria-label="Email for guide">
-        <button class="btn btn-navy" id="downloadBtn" type="button">Send Me the Guide →</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <!-- ⑦  CONTACT -->
 <section class="contact" id="contact">
@@ -637,36 +607,6 @@ links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.clas
 // Reveal
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-// Guide download
-const downloadBtn=document.getElementById('downloadBtn');
-if(downloadBtn){
-  downloadBtn.addEventListener('click',async()=>{
-    const input=downloadBtn.closest('.download-form').querySelector('.download-input');
-    const email=input.value.trim();
-    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-      input.style.borderColor='rgba(255,100,100,.7)';
-      input.placeholder='Please enter a valid email';
-      setTimeout(()=>{input.style.borderColor='';input.placeholder='Your work email';},2500);
-      return;
-    }
-    downloadBtn.disabled=true;
-    downloadBtn.textContent='Sending…';
-    try{
-      const r=await fetch('/api/send-guide',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
-      const d=await r.json();
-      if(d.success){
-        downloadBtn.closest('.download-form').innerHTML='<p style="color:#fff;font-weight:600;font-size:.95rem;">✓ Check your inbox — guide is on its way.</p>';
-      }else{
-        downloadBtn.disabled=false;
-        downloadBtn.textContent='Send Me the Guide →';
-        input.placeholder=d.error||'Something went wrong, try again';
-      }
-    }catch{
-      downloadBtn.disabled=false;
-      downloadBtn.textContent='Send Me the Guide →';
-    }
-  });
-}
 // Contact form
 const form=document.getElementById('contactForm'),toastEl=document.getElementById('toast'),toastClose=document.getElementById('toastClose');
 form.addEventListener('submit',async e=>{
@@ -678,5 +618,3 @@ form.addEventListener('submit',async e=>{
 });
 toastClose.addEventListener('click',()=>toastEl.classList.remove('show'));
 toastEl.addEventListener('click',e=>{if(e.target===toastEl)toastEl.classList.remove('show')});
-// Download CTA
-document.get
