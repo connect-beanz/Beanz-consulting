@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Viraj Mehta — Founder, Beanz Consulting</title>
-<meta name="description" content="Viraj Mehta built Kraft Heinz's first GCC from scratch — 1,000+ capacity, under 5% attrition. 20+ years at P&G, General Mills, Kraft Heinz. Founder of Beanz Consulting.">
+<meta name="description" content="Viraj Mehta built Kraft Heinz's first GCC from scratch — 1,000+ capacity, under 5% attrition. 20+ years at P&G, General Mills and Kraft Heinz. Founder, Beanz.">
 
 <meta name="robots" content="index, follow">
 <meta property="og:site_name" content="Beanz Consulting">
@@ -140,10 +140,6 @@ button{font-family:inherit;cursor:pointer;border:none}
 .rec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .rec-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; padding: 2rem 2rem 1.75rem; display: flex; flex-direction: column; transition: box-shadow 0.3s, transform 0.3s; }
 .rec-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.09); transform: translateY(-3px); }
-.rec-li-badge { display: flex; align-items: center; gap: 0.45rem; margin-bottom: 1.25rem; }
-.rec-li-icon { width: 18px; height: 18px; border-radius: 3px; background: #0a66c2; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.rec-li-icon svg { width: 11px; height: 11px; fill: #fff; }
-.rec-li-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); }
 .rec-rel { font-size: 0.68rem; color: var(--gray-400); margin-left: auto; font-style: italic; background: var(--white); padding: 0.2rem 0.55rem; border-radius: 100px; border: 1px solid var(--gray-200); white-space: nowrap; }
 .rec-body { font-size: 0.9rem; line-height: 1.85; color: var(--gray-600); margin-bottom: 1.5rem; font-style: italic; flex: 1; }
 .rec-body::before { content: '\201C'; font-family: var(--font-display); font-size: 1.4rem; color: var(--gold-400); line-height: 0; vertical-align: -0.4rem; margin-right: 0.15rem; }
@@ -153,11 +149,6 @@ button{font-family:inherit;cursor:pointer;border:none}
 .rec-avatar span { font-family: var(--font-display); font-size: 1rem; color: var(--gold-400); }
 .rec-name { font-size: 0.85rem; font-weight: 700; color: var(--navy-800); }
 .rec-role { font-size: 0.72rem; color: var(--gray-500); margin-top: 0.15rem; line-height: 1.4; }
-.rec-verify { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.5rem; font-size: 0.68rem; font-weight: 600; color: #0a66c2; letter-spacing: 0.02em; transition: opacity 0.2s; }
-.rec-verify:hover { opacity: 0.75; }
-.rec-verify svg { width: 9px; height: 9px; fill: #0a66c2; }
-@media(max-width:1024px){ .rec-grid { grid-template-columns: 1fr; gap: 1rem; } }
-@media(max-width:480px){ .rec-card { padding: 1.5rem; } }
 .about-cta{padding:5rem 0;background:var(--gold-500);position:relative;overflow:hidden}
 .about-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:60px 60px}
 .about-cta-inner{position:relative;z-index:2;text-align:center;max-width:680px;margin:0 auto}
@@ -165,22 +156,6 @@ button{font-family:inherit;cursor:pointer;border:none}
 .about-cta p{font-size:1rem;color:rgba(255,255,255,.8);margin-bottom:2.5rem;line-height:1.75}
 .about-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
-/* FOOTER */
-.footer{background:var(--navy-900);padding:4rem 0 2.25rem;border-top:1px solid rgba(255,255,255,.05)}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem}
-.footer-brand-logo{font-family:var(--font-display);font-size:1.7rem;color:var(--white);margin-bottom:1rem;display:block}
-.footer-brand-logo span{color:var(--gold-400)}
-.footer-brand p{font-size:.85rem;color:rgba(255,255,255,.35);line-height:1.75;max-width:300px;margin-bottom:1.5rem}
-.footer-accord-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(200,151,62,.1);border:1px solid rgba(200,151,62,.2);padding:.4rem .85rem;border-radius:4px;font-size:.7rem;font-weight:700;color:var(--gold-300);letter-spacing:.08em;text-transform:uppercase}
-.footer-col h3{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
-.footer-col ul a{font-size:.875rem;color:rgba(255,255,255,.38);transition:color .3s}
-.footer-col ul a:hover{color:var(--gold-400)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
-.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.22)}
-.footer-bottom-links{display:flex;gap:1.5rem}
-.footer-bottom-links a{font-size:.78rem;color:rgba(255,255,255,.22);transition:color .3s}
-.footer-bottom-links a:hover{color:var(--gold-400)}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -191,9 +166,8 @@ button{font-family:inherit;cursor:pointer;border:none}
   .founder-photo{aspect-ratio:4/5;object-position:center bottom;max-height:280px}
   .philosophy-inner{grid-template-columns:1fr;gap:3rem}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.25rem}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
 }
-@media(max-width:768px){
+@media(max-width:768px){.rec-grid{grid-template-columns:1fr}
   .why-beanz-grid{grid-template-columns:1fr!important}
   [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
   .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999}
@@ -202,8 +176,6 @@ button{font-family:inherit;cursor:pointer;border:none}
   .about-hero{padding:7rem 0 3.5rem}
   .timeline-item{grid-template-columns:1fr}
   .timeline-period{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);padding:1rem 1.5rem}
-  .footer-grid{grid-template-columns:1fr;gap:2rem}
-  .footer-bottom{flex-direction:column;gap:.5rem;text-align:center}
   .about-cta-btns{flex-direction:column;align-items:center}
 }
 @media(max-width:480px){
@@ -213,9 +185,27 @@ button{font-family:inherit;cursor:pointer;border:none}
   .stat-card{padding:1.75rem 1rem}
   .stat-card-num{font-size:2.25rem}
   .founder-badge{grid-template-columns:1fr 1fr}
-  .footer-brand p{display:none}
 }
-</style>
+
+
+  /* ── FOOTER (inlined) ── */
+  
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.footer-brand{grid-column:1/-1}}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.75rem}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
+
+  /* RECOMMENDATIONS */
+  .recommendations{padding:var(--section-pad) 0;background:var(--gray-50);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--gray-200);border:1px solid var(--gray-200)}
+  .rec{background:var(--white);padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.75rem}
+  .rec-rel{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-500);margin-bottom:.75rem}
+  .rec-quote{font-family:var(--font-display);font-size:.98rem;color:var(--navy-800);line-height:1.75;font-style:italic}
+  .rec-badge{display:flex;align-items:center;gap:.85rem;padding-top:1.25rem;border-top:1px solid var(--gray-100)}
+  .rec-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy-800);color:var(--gold-400);font-family:var(--font-display);font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .rec-name{font-size:.85rem;font-weight:700;color:var(--navy-800)}
+  .rec-role{font-size:.72rem;color:var(--gray-500);margin-top:.15rem;line-height:1.4}
+    .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0a1628;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d4a84f}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d4a84f}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d4a84f}
+  </style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -240,6 +230,14 @@ button{font-family:inherit;cursor:pointer;border:none}
   "knowsAbout": ["Global Capability Centers", "GBS Vendor Audits", "Supply Chain Management", "Leadership Development", "Operational Excellence"]
 }
 </script>
+<link rel="stylesheet" href="/css/footer.css">
+  <meta property="og:title" content="About Viraj Mehta — Founder, Beanz Consulting">
+  <meta property="og:url" content="https://www.beanz.in/about.html">
+  <meta property="og:image" content="https://www.beanz.in/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Viraj Mehta — Founder, Beanz Consulting">
+  <meta name="twitter:description" content="Viraj Mehta built Kraft Heinz's first GCC from scratch — 1,000+ capacity, under 5% attrition. 20+ years at P&G, General Mills and Kraft Heinz. Founder, Beanz Consulting.">
+  <meta name="twitter:image" content="https://www.beanz.in/og-image.jpg">
 </head>
 <body>
 
@@ -349,7 +347,7 @@ button{font-family:inherit;cursor:pointer;border:none}
             <div class="founder-cred-row"><span class="icon">🏢</span> Ex — Kraft Heinz · General Mills · Procter &amp; Gamble</div>
             <div class="founder-cred-row"><span class="icon">🧭</span> Gallup Certified Strengths Coach (CliftonStrengths)</div>
             <div class="founder-cred-row"><span class="icon">📊</span> APICS CPIM Certified — Supply Chain &amp; Operations</div>
-            <div class="founder-cred-row"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/virajmehta21/" style="color:var(--gold-500);font-weight:600" target="_blank" rel="noopener">Connect on LinkedIn →</a></div>
+            <div class="founder-cred-row"><span class="icon">🔗</span> Connect on LinkedIn →</div>
           </div>
         </div>
       </div>
@@ -454,61 +452,57 @@ button{font-family:inherit;cursor:pointer;border:none}
 </section>
 
 <!-- LINKEDIN RECOMMENDATIONS -->
+<!-- RECOMMENDATIONS -->
 <section class="recommendations">
   <div class="container">
     <div class="rec-header reveal">
-      <div class="label label--center">LinkedIn Recommendations</div>
-      <h2 class="title" style="text-align:center;max-width:580px;margin-left:auto;margin-right:auto;">What senior leaders <em>say publicly.</em></h2>
+      <div class="label" style="justify-content:center">What Senior Leaders Say</div>
+      <h2 class="section-title" style="text-align:center;max-width:580px;margin:0 auto 3rem">Recommendations from<br><em>people who worked with Viraj directly.</em></h2>
     </div>
     <div class="rec-grid">
-      <div class="rec-card reveal">
-        <div class="rec-li-badge">
-          <div class="rec-li-icon"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
-          <span class="rec-li-label">LinkedIn Recommendation</span>
-          <span class="rec-rel">Viraj's mentor at P&G</span>
+
+      <div class="rec reveal">
+        <div class="rec-body">
+          <div class="rec-rel">Viraj's mentor at P&amp;G</div>
+          <p class="rec-quote">"I've known and worked with Viraj during our time together in Procter &amp; Gamble, during his early career. He was young, full of energy, curious, and eager to learn. He struck me as one of those who had the potential to one day grow and mature to become a terrific leader. I am very pleased to see that he has accomplished that and wish him the very best in developing the next generation of leaders."</p>
         </div>
-        <p class="rec-body">I've known and worked with Viraj during our time together in Procter &amp; Gamble, during his early career. He was young, full of energy, curious, and eager to learn at that time. He struck me as one of those who had that potential to one day grow and mature to become a terrific leader. I am very pleased to see that he has accomplished that and wish him the very best in developing the next generation of leaders.</p>
-        <div class="rec-attr">
-          <div class="rec-avatar"><span>J</span></div>
-          <div>
+        <div class="rec-badge">
+          <div class="rec-avatar">J</div>
+          <div class="rec-info">
             <div class="rec-name">Jet Antonio</div>
             <div class="rec-role">Managing Partner, Synfiny Advisors</div>
-            <a href="https://www.linkedin.com/in/virajmehta21/" target="_blank" rel="noopener" class="rec-verify"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Verify on LinkedIn →</a>
           </div>
         </div>
       </div>
-      <div class="rec-card reveal" style="animation-delay:0.1s">
-        <div class="rec-li-badge">
-          <div class="rec-li-icon"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
-          <span class="rec-li-label">LinkedIn Recommendation</span>
-          <span class="rec-rel">Managed Viraj directly</span>
+
+      <div class="rec reveal" style="animation-delay:.1s">
+        <div class="rec-body">
+          <div class="rec-rel">Managed Viraj directly at P&amp;G</div>
+          <p class="rec-quote">"Viraj is a highly knowledgeable professional whose working experience allowed him to gain pockets of excellence in leading improvements and breakthroughs in supply chain."</p>
         </div>
-        <p class="rec-body">Viraj is a highly knowledgeable professional whose working experience allowed him to gain pockets of excellence in leading improvements and breakthroughs in supply chain.</p>
-        <div class="rec-attr">
-          <div class="rec-avatar"><span>J</span></div>
-          <div>
+        <div class="rec-badge">
+          <div class="rec-avatar">J</div>
+          <div class="rec-info">
             <div class="rec-name">Jen Aberilla</div>
             <div class="rec-role">Director, Regional Supply Network Operations · Procter &amp; Gamble</div>
-            <a href="https://www.linkedin.com/in/virajmehta21/" target="_blank" rel="noopener" class="rec-verify"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Verify on LinkedIn →</a>
           </div>
         </div>
       </div>
-      <div class="rec-card reveal" style="animation-delay:0.2s">
-        <div class="rec-li-badge">
-          <div class="rec-li-icon"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
-          <span class="rec-li-label">LinkedIn Recommendation</span>
-          <span class="rec-rel">Viraj's mentor at P&G</span>
+
+      <div class="rec reveal" style="animation-delay:.2s">
+        <div class="rec-body">
+          <div class="rec-rel">Viraj's mentor at P&amp;G</div>
+          <p class="rec-quote">"Viraj is a mature and seasoned professional with deep mastery in supply chain and operations. He is entrepreneurial in finding solutions and has the ability to build and lead high-performing teams across cultures and geographies."</p>
         </div>
-        <p class="rec-body">Viraj is a very mature and well balanced person. Develops deep mastery of what ever he does. Very entrepreneurial in his approach in finding business solutions. It was always enriching to work with him.</p>
-        <div class="rec-attr">
-          <div class="rec-avatar"><span>R</span></div>
-          <div>
+        <div class="rec-badge">
+          <div class="rec-avatar">R</div>
+          <div class="rec-info">
             <div class="rec-name">Rahul Pundir</div>
             <div class="rec-role">Chief Supply Chain Officer, Bajaj Electricals · Former Japan Executive Officer, Procter &amp; Gamble</div>
-            <a href="https://www.linkedin.com/in/virajmehta21/" target="_blank" rel="noopener" class="rec-verify"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Verify on LinkedIn →</a>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -530,46 +524,30 @@ button{font-family:inherit;cursor:pointer;border:none}
 </main>
 
 <footer class="footer">
-  <div class="container">
+  <div class="footer-container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">Beanz <span>Consulting.</span></a>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
-          <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
-          <li><a href="/services.html#service-03">Supply Chain &amp; OpEx</a></li>
-          <li><a href="/services.html#service-04">Leadership &amp; Transformation</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/about.html">About the Founder</a></li>
-          <li><a href="/results.html">Case Studies</a></li>
-          <li><a href="/insights.html">Insights</a></li>
-          <li><a href="/careers.html">Careers</a></li>
-          <li><a href="/#contact">Contact</a></li>
-          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
+      <div class="footer-brand"><a href="/" class="footer-logo">Beanz <span>Consulting.</span></a></div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
+        <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
+        <li><a href="/service-supply-chain.html">Supply Chain &amp; OpEx</a></li>
+        <li><a href="/service-leadership.html">Leadership &amp; Transformation</a></li>
+        <li><a href="/service-capability.html">Capability Building</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="/about.html">About the Founder</a></li>
+        <li><a href="/results.html">Case Studies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+      </ul></div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="mailto:connect@beanz.in">connect&#64;beanz.in</a>
-      </div>
+      <div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="mailto:connect@beanz.in">connect&#64;beanz.in</a></div>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/cookie-banner.js" defer></script>
-<script>
-document.documentElement.classList.add('js-ready');
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelecto
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.j
