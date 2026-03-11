@@ -66,6 +66,13 @@
   </url>
 
   <!-- SEO / Content pages -->
+
+  <url>
+    <loc>https://www.beanz.in/gbs-vendor-audit-5-signs</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.beanz.in/gbs-vendor-audit-7-signs</loc>
     <lastmod>2026-03-11</lastmod>
