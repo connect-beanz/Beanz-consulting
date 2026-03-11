@@ -134,77 +134,18 @@ blockquote cite{font-size:.85rem;color:var(--gray-400);font-style:normal;display
 .related-link:hover{border-color:var(--gold-400);box-shadow:0 2px 12px rgba(0,0,0,.06);}
 .related-link .rl-tag{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-500);margin-bottom:.5rem;}
 .related-link .rl-title{font-family:var(--font-display);font-size:1rem;color:var(--gray-800);line-height:1.35;}
-.footer{background:var(--navy-900);padding:3.5rem 0 2rem;border-top:1px solid rgba(255,255,255,.05);}
-.footer .container{width:var(--container-wide);margin:0 auto;}
-.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
-.footer-logo{font-family:var(--font-display);font-size:1.7rem;color:var(--white);margin-bottom:1rem;display:inline-block;}
-.footer-logo span{color:var(--gold-400);}
-.footer-brand p{font-size:.88rem;color:rgba(255,255,255,.35);line-height:1.7;max-width:300px;}
-.footer-col h3{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem;}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
-.footer-col ul a{font-size:.88rem;color:rgba(255,255,255,.4);transition:color .2s;}
-.footer-col ul a:hover{color:var(--gold-400);}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}
-.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.2);}
-@media(max-width:768px){
-  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999;}
-  .nav-links.active{display:flex;}
-  .nav-toggle{display:flex;}
-  .article-hero{padding:7rem 0 3rem;}
-  .cta-block{padding:2rem 1.5rem;}
-  .footer-grid{grid-template-columns:1fr;gap:2rem;}
-  .footer-bottom{flex-direction:column;gap:.5rem;text-align:center;}
-  .related-links{flex-direction:column;}
-  .data-table{font-size:.82rem;}
-}
-
-/* ── DESIGN TOKENS ── */
-:root {
-  --navy-900:#0a1628; --navy-800:#0f2240; --navy-700:#162d50;
-  --gold-500:#c8973e; --gold-400:#d4a84f; --gold-300:#e0be72;
-  --white:#ffffff;
-  --gray-50:#f8f9fb; --gray-100:#f0f2f5; --gray-200:#e2e5eb;
-  --gray-400:#9aa2b1; --gray-500:#6b7589; --gray-600:#4a5568; --gray-700:#2d3748;
-  --font-display:'DM Serif Display',Georgia,serif;
-  --font-body:'Plus Jakarta Sans',-apple-system,sans-serif;
-}
-body { font-family: var(--font-body); }
-
-/* ── NAV ── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#0f2240;border-bottom:2px solid rgba(200,151,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
-.nav-inner{width:min(1200px,90vw);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:var(--font-display);font-size:1.45rem;color:var(--white);text-decoration:none}
-.nav-logo span{color:var(--gold-400)}
-.nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
-.nav-links a{font-size:.85rem;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.02em;transition:color .3s;position:relative;text-decoration:none}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold-400);transition:width .3s}
-.nav-links a:hover{color:var(--white)}.nav-links a:hover::after,.nav-links a.active::after{width:100%}
-.nav-links a.active{color:var(--white)}
-.nav-cta{background:var(--gold-500)!important;color:var(--white)!important;padding:.55rem 1.4rem!important;border-radius:4px;font-weight:700!important;font-size:.78rem!important;letter-spacing:.06em!important;text-transform:uppercase}
-.nav-cta::after{display:none!important}.nav-cta:hover{background:var(--gold-400)!important}
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;cursor:pointer}
-.nav-toggle span{width:24px;height:2px;background:var(--white);border-radius:2px}
-@media(max-width:768px){
-  .nav-links{display:none;position:fixed;inset:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999}
-  .nav-links.open{display:flex}
-  .nav-toggle{display:flex}
-}
-
-/* ── FOOTER ── */
 .footer{background:var(--navy-900);padding:4rem 0 2.25rem;border-top:1px solid rgba(255,255,255,.05)}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:4rem;margin-bottom:3rem}
-.footer-logo{font-family:var(--font-display);font-size:1.65rem;color:var(--white);margin-bottom:.85rem;display:block;text-decoration:none}
+.footer-logo{font-family:var(--font-display);font-size:1.7rem;color:var(--white);margin-bottom:1rem;display:block}
 .footer-logo span{color:var(--gold-400)}
-.footer-brand p{font-size:.83rem;color:rgba(255,255,255,.33);line-height:1.75;max-width:300px;margin-bottom:1.25rem}
-.footer-accord-badge{display:inline-flex;align-items:center;background:rgba(200,151,62,.1);border:1px solid rgba(200,151,62,.2);padding:.35rem .8rem;border-radius:4px;font-size:.65rem;font-weight:700;color:var(--gold-300);letter-spacing:.08em;text-transform:uppercase}
-.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
-.footer-col ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:.6rem}
-.footer-col ul a{font-size:.85rem;color:rgba(255,255,255,.35);transition:color .3s;text-decoration:none}
+.footer-col h4{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.footer-col ul a{font-size:.875rem;color:rgba(255,255,255,.38);transition:color .3s}
 .footer-col ul a:hover{color:var(--gold-400)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
 .footer-bottom p{font-size:.75rem;color:rgba(255,255,255,.3)}
 .footer-links{display:flex;gap:1.5rem}
-.footer-links a{font-size:.75rem;color:rgba(255,255,255,.2);transition:color .3s;text-decoration:none}
+.footer-links a{font-size:.75rem;color:rgba(255,255,255,.3);transition:color .3s}
 .footer-links a:hover{color:var(--gold-400)}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
@@ -445,7 +386,7 @@ body { font-family: var(--font-body); }
       <div class="author-name">Viraj Mehta — Founder, Beanz Consulting</div>
       <p>Viraj built Kraft Heinz's first-ever GCC in Ahmedabad from a blank page — 1,000+ capacity, 20+ Centres of Excellence, under 5% attrition against an industry average of 20%. An IIT Bombay alumnus with 20+ years at Kraft Heinz, P&G, and General Mills, he now advises Fortune 500 companies and high-growth enterprises through Beanz Consulting.<br><br>
       <a href="/gcc-advisory.html">GCC Advisory Services →</a>&nbsp;&nbsp;
-      <a href="/cdn-cgi/l/email-protection#abc8c4c5c5cec8dfebc9cecac5d185c2c5" style="color:var(--gray-400)">connect&#64;beanz.in</a></p>
+      <a href="mailto:connect@beanz.in" style="color:var(--gray-400)">connect&#64;beanz.in</a></p>
     </div>
   </div>
 
@@ -469,17 +410,16 @@ body { font-family: var(--font-body); }
 
 </article>
 
-<footer class="footer" aria-label="Site footer">
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="footer-logo">Beanz <span>Consulting.</span></a>
-        <p>Independent. Evidence-based. Designed to make itself unnecessary.</p>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit &mdash; ACCORD&#8482;</a></li>
+          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
           <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
           <li><a href="/services.html#service-03">Supply Chain &amp; OpEx</a></li>
           <li><a href="/services.html#service-04">Leadership &amp; Transformation</a></li>
@@ -498,10 +438,10 @@ body { font-family: var(--font-body); }
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD&#8482; is a proprietary methodology. All rights reserved.</p>
+      <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
       <div class="footer-links">
         <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/cdn-cgi/l/email-protection#f5969a9b9b909681b59790949b8fdb9c9b">connect&#64;beanz.in</a>
+        <a href="mailto:connect@beanz.in">connect&#64;beanz.in</a>
       </div>
     </div>
   </div>

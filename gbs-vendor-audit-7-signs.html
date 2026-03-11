@@ -172,16 +172,14 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 /* ── FOOTER ──────────────────────────────────────────────────────────── */
 .footer{background:var(--navy-900);padding:4rem 0 2.25rem;border-top:1px solid rgba(255,255,255,.05)}
-.footer-grid{width:var(--container-wide);margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:4rem;margin-bottom:3rem}
-.footer-logo{font-family:var(--font-display);font-size:1.65rem;color:var(--white);margin-bottom:.85rem;display:block}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:4rem;margin-bottom:3rem}
+.footer-logo{font-family:var(--font-display);font-size:1.7rem;color:var(--white);margin-bottom:1rem;display:block}
 .footer-logo span{color:var(--gold-400)}
-.footer-brand p{font-size:.83rem;color:rgba(255,255,255,.33);line-height:1.75;max-width:300px;margin-bottom:1.25rem}
-.footer-accord-badge{display:inline-flex;align-items:center;background:rgba(200,151,62,.1);border:1px solid rgba(200,151,62,.2);padding:.35rem .8rem;border-radius:4px;font-size:.65rem;font-weight:700;color:var(--gold-300);letter-spacing:.08em;text-transform:uppercase}
-.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
-.footer-col ul a{font-size:.85rem;color:rgba(255,255,255,.35);transition:color .3s}
+.footer-col h4{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.footer-col ul a{font-size:.875rem;color:rgba(255,255,255,.38);transition:color .3s}
 .footer-col ul a:hover{color:var(--gold-400)}
-.footer-bottom{width:var(--container-wide);margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
 .footer-bottom p{font-size:.75rem;color:rgba(255,255,255,.3)}
 .footer-links{display:flex;gap:1.5rem}
 .footer-links a{font-size:.75rem;color:rgba(255,255,255,.3);transition:color .3s}
@@ -428,7 +426,7 @@ button{font-family:inherit;cursor:pointer;border:none}
         <h3>The BEANZ ACCORD™ GBS Vendor Audit</h3>
         <p>A structured, five-week independent review designed for exactly the situations described in this article. Fixed-fee. No vendor access required. Evidence-based findings with an immediately actionable roadmap.</p>
         <a href="/gbs-vendor-audit.html" class="btn-gold">Explore BEANZ ACCORD™ →</a>
-        <p class="cta-note">Or start with a 30-minute discovery call: <a href="/cdn-cgi/l/email-protection#197a7677777c7a6d597b7c787763377077">connect&#64;beanz.in</a></p>
+        <p class="cta-note">Or start with a 30-minute discovery call: <a href="mailto:connect@beanz.in">connect&#64;beanz.in</a></p>
       </div>
     </div>
 
@@ -447,37 +445,38 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="/" class="footer-logo">Beanz <span>Consulting.</span></a>
-      <p>Independent. Evidence-based. Designed to make itself unnecessary.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Beanz <span>Consulting.</span></a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
+          <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
+          <li><a href="/services.html#service-03">Supply Chain &amp; OpEx</a></li>
+          <li><a href="/services.html#service-04">Leadership &amp; Transformation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About the Founder</a></li>
+          <li><a href="/results.html">Case Studies</a></li>
+          <li><a href="/insights.html">Insights</a></li>
+          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
-        <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
-        <li><a href="/services.html#service-03">Supply Chain &amp; OpEx</a></li>
-        <li><a href="/services.html#service-04">Leadership &amp; Transformation</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="/about.html">About the Founder</a></li>
-        <li><a href="/results.html">Case Studies</a></li>
-        <li><a href="/insights.html">Insights</a></li>
-        <li><a href="/careers.html">Careers</a></li>
-        <li><a href="/#contact">Contact</a></li>
-        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/cdn-cgi/l/email-protection#a3c0cccdcdc6c0d7e3c1c6c2cdd98dcacd">connect&#64;beanz.in</a>
+    <div class="footer-bottom">
+      <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="mailto:connect@beanz.in">connect&#64;beanz.in</a>
+      </div>
     </div>
   </div>
 </footer>

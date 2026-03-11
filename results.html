@@ -91,8 +91,8 @@ button{font-family:inherit;cursor:pointer;border:none}
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat-item{text-align:center;padding:1.25rem 1rem;position:relative}
 .stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:var(--gray-200)}
-.stat-big{font-family:var(--font-display);font-size:2.25rem;color:var(--navy-800);line-height:1;display:block;margin-bottom:.35rem}
-.stat-big em{color:var(--gold-500);font-style:normal}
+.stat-big{font-family:var(--font-display);font-size:2.25rem;color:var(--gold-500);line-height:1;display:block;margin-bottom:.35rem}
+
 .stat-desc{font-size:.72rem;color:var(--gray-400);font-weight:500;letter-spacing:.03em}
 
 /* ── CASES SECTION ── */
@@ -153,7 +153,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .case-stat-block:not(:last-child)::after{content:'';position:absolute;right:0;top:18%;height:64%;width:1px;background:rgba(255,255,255,.06)}
 .stat-num{font-family:var(--font-display);font-size:1.35rem;color:var(--gold-400);display:block;line-height:1;margin-bottom:.22rem}
 .case-card--featured .stat-num{font-size:1.55rem}
-.stat-desc{font-size:.65rem;color:rgba(255,255,255,.26);font-weight:500;line-height:1.35}
+.case-stat-desc{font-size:.65rem;color:rgba(255,255,255,.26);font-weight:500;line-height:1.35}
 
 /* ── AGGREGATE BAR ── */
 .results-bar{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden}
@@ -270,20 +270,20 @@ button{font-family:inherit;cursor:pointer;border:none}
   <div class="container">
     <div class="stats-row">
       <div class="stat-item reveal">
-        <span class="stat-big">$<em>6M</em>+</span>
+        <span class="stat-big">$6M+</span>
         <span class="stat-desc">Savings Delivered</span>
       </div>
       <div class="stat-item reveal" style="animation-delay:.07s">
-        <span class="stat-big"><em>1,000</em>+</span>
+        <span class="stat-big">1,000+</span>
         <span class="stat-desc">GCC Capacity Built</span>
       </div>
       <div class="stat-item reveal" style="animation-delay:.14s">
-        <span class="stat-big"><em>10,000</em>+</span>
-        <span class="stat-desc">Employees Impacted</span>
+        <span class="stat-big">10,000+</span>
+        <span class="case-stat-desc">Employees Impacted</span>
       </div>
       <div class="stat-item reveal" style="animation-delay:.21s">
-        <span class="stat-big"><em>20</em>+</span>
-        <span class="stat-label">Global Clients Advised</span>
+        <span class="stat-big">20+</span>
+        <span class="case-stat-desc">Global Clients Advised</span>
       </div>
     </div>
   </div>
@@ -338,9 +338,9 @@ button{font-family:inherit;cursor:pointer;border:none}
           </div>
         </div>
         <div class="case-stats-row">
-          <div class="case-stat-block"><span class="stat-num">$2.4M</span><span class="stat-desc">Annual Leakage Found</span></div>
-          <div class="case-stat-block"><span class="stat-num">$1.8M</span><span class="stat-desc">Hard Savings Realised</span></div>
-          <div class="case-stat-block"><span class="stat-num">5 Weeks</span><span class="stat-desc">Fixed-Fee Engagement</span></div>
+          <div class="case-stat-block"><span class="stat-num">$2.4M</span><span class="case-stat-desc">Annual Leakage Found</span></div>
+          <div class="case-stat-block"><span class="stat-num">$1.8M</span><span class="case-stat-desc">Hard Savings Realised</span></div>
+          <div class="case-stat-block"><span class="stat-num">5 Weeks</span><span class="case-stat-desc">Fixed-Fee Engagement</span></div>
         </div>
       </div>
 
@@ -367,9 +367,9 @@ button{font-family:inherit;cursor:pointer;border:none}
           </div>
         </div>
         <div class="case-stats-row">
-          <div class="case-stat-block"><span class="stat-num">Fortune 500</span><span class="stat-desc">Client Profile</span></div>
-          <div class="case-stat-block"><span class="stat-num">Multi-sector</span><span class="stat-desc">Across Industries</span></div>
-          <div class="case-stat-block"><span class="stat-num">End-to-End</span><span class="stat-desc">Strategy to Deployment</span></div>
+          <div class="case-stat-block"><span class="stat-num">Fortune 500</span><span class="case-stat-desc">Client Profile</span></div>
+          <div class="case-stat-block"><span class="stat-num">Multi-sector</span><span class="case-stat-desc">Across Industries</span></div>
+          <div class="case-stat-block"><span class="stat-num">End-to-End</span><span class="case-stat-desc">Strategy to Deployment</span></div>
         </div>
       </div>
 
@@ -393,9 +393,9 @@ button{font-family:inherit;cursor:pointer;border:none}
           </div>
         </div>
         <div class="case-stats-row">
-          <div class="case-stat-block"><span class="stat-num">Lean</span><span class="stat-desc">Culture Embedded</span></div>
-          <div class="case-stat-block"><span class="stat-num">VSM</span><span class="stat-desc">End-to-End Mapping</span></div>
-          <div class="case-stat-block"><span class="stat-num">Plant-Wide</span><span class="stat-desc">Efficiency &amp; Effectiveness</span></div>
+          <div class="case-stat-block"><span class="stat-num">Lean</span><span class="case-stat-desc">Culture Embedded</span></div>
+          <div class="case-stat-block"><span class="stat-num">VSM</span><span class="case-stat-desc">End-to-End Mapping</span></div>
+          <div class="case-stat-block"><span class="stat-num">Plant-Wide</span><span class="case-stat-desc">Efficiency &amp; Effectiveness</span></div>
         </div>
       </div>
 
@@ -419,9 +419,9 @@ button{font-family:inherit;cursor:pointer;border:none}
           </div>
         </div>
         <div class="case-stats-row">
-          <div class="case-stat-block"><span class="stat-num">10,000+</span><span class="stat-desc">Employees Impacted</span></div>
-          <div class="case-stat-block"><span class="stat-num">Ground-Up</span><span class="stat-desc">Built From Scratch</span></div>
-          <div class="case-stat-block"><span class="stat-num">Live</span><span class="stat-desc">In Active Deployment</span></div>
+          <div class="case-stat-block"><span class="stat-num">10,000+</span><span class="case-stat-desc">Employees Impacted</span></div>
+          <div class="case-stat-block"><span class="stat-num">Ground-Up</span><span class="case-stat-desc">Built From Scratch</span></div>
+          <div class="case-stat-block"><span class="stat-num">Live</span><span class="case-stat-desc">In Active Deployment</span></div>
         </div>
       </div>
 
@@ -444,9 +444,9 @@ button{font-family:inherit;cursor:pointer;border:none}
           </div>
         </div>
         <div class="case-stats-row">
-          <div class="case-stat-block"><span class="stat-num">10x</span><span class="stat-desc">YoY Growth Managed</span></div>
-          <div class="case-stat-block"><span class="stat-num">Sustained</span><span class="stat-desc">Ongoing Programme</span></div>
-          <div class="case-stat-block"><span class="stat-num">C-Suite</span><span class="stat-desc">To Mid-Management</span></div>
+          <div class="case-stat-block"><span class="stat-num">10x</span><span class="case-stat-desc">YoY Growth Managed</span></div>
+          <div class="case-stat-block"><span class="stat-num">Sustained</span><span class="case-stat-desc">Ongoing Programme</span></div>
+          <div class="case-stat-block"><span class="stat-num">C-Suite</span><span class="case-stat-desc">To Mid-Management</span></div>
         </div>
       </div>
 
@@ -457,7 +457,7 @@ button{font-family:inherit;cursor:pointer;border:none}
       <div class="result-stat"><span class="big-num">2,000+</span><span class="stat-label">Team Members Scaled</span></div>
       <div class="result-stat"><span class="big-num">20+</span><span class="stat-label">Functions Established</span></div>
       <div class="result-stat"><span class="big-num">$6M+</span><span class="stat-label">Savings Delivered</span></div>
-      <div class="result-stat"><span class="big-num">20+</span><span class="stat-label">Global Clients Advised</span></div>
+      <div class="result-stat"><span class="big-num">20+</span><span class="case-stat-desc">Global Clients Advised</span></div>
     </div>
 
   </div>
@@ -486,7 +486,6 @@ button{font-family:inherit;cursor:pointer;border:none}
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="footer-logo">Beanz <span>Consulting.</span></a>
-        <p>Independent. Evidence-based. Designed to make itself unnecessary.</p>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -513,7 +512,7 @@ button{font-family:inherit;cursor:pointer;border:none}
       <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
       <div class="footer-links">
         <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/cdn-cgi/l/email-protection#8ae9e5e4e4efe9fecae8efebe4f0a4e3e4">connect&#64;beanz.in</a>
+        <a href="mailto:connect@beanz.in">connect&#64;beanz.in</a>
       </div>
     </div>
   </div>
