@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Beanz Consulting</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0a1628">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7DZMPX4XJM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7DZMPX4XJM');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy-900:#0a1628;--navy-800:#0f2240;--navy-700:#162d50;--gold-500:#c8973e;--gold-400:#d4a84f;--gold-300:#e0be72;--white:#ffffff;--gray-50:#f8f9fb;--gray-200:#e2e5eb;--gray-500:#6b7589;--gray-600:#4a5568;--font-display:'DM Serif Display',Georgia,serif;--font-body:'Plus Jakarta Sans',-apple-system,sans-serif;--container:min(1100px,90vw)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+html{-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);background:var(--navy-900);color:var(--white);display:flex;flex-direction:column;min-height:100vh}
+a{text-decoration:none;color:inherit}
+.container{width:var(--container);margin:0 auto}
+
+/* NAV */
+.nav{padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-display);font-size:1.75rem;color:var(--white)}
+.nav-logo span{color:var(--gold-400)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.55);letter-spacing:.02em;transition:color .25s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold-500)!important;color:var(--white)!important;padding:.5rem 1.25rem;border-radius:4px;font-weight:700!important;font-size:.75rem!important;letter-spacing:.06em!important;text-transform:uppercase;color:var(--white)!important}
+.nav-cta:hover{background:var(--gold-400)!important;color:var(--white)!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{width:24px;height:2px;background:var(--white);border-radius:2px}
+
+/* MAIN */
+.main{flex:1;display:flex;align-items:center;position:relative;overflow:hidden}
+.main::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(200,151,62,.06) 0%,transparent 60%),linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:100%,72px 72px,72px 72px}
+.main-inner{position:relative;z-index:2;padding:6rem 0;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+
+.left-col{}
+.error-code{font-family:var(--font-display);font-size:clamp(6rem,14vw,11rem);color:rgba(255,255,255,.06);line-height:1;margin-bottom:-1.5rem;letter-spacing:-.02em}
+.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-500);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:'';width:1.6rem;height:2px;background:var(--gold-500)}
+h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.9rem);line-height:1.15;color:var(--white);margin-bottom:1.25rem}
+h1 em{color:var(--gold-400);font-style:italic}
+.sub{font-size:.93rem;color:rgba(255,255,255,.5);line-height:1.8;max-width:420px;margin-bottom:2.5rem}
+.actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.75rem;border-radius:4px;font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;transition:all .25s;font-family:var(--font-body)}
+.btn-gold{background:var(--gold-500);color:var(--white)}.btn-gold:hover{background:var(--gold-400);transform:translateY(-2px);box-shadow:0 6px 24px rgba(200,151,62,.3)}
+.btn-ghost{background:transparent;color:rgba(255,255,255,.7);border:1.5px solid rgba(255,255,255,.2)}.btn-ghost:hover{border-color:rgba(255,255,255,.5);color:var(--white);transform:translateY(-2px)}
+
+/* RIGHT NAV LINKS */
+.right-col{}
+.right-label{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1.25rem}
+.page-links{list-style:none;border-top:1px solid rgba(255,255,255,.07)}
+.page-links li{border-bottom:1px solid rgba(255,255,255,.07)}
+.page-links a{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;font-size:.88rem;color:rgba(255,255,255,.55);transition:color .25s}
+.page-links a:hover{color:var(--white)}
+.page-links a:hover .arrow{color:var(--gold-400);transform:translateX(4px)}
+.page-link-label{font-weight:500}
+.page-link-desc{font-size:.75rem;color:rgba(255,255,255,.3);margin-top:.2rem}
+.arrow{color:rgba(255,255,255,.2);transition:all .25s;flex-shrink:0;margin-left:1rem}
+
+/* FOOTER */
+.footer{padding:1.75rem 0;border-top:1px solid rgba(255,255,255,.07)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-inner p{font-size:.72rem;color:rgba(255,255,255,.22)}
+.footer-inner a{font-size:.72rem;color:rgba(255,255,255,.3);transition:color .25s}
+.footer-inner a:hover{color:var(--gold-300)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none;position:fixed;inset:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .main-inner{grid-template-columns:1fr;gap:3rem;padding:4rem 0}
+  .error-code{font-size:8rem;margin-bottom:-1rem}
+  .right-col{border-top:1px solid rgba(255,255,255,.07);padding-top:2rem}
+}
+@media(max-width:480px){
+  .container{padding:0 1.2rem}
+  .actions{flex-direction:column}
+  .btn{justify-content:center}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Beanz <span>Consulting.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/results.html">Results</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+  <div class="container">
+    <div class="main-inner">
+
+      <div class="left-col">
+        <div class="error-code">404</div>
+        <div class="eyebrow">Page Not Found</div>
+        <h1>This page doesn't exist.<br><em>The work does.</em></h1>
+        <p class="sub">The page you're looking for may have moved or never existed. Head back to the homepage or find what you need from the links on the right.</p>
+        <div class="actions">
+          <a href="/" class="btn btn-gold">Back to Homepage →</a>
+          <a href="/#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div class="right-label">You might be looking for</div>
+        <ul class="page-links">
+          <li>
+            <a href="/services.html">
+              <div>
+                <div class="page-link-label">Services</div>
+                <div class="page-link-desc">GBS Vendor Audit, GCC Advisory &amp; more</div>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="/gbs-vendor-audit.html">
+              <div>
+                <div class="page-link-label">BEANZ ACCORD™</div>
+                <div class="page-link-desc">Independent GBS vendor audit</div>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="/gcc-advisory.html">
+              <div>
+                <div class="page-link-label">GCC Advisory</div>
+                <div class="page-link-desc">Build the right GCC, the first time</div>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="/results.html">
+              <div>
+                <div class="page-link-label">Case Studies</div>
+                <div class="page-link-desc">Real outcomes from real engagements</div>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about.html">
+              <div>
+                <div class="page-link-label">About Viraj</div>
+                <div class="page-link-desc">20+ years Fortune 500 experience</div>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="/#contact">
+              <div>
+                <div class="page-link-label">Let's Talk</div>
+                <div class="page-link-desc">30-minute scoping call, no pitch</div>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). All rights reserved.</p>
+      <a href="mailto:connect@beanz.in">connect@beanz.in</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body>
+</html>

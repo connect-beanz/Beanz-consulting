@@ -140,8 +140,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .form-toast-close { background: var(--navy-900); color: var(--white); border: none; padding: 0.7rem 2rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.3s; }
 .form-toast-close:hover { background: var(--navy-700); }
 
-.reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.8s ease, transform 0.8s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal{opacity:1;transform:none;transition:opacity .65s ease,transform .65s ease}
+.js-ready .reveal{opacity:0;transform:translateY(20px)}
+.js-ready .reveal.visible{opacity:1;transform:none}
+.js-ready 
+
 
 @media (max-width: 1024px) {
   .careers-tracks { grid-template-columns: 1fr; }
@@ -183,6 +186,58 @@ button { font-family: inherit; cursor: pointer; border: none; }
   .footer { padding: 2.5rem 0 1.5rem; }
   .footer-brand p { display: none; }
 }
+
+/* ── DESIGN TOKENS ── */
+:root {
+  --navy-900:#0a1628; --navy-800:#0f2240; --navy-700:#162d50;
+  --gold-500:#c8973e; --gold-400:#d4a84f; --gold-300:#e0be72;
+  --white:#ffffff;
+  --gray-50:#f8f9fb; --gray-100:#f0f2f5; --gray-200:#e2e5eb;
+  --gray-400:#9aa2b1; --gray-500:#6b7589; --gray-600:#4a5568; --gray-700:#2d3748;
+  --font-display:'DM Serif Display',Georgia,serif;
+  --font-body:'Plus Jakarta Sans',-apple-system,sans-serif;
+}
+body { font-family: var(--font-body); }
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy-900);padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 20px rgba(0,0,0,.4)}
+.nav-inner{width:min(1200px,90vw);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-display);font-size:1.45rem;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--gold-400)}
+.nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
+.nav-links a{font-size:.85rem;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.02em;transition:color .3s;position:relative;text-decoration:none}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold-400);transition:width .3s}
+.nav-links a:hover{color:var(--white)}.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--gold-500)!important;color:var(--white)!important;padding:.55rem 1.4rem!important;border-radius:4px;font-weight:700!important;font-size:.78rem!important;letter-spacing:.06em!important;text-transform:uppercase}
+.nav-cta::after{display:none!important}.nav-cta:hover{background:var(--gold-400)!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;cursor:pointer}
+.nav-toggle span{width:24px;height:2px;background:var(--white);border-radius:2px}
+@media(max-width:768px){
+  .nav-links{display:none;position:fixed;inset:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy-900);padding:4rem 0 2.25rem;border-top:1px solid rgba(255,255,255,.05)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:4rem;margin-bottom:3rem}
+.footer-logo{font-family:var(--font-display);font-size:1.65rem;color:var(--white);margin-bottom:.85rem;display:block;text-decoration:none}
+.footer-logo span{color:var(--gold-400)}
+.footer-brand p{font-size:.83rem;color:rgba(255,255,255,.33);line-height:1.75;max-width:300px;margin-bottom:1.25rem}
+.footer-accord-badge{display:inline-flex;align-items:center;background:rgba(200,151,62,.1);border:1px solid rgba(200,151,62,.2);padding:.35rem .8rem;border-radius:4px;font-size:.65rem;font-weight:700;color:var(--gold-300);letter-spacing:.08em;text-transform:uppercase}
+.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
+.footer-col ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:.6rem}
+.footer-col ul a{font-size:.85rem;color:rgba(255,255,255,.35);transition:color .3s;text-decoration:none}
+.footer-col ul a:hover{color:var(--gold-400)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.footer-bottom p{font-size:.75rem;color:rgba(255,255,255,.2)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.75rem;color:rgba(255,255,255,.2);transition:color .3s;text-decoration:none}
+.footer-links a:hover{color:var(--gold-400)}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
+
 </style>
 </head>
 <body>
@@ -193,12 +248,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
     <a href="/" class="nav-logo">Beanz <span>Consulting.</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li><a href="/#why-beanz">Why Beanz</a></li>
       <li><a href="/about.html">About</a></li>
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#results">Results</a></li>
+      <li><a href="/gbs-vendor-audit.html">Services</a></li>
+      <li><a href="/results.html">Results</a></li>
       <li><a href="/insights.html">Insights</a></li>
-      <li><a href="/careers.html">Careers</a></li>
+      <li><a href="/careers.html" class="active">Careers</a></li>
       <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -320,37 +374,37 @@ button { font-family: inherit; cursor: pointer; border: none; }
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="nav-logo">Beanz <span>Consulting.</span></a>
-        <p>Strategic growth through operational excellence. Transforming global operations for Fortune 500 companies and high-growth enterprises.</p>
+        <a href="/" class="footer-logo">Beanz <span>Consulting.</span></a>
+        <p>Independent. Evidence-based. Designed to make itself unnecessary.</p>
+        <div class="footer-accord-badge">BEANZ ACCORD&#8482; Certified Audits</div>
       </div>
       <div class="footer-col">
-        <h3>Services</h3>
+        <h4>Services</h4>
         <ul>
+          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit &mdash; ACCORD&#8482;</a></li>
           <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
-          <li><a href="/#services">Supply Chain</a></li>
-          <li><a href="/#services">Operational Excellence</a></li>
-          <li><a href="/#services">Executive Coaching</a></li>
-          <li><a href="/#services">Org Transformation</a></li>
-          <li><a href="/#services">Trainings &amp; Academies</a></li>
-          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit</a></li>
+          <li><a href="/gbs-vendor-audit.html">Supply Chain &amp; OpEx</a></li>
+          <li><a href="/gbs-vendor-audit.html">Leadership &amp; Transformation</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h3>Company</h3>
+        <h4>Company</h4>
         <ul>
-          <li><a href="/#why-beanz">Why Beanz</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/#results">Results</a></li>
+          <li><a href="/about.html">About Viraj</a></li>
+          <li><a href="/results.html">Case Studies</a></li>
           <li><a href="/insights.html">Insights</a></li>
           <li><a href="/careers.html">Careers</a></li>
-          <li><a href="/#contact">Contact Form</a></li>
-          <li><a href="mailto:connect@beanz.in">Email Us</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Beanz Consulting. All rights reserved.</p>
-      <p><a href="/privacy-policy.html" style="color:rgba(255,255,255,0.35);">Privacy &amp; Cookie Policy</a></p>
+      <p>&copy; 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD&#8482; is a proprietary methodology. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/cdn-cgi/l/email-protection#b4d7dbdadad1d7c0f4d6d1d5dace9addda"><span class="__cf_email__" data-cfemail="c6a5a9a8a8a3a5b286a4a3a7a8bce8afa8">[email&#160;protected]</span></a>
+      </div>
     </div>
   </div>
 </footer>
@@ -364,7 +418,8 @@ button { font-family: inherit; cursor: pointer; border: none; }
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.documentElement.classList.add('js-ready');
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
 const navToggle = document.getElementById('navToggle');
@@ -401,5 +456,5 @@ if (fileInput && fileDisplay) {
 </script>
 <script src="/js/otp-forms.js"></script>
 <script src="/js/cookie-banner.js"></script>
-</body>
-</html>
+<script>
+const _nt=document.getElementById('navToggle'),_nl=doc

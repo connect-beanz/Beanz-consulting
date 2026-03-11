@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow:
 
-Sitemap: https://beanz.in/sitemap.xml
+Sitemap: https://www.beanz.in/sitemap.xml
