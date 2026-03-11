@@ -888,6 +888,29 @@ button { font-family: inherit; cursor: pointer; border: none; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
+@media (max-width: 480px) {
+  :root { --section-pad: 2rem; }
+  .container { padding: 0 1rem; }
+  .page-section { padding: 2rem 0; }
+  .page-hero { padding: 6rem 0 2rem; }
+  [class*=hero] h1 { font-size: 1.75rem; }
+
+  /* Hide secondary body paragraphs in dimension / deliverable cards */
+  .accord-card > p { display: none; }
+  .deliverable-item > p { display: none; }
+  .who-card > p { display: none; }
+
+  /* Tighten cards */
+  .accord-card { padding: 1.25rem 1rem; }
+  .deliverable-item { padding: 1rem; }
+
+  /* FAQ: hide answers initially on mobile — they toggle */
+  /* (no change needed — accordion already handles this) */
+
+  /* Footer */
+  .footer { padding: 2.5rem 0 1.5rem; }
+  .footer-brand p { display: none; }
+}
 </style>
 </head>
 <body>

@@ -469,11 +469,82 @@ button { font-family: inherit; cursor: pointer; border: none; }
   .careers-form-section { padding: 2rem 1.25rem; }
 }
 @media (max-width: 480px) {
-  .hero h1 { font-size: 1.9rem; }
-  .why-pillars { grid-template-columns: 1fr; }
-  .results-stats { grid-template-columns: 1fr 1fr; }
-  .credential-stats { grid-template-columns: 1fr 1fr; }
-  .announce-strip-inner { flex-direction: column; text-align: center; }
+  /* ── Global spacing ── */
+  :root { --section-pad: 2rem; }
+  .container { padding: 0 1rem; }
+  .section-title { font-size: 1.55rem; line-height: 1.25; }
+
+  /* ── Hero ── */
+  .hero { padding: 4.5rem 0 2rem; }
+  .hero h1 { font-size: 1.75rem; line-height: 1.2; }
+  .hero-sub { font-size: 0.88rem; line-height: 1.65; }
+  .credential-stats { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .credential-stat { padding: 0.75rem; }
+  .credential-number { font-size: 1.5rem; }
+
+  /* ── Announce strip — hide on mobile (Service 07 card covers it) ── */
+  .announce-strip { display: none; }
+
+  /* ── Why Beanz ── */
+  .why-pillars { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .why-text:not(:first-of-type) { display: none; }
+  .pillar { padding: 1rem 0.85rem; }
+  .pillar p { display: none; }
+  .pillar-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .pillar h3 { font-size: 0.88rem; }
+
+  /* ── About teaser ── */
+  .about-narrative:last-of-type { display: none; }
+  .about-narrative { font-size: 0.9rem; line-height: 1.7; }
+  .founder-card { padding: 1.25rem; }
+
+  /* ── Services ── */
+  .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .service-card { padding: 1.25rem; }
+  .service-card > p { display: none; }
+  .service-card--accent > p { display: block; font-size: 0.85rem; line-height: 1.6; }
+  .service-tags { gap: 0.35rem; }
+  .service-tag { font-size: 0.65rem; padding: 0.2rem 0.55rem; }
+
+  /* ── Case studies ── */
+  .case-body > p { display: none; }
+  .case-card-inner { padding: 1.25rem; }
+  .case-outcomes { display: none; }
+  .case-stats-row { gap: 0.5rem; }
+  .case-stat-block { min-width: 30%; }
+  .stat-num { font-size: 1rem; }
+
+  /* ── Results stats ── */
+  .results-stats { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .big-num { font-size: 1.8rem; }
+
+  /* ── Approach ── */
+  .approach-steps { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .step { padding: 1rem 0.85rem; }
+  .step p { display: none; }
+  .step-number { font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .step h3 { font-size: 0.9rem; }
+
+  /* ── Not-do strip ── */
+  .not-do-inner { gap: 0.75rem; }
+  .not-do-list { gap: 0.4rem; }
+  .not-do-item { font-size: 0.78rem; padding: 0.3rem 0.7rem; }
+
+  /* ── Contact ── */
+  .contact-text { display: none; }
+  .contact-info { display: none; }
+  .contact-form { padding: 1.5rem 1.25rem; }
+  .contact-form h3 { font-size: 1.15rem; }
+  .contact-left .section-title { font-size: 1.4rem; }
+
+  /* ── Careers teaser ── */
+  .careers-teaser p { display: none; }
+  .careers-teaser-inner { gap: 1.25rem; }
+
+  /* ── Footer ── */
+  .footer { padding: 2.5rem 0 1.5rem; }
+  .footer-brand p { display: none; }
+  .footer-grid { gap: 1.5rem; }
 }
 
 .form-toast-overlay { position: fixed; inset: 0; background: rgba(10, 22, 40, 0.7); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.35s ease; }
