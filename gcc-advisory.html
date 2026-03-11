@@ -619,10 +619,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
 }
 
 @media (max-width: 768px) {
+
+
   .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-900); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; z-index: 999; }
   .nav-links.active { display: flex; }
   .nav-toggle { display: flex; }
-  .service-grid { grid-template-columns: 1fr; }
   .gcc-hero { min-height: auto; padding: 8rem 0 3rem; }
   .gcc-stats { gap: 1.5rem; }
   .gcc-stat .num { font-size: 1.6rem; }
@@ -641,11 +642,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/#why-beanz">Why Beanz</a></li>
-      <li><a href="/#about">About</a></li>
+      <li><a href="/about.html">About</a></li>
       <li><a href="/#services">Services</a></li>
       <li><a href="/#results">Results</a></li>
       <li><a href="/insights.html">Insights</a></li>
-      <li><a href="/#careers">Careers</a></li>
+      <li><a href="/careers.html">Careers</a></li>
       <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -901,10 +902,10 @@ button { font-family: inherit; cursor: pointer; border: none; }
         <h3>Company</h3>
         <ul>
           <li><a href="/#why-beanz">Why Beanz</a></li>
-          <li><a href="/#about">About</a></li>
+          <li><a href="/about.html">About</a></li>
           <li><a href="/#results">Results</a></li>
           <li><a href="/insights.html">Insights</a></li>
-          <li><a href="/#careers">Careers</a></li>
+          <li><a href="/careers.html">Careers</a></li>
           <li><a href="/#contact">Contact Form</a></li>
           <li><a href="mailto:connect@beanz.in">Email Us</a></li>
         </ul>
@@ -912,7 +913,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Beanz Consulting. All rights reserved.</p>
-      <p>Beanz Enterprises — Building Global Capabilities</p>
+      <p><a href="/privacy-policy.html" style="color:rgba(255,255,255,0.35);">Privacy &amp; Cookie Policy</a></p>
     </div>
   </div>
 </footer>
@@ -944,5 +945,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
+<script src="/js/cookie-banner.js"></script>
 </body>
 </html>

@@ -241,6 +241,22 @@ button { font-family: inherit; cursor: pointer; border: none; }
   border-radius: 3px;
 }
 
+.article-tag.tag-gbs {
+  color: var(--white);
+  background: var(--navy-800);
+}
+
+.article-new-badge {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--gold-500);
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+}
+
 .article-date {
   font-size: 0.75rem;
   color: var(--gray-400);
@@ -366,6 +382,22 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+  .container { width: 92vw; }
+  .article-hero { padding: 5.5rem 0 2.5rem; }
+  .article-hero-inner { padding: 0; }
+  [class*=hero] h1 { font-size: clamp(1.75rem, 6vw, 2.4rem) !important; }
+  .article-hero-sub { font-size: 0.95rem; }
+  .article-body p, .article-body li { font-size: 0.93rem; }
+  .pattern-block, .sign-block { padding: 1.25rem; }
+  .sign-header { flex-direction: row; gap: 0.75rem; }
+  .cta-buttons { flex-direction: column; align-items: center; gap: 0.75rem; }
+  .article-cta { padding: 2rem 1.25rem; }
+  .article-grid { grid-template-columns: 1fr; }
+  .insights-grid { grid-template-columns: 1fr; }
+  .insights-hero { padding: 5.5rem 0 2.5rem; }
+  .cta-strip-buttons { flex-direction: column; align-items: center; gap: 0.75rem; }
+
   .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-900); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; z-index: 999; }
   .nav-links.active { display: flex; }
   .nav-toggle { display: flex; }
@@ -387,11 +419,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/#why-beanz">Why Beanz</a></li>
-      <li><a href="/#about">About</a></li>
+      <li><a href="/about.html">About</a></li>
       <li><a href="/#services">Services</a></li>
       <li><a href="/#results">Results</a></li>
       <li><a href="/insights.html" class="active">Insights</a></li>
-      <li><a href="/#careers">Careers</a></li>
+      <li><a href="/careers.html">Careers</a></li>
       <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -410,7 +442,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
   <div class="insights-hero-inner">
     <div class="hero-label">Insights</div>
     <h1>GCC Intelligence. <em>From the Inside.</em></h1>
-    <p class="insights-hero-sub">Practical thinking on Global Capability Centers, supply chain transformation, and building operations that last — from someone who's done it at Fortune 500 scale.</p>
+    <p class="insights-hero-sub">Practical thinking on Global Capability Centers, GBS vendor management, supply chain transformation, and building operations that last — from someone who's done it at Fortune 500 scale.</p>
   </div>
 </section>
 
@@ -421,6 +453,19 @@ button { font-family: inherit; cursor: pointer; border: none; }
 <section class="insights-grid">
   <div class="container">
     <div class="insights-list">
+
+      <a href="/gbs-vendor-audit-5-signs.html" class="article-card">
+        <div>
+          <div class="article-meta">
+            <span class="article-tag tag-gbs">GBS Vendor Audit</span>
+            <span class="article-new-badge">New</span>
+            <span class="article-date">March 2026</span>
+          </div>
+          <h2>5 Signs Your GBS Vendor Relationship Needs an Independent Audit</h2>
+          <p>Most leaders who commission an independent GBS vendor review say they had a sense something was off long before they acted. A diagnostic framework for CFOs, COOs, and Procurement leaders — five signs that the relationship warrants a closer, independent look.</p>
+        </div>
+        <span class="article-arrow">→</span>
+      </a>
 
       <a href="/how-to-set-up-gcc-india.html" class="article-card">
         <div>
@@ -465,10 +510,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
      ========================================== -->
 <section class="insights-cta">
   <div class="container">
-    <h2>Looking for <em>GCC advisory?</em></h2>
-    <p>These articles are a starting point. If you're actively exploring a GCC in India, a conversation with Viraj can save you months of expensive mistakes.</p>
+    <h2>Looking for <em>advisory?</em></h2>
+    <p>These articles are a starting point. Whether you're building a GCC in India or reviewing a GBS vendor relationship — a conversation with Viraj can save you significant time, money, and the wrong assumptions.</p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="/gcc-advisory.html" class="btn-secondary">GCC Advisory Services</a>
+      <a href="/gcc-advisory.html" class="btn-secondary">GCC Advisory</a>
+      <a href="/gbs-vendor-audit.html" class="btn-secondary">GBS Vendor Audit</a>
       <a href="/#contact" class="btn-primary">Start a Conversation →</a>
     </div>
   </div>
@@ -493,16 +539,17 @@ button { font-family: inherit; cursor: pointer; border: none; }
           <li><a href="/#services">Executive Coaching</a></li>
           <li><a href="/#services">Org Transformation</a></li>
           <li><a href="/#services">Trainings &amp; Academies</a></li>
+          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h3>Company</h3>
         <ul>
           <li><a href="/#why-beanz">Why Beanz</a></li>
-          <li><a href="/#about">About</a></li>
+          <li><a href="/about.html">About</a></li>
           <li><a href="/#results">Results</a></li>
           <li><a href="/insights.html">Insights</a></li>
-          <li><a href="/#careers">Careers</a></li>
+          <li><a href="/careers.html">Careers</a></li>
           <li><a href="/#contact">Contact Form</a></li>
           <li><a href="mailto:connect@beanz.in">Email Us</a></li>
         </ul>
@@ -510,7 +557,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Beanz Consulting. All rights reserved.</p>
-      <p>Beanz Enterprises — Building Global Capabilities</p>
+      <p><a href="/privacy-policy.html" style="color:rgba(255,255,255,0.35);">Privacy &amp; Cookie Policy</a></p>
     </div>
   </div>
 </footer>
@@ -529,5 +576,6 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 </script>
 
+<script src="/js/cookie-banner.js"></script>
 </body>
 </html>

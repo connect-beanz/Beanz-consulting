@@ -248,6 +248,27 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .service-link { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 1rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; color: var(--gold-500); transition: color 0.3s, gap 0.3s; }
 .service-link:hover { color: var(--navy-900); gap: 0.5rem; }
 
+/* SERVICE 07 — BEANZ ACCORD™ featured card */
+.service-card--accent { background: var(--navy-900); border-color: var(--navy-700); border-left: 4px solid var(--gold-500); }
+.service-card--accent .service-num { color: var(--gold-400); }
+.service-card--accent h3 { color: var(--white); }
+.service-card--accent p { color: rgba(255,255,255,0.55); }
+.service-card--accent .service-tag { color: var(--gold-300); background: rgba(200,151,62,0.1); border-color: rgba(200,151,62,0.2); }
+.service-card--accent:hover .service-tag { background: rgba(200,151,62,0.18); border-color: rgba(200,151,62,0.35); }
+.service-card--accent .service-link { color: var(--gold-400); }
+.service-card--accent:hover { border-color: var(--gold-500); box-shadow: 0 12px 40px rgba(200,151,62,0.15); background: var(--navy-900); transform: translateY(-4px); }
+.service-card--accent:hover::before { background: var(--gold-400); }
+.service-card--accent .accord-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(200,151,62,0.12); border: 1px solid rgba(200,151,62,0.25); color: var(--gold-300); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: 100px; margin-bottom: 0.75rem; }
+.service-card--accent .accord-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold-400); }
+
+/* Announcement strip */
+.announce-strip { background: var(--gold-500); padding: 0.85rem 0; }
+.announce-strip-inner { width: var(--container); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.announce-strip-text { font-size: 0.875rem; font-weight: 600; color: var(--navy-900); text-align: center; }
+.announce-strip-text strong { font-weight: 800; }
+.announce-strip-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.8rem; font-weight: 700; color: var(--navy-900); background: rgba(10,22,40,0.12); border: 1px solid rgba(10,22,40,0.2); padding: 0.3rem 0.85rem; border-radius: 100px; letter-spacing: 0.03em; transition: background 0.2s; white-space: nowrap; }
+.announce-strip-link:hover { background: rgba(10,22,40,0.22); }
+
 .results { padding: var(--section-pad) 0; background: var(--navy-900); position: relative; overflow: hidden; }
 .results::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 80px 80px; }
 .results-inner { position: relative; z-index: 2; }
@@ -385,41 +406,74 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
 .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
 
+/* About teaser */
+.about-teaser-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: center; }
+.about-teaser-content .about-narrative { font-size: 1rem; line-height: 1.85; color: var(--gray-600); margin-bottom: 1.25rem; }
+.about-teaser-content .about-narrative strong { color: var(--navy-800); font-weight: 600; }
+
+/* Careers teaser */
+.careers-teaser { padding: var(--section-pad) 0; background: var(--navy-900); position: relative; overflow: hidden; }
+.careers-teaser::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 80px 80px; }
+.careers-teaser-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
+.careers-teaser .section-label { color: var(--gold-400); }
+.careers-teaser .section-label::before { background: var(--gold-400); }
+.careers-teaser .section-title { color: var(--white); }
+.careers-teaser .section-title em { color: var(--gold-400); }
+.careers-teaser p { color: rgba(255,255,255,0.5); font-size: 0.95rem; line-height: 1.75; max-width: 520px; }
+.careers-teaser-actions { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; flex-shrink: 0; }
+.careers-tracks-mini { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
+.careers-tracks-mini span { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.4); letter-spacing: 0.02em; }
+
 @media (max-width: 1024px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-sub { max-width: 100%; }
   .why-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .about-grid { grid-template-columns: 1fr; }
-  .founder-card { position: static; }
+  .about-teaser-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .founder-card { position: static; max-width: 420px; }
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .case-grid { grid-template-columns: repeat(2, 1fr); }
+  .case-grid { grid-template-columns: 1fr; }
   .careers-tracks { grid-template-columns: 1fr; }
+  .careers-teaser-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .careers-teaser-actions { align-items: flex-start; }
+  .careers-tracks-mini { align-items: flex-start; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .results-stats { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  :root { --section-pad: 3rem; }
+  .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-900); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; z-index: 999; }
+  .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
-  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy-900); padding: 1.5rem 5vw 2rem; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
-  .hero { min-height: auto; padding: 8rem 0 3rem; }
+  .hero { min-height: auto; padding: 5rem 0 3rem; }
   .hero-content { padding: 0; }
+  .hero h1 { font-size: clamp(2rem, 7vw, 2.75rem); }
+  .hero-buttons { flex-wrap: wrap; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  .credential-stats { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: 1fr; }
   .case-grid { grid-template-columns: 1fr; }
   .case-stats-row { flex-wrap: wrap; }
-  .case-stat-block { min-width: 33%; }
-  .results-stats { grid-template-columns: repeat(2, 1fr); }
+  .case-stat-block { min-width: 50%; }
+  .results-stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .approach-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .approach-steps::before { display: none; }
   .about-stats-grid { grid-template-columns: repeat(3, 1fr); }
-  .why-pillars { grid-template-columns: 1fr; }
+  .why-pillars { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  .logo-bar-inner { flex-direction: column; gap: 1rem; }
+  .logo-bar-inner { flex-direction: column; gap: 1rem; align-items: flex-start; }
+  .logo-list { gap: 1.25rem; }
   .not-do-inner { flex-direction: column; gap: 1rem; text-align: center; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
-  .credential-stats { grid-template-columns: repeat(2, 1fr); }
-  .what-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
   .careers-form-section { padding: 2rem 1.25rem; }
-  .careers-form-section .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.9rem; }
+  .why-pillars { grid-template-columns: 1fr; }
+  .results-stats { grid-template-columns: 1fr 1fr; }
+  .credential-stats { grid-template-columns: 1fr 1fr; }
+  .announce-strip-inner { flex-direction: column; text-align: center; }
 }
 
 .form-toast-overlay { position: fixed; inset: 0; background: rgba(10, 22, 40, 0.7); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.35s ease; }
@@ -444,11 +498,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
     <ul class="nav-links" id="navLinks">
       <li><a href="#">Home</a></li>
       <li><a href="#why-beanz">Why Beanz</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="/about.html">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#results">Results</a></li>
       <li><a href="/insights.html">Insights</a></li>
-      <li><a href="#careers">Careers</a></li>
+      <li><a href="/careers.html">Careers</a></li>
       <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -530,7 +584,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 <section class="about" id="about" aria-label="About the founder">
   <div class="container">
-    <div class="about-grid">
+    <div class="about-teaser-grid">
       <div class="reveal">
         <div class="founder-card">
           <div class="founder-visual">
@@ -544,27 +598,16 @@ button { font-family: inherit; cursor: pointer; border: none; }
               <div class="founder-cred"><span class="icon">🏢</span><span>Ex — Kraft Heinz · General Mills · P&amp;G</span></div>
               <div class="founder-cred"><span class="icon">🧭</span><span>Gallup Certified Strengths Coach</span></div>
               <div class="founder-cred"><span class="icon">📊</span><span>APICS CPIM Certified</span></div>
-              <div class="founder-cred"><span class="icon">🤝</span><span>Advisor to BCG &amp; Synfiny</span></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="about-content reveal" style="animation-delay: 0.15s;">
+      <div class="about-teaser-content reveal" style="animation-delay: 0.15s;">
         <div class="section-label">Meet the Founder</div>
         <h2 class="section-title">Most consultants talk about GCCs. <em>Viraj has actually built one.</em></h2>
-        <p class="about-narrative">An IIT Bombay alumnus and engineer at heart — Viraj spent <strong>twenty years inside the machine</strong>. Not advising from the outside. Not reviewing decks in a boardroom. But building, scaling, and fixing things from the inside — across three continents, multiple Fortune 500 companies, and some of the most complex supply chain and capability challenges in the industry.</p>
-        <p class="about-narrative">It started at <strong>Procter &amp; Gamble</strong>, where he cut his teeth across procurement, contract manufacturing, planning, and logistics. He helped launch P&amp;G's Planning Service Centres (GCC) in China and Singapore from scratch.</p>
-        <p class="about-narrative">At <strong>General Mills</strong>, he took charge of the entire IMEA and India supply chain — launching 9 sites in 18 months and driving S&amp;OP excellence across the region.</p>
-        <div class="about-highlight">
-          <p>Then came the big one. Kraft Heinz handed him a blank page and a mandate: <strong>build Kraft Heinz's first-ever Global Capability Center</strong>. Not in Bangalore or Hyderabad — but in a tier-2 city. He built a centre with 1,000+ installed capacity across 20+ Centres of Excellence, achieving under 5% attrition against an industry average of 20%.</p>
-        </div>
-        <div class="about-stats-grid">
-          <div class="about-stat"><div class="num">1,000+</div><div class="lbl">Installed Capacity</div></div>
-          <div class="about-stat"><div class="num">&lt;5%</div><div class="lbl">Attrition Rate</div></div>
-          <div class="about-stat"><div class="num">85%+</div><div class="lbl">Engagement Score</div></div>
-        </div>
-        <p class="about-narrative">Today, Viraj runs Beanz Consulting — helping companies build for themselves, the right way, in the right place. In just the last two years, he has advised <strong>10+ global enterprises</strong> — with the instinct of someone who's sat in the chair, made the calls, and knows exactly what it takes to make a GCC actually work.</p>
-        <a href="#contact" class="btn-primary" style="margin-top: 1rem;">Start a Conversation →</a>
+        <p class="about-narrative">Twenty years inside Fortune 500 organisations — P&amp;G, General Mills, Kraft Heinz — building, scaling, and fixing things across three continents. Not advising from the outside. Then came the defining chapter: <strong>building Kraft Heinz's first-ever GCC from a blank page</strong> — 1,000+ capacity, 20+ Centres of Excellence, under 5% attrition against an industry average of 20%.</p>
+        <p class="about-narrative">That experience is the foundation of Beanz Consulting. Not borrowed methodology — the real thing, with real accountability.</p>
+        <a href="/about.html" class="btn-primary" style="margin-top: 1.25rem;">Read Viraj's Full Story →</a>
       </div>
     </div>
   </div>
@@ -615,9 +658,24 @@ button { font-family: inherit; cursor: pointer; border: none; }
         <p>Structured capability programmes — with curricula, assessments, progression paths, and real impact metrics that compound over time.</p>
         <div class="service-tags"><span class="service-tag">Supply Chain Academy</span><span class="service-tag">Lean Training</span><span class="service-tag">Custom Programmes</span><span class="service-tag">Capability Uplift</span></div>
       </div>
+      <div class="service-card service-card--accent reveal" style="animation-delay: 0.1s; grid-column: 1 / -1;">
+        <div class="accord-badge">New Offering</div>
+        <div class="service-num">SERVICE 07</div>
+        <h3>GBS Vendor Audit — BEANZ ACCORD™</h3>
+        <p>An independent review of your GBS vendor relationships — giving CFOs, COOs, and Procurement leaders a clear, evidence-based picture of contract adherence, cost integrity, and delivery performance. Designed for organisations that want confidence before a renewal, a leadership transition, or an internal review. Fixed-fee engagement. No conflicts of interest.</p>
+        <div class="service-tags"><span class="service-tag">Invoice Forensics</span><span class="service-tag">Headcount Audit</span><span class="service-tag">SLA Compliance</span><span class="service-tag">Rate Benchmarking</span><span class="service-tag">Vendor Governance</span></div>
+        <a href="/gbs-vendor-audit.html" class="service-link">Learn More About BEANZ ACCORD™ →</a>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="announce-strip" role="banner" aria-label="New offering announcement">
+  <div class="announce-strip-inner">
+    <p class="announce-strip-text"><strong>New:</strong> BEANZ ACCORD™ GBS Vendor Audit — Independent forensic audit of your GBS vendor relationships. Are your vendors delivering what you're paying for?</p>
+    <a href="/gbs-vendor-audit.html" class="announce-strip-link">Learn More →</a>
+  </div>
+</div>
 
 <section class="results" id="results" aria-label="Case studies and results">
   <div class="container results-inner">
@@ -784,6 +842,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
                   <option>Executive Coaching &amp; Leadership</option>
                   <option>Organisational Transformation</option>
                   <option>Trainings &amp; Academies</option>
+                  <option>GBS Vendor Audit — BEANZ ACCORD™</option>
                   <option>General Inquiry</option>
                 </select>
               </div>
@@ -800,107 +859,20 @@ button { font-family: inherit; cursor: pointer; border: none; }
   </div>
 </section>
 
-<section class="careers" id="careers" aria-label="Career opportunities">
+<section class="careers-teaser" id="careers" aria-label="Careers">
   <div class="container">
-    <div class="careers-inner">
-      <div class="careers-header reveal">
-        <div class="section-label">Careers</div>
+    <div class="careers-teaser-inner reveal">
+      <div class="careers-teaser-text">
+        <div class="section-label">Join the Team</div>
         <h2 class="section-title">We don't hire résumés.<br><em>We find exceptional talent.</em></h2>
-        <p class="careers-intro">Beanz Consulting is a lean, high-impact advisory firm — and we intend to keep it that way. We don't do large bench teams or mediocre talent. We look for exceptional people who bring fire, curiosity, and craft to everything they do.</p>
+        <p>Beanz is lean and high-impact by design. We partner with seasoned operators and exceptional early-career minds — people who want to do real work, not slide work.</p>
       </div>
-      <div class="careers-philosophy reveal">
-        <div class="careers-quote">
-          <blockquote>"We'd rather work with five exceptional minds than fifty average ones."</blockquote>
+      <div class="careers-teaser-actions">
+        <a href="/careers.html" class="btn-primary">View Opportunities →</a>
+        <div class="careers-tracks-mini">
+          <span>⚡ Independent Advisors</span>
+          <span>🚀 MBA Internships</span>
         </div>
-      </div>
-      <div class="careers-tracks reveal">
-        <div class="track-card">
-          <div class="track-icon">⚡</div>
-          <div class="track-label">Independent Advisors</div>
-          <h3>Seasoned Operators & Domain Experts</h3>
-          <p>You've built GCCs, turned around supply chains, or led operational transformations at scale. You don't need a playbook — you write them. We partner with independent advisors who bring deep, practitioner-grade expertise to our client engagements.</p>
-          <div class="track-tags"><span>GCC & Shared Services</span><span>Supply Chain & S&OP</span><span>Lean & Operational Excellence</span><span>Executive Coaching</span><span>Change Management</span></div>
-        </div>
-        <div class="track-card">
-          <div class="track-icon">🚀</div>
-          <div class="track-label">Internships</div>
-          <h3>Hungry Minds, Early Careers</h3>
-          <p>If you're an MBA student or early-career professional who thinks consulting is about PowerPoints — this isn't for you. But if you want front-row access to real strategy work with Fortune 500 clients, a founder who mentors hands-on, and a steep learning curve you'll actually enjoy — let's talk.</p>
-          <div class="track-tags"><span>MBA / PGDM Students</span><span>Research & Analysis</span><span>Client Engagement Support</span><span>3–6 Month Stints</span></div>
-        </div>
-      </div>
-      <div class="careers-what reveal">
-        <h3>What we look for</h3>
-        <div class="what-grid">
-          <div class="what-item"><span class="what-num">01</span><div><strong>Intellectual Horsepower</strong><p>You think in frameworks but aren't trapped by them. You ask "why" five times before accepting an answer.</p></div></div>
-          <div class="what-item"><span class="what-num">02</span><div><strong>Builder's Mindset</strong><p>You'd rather create something from scratch than optimise someone else's deck. You ship, not just strategise.</p></div></div>
-          <div class="what-item"><span class="what-num">03</span><div><strong>No-Ego Collaboration</strong><p>The best idea wins, regardless of where it comes from. You check your title at the door.</p></div></div>
-          <div class="what-item"><span class="what-num">04</span><div><strong>Skin in the Game</strong><p>You care about outcomes, not hours logged. You own problems end-to-end and don't wait to be told.</p></div></div>
-        </div>
-      </div>
-      <div class="careers-form-section reveal">
-        <div class="careers-form-header">
-          <h3>Submit Your Application</h3>
-          <p>All fields marked * are required. We'll be in touch.</p>
-        </div>
-        <form id="careers-form" aria-label="Career application form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="career-name">Full Name *</label>
-              <input type="text" id="career-name" name="Full Name" placeholder="e.g. Priya Sharma" required>
-            </div>
-            <div class="form-group">
-              <label for="career-email">Email *</label>
-              <input type="email" id="career-email" name="Email" placeholder="priya@example.com" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="career-track">I'm Interested In *</label>
-              <select id="career-track" name="Track Interest" required>
-                <option value="" disabled selected>Select a role type...</option>
-                <option>Independent Advisor — GCC & Shared Services</option>
-                <option>Independent Advisor — Supply Chain</option>
-                <option>Independent Advisor — Operational Excellence</option>
-                <option>Independent Advisor — Executive Coaching</option>
-                <option>Internship — MBA / PGDM</option>
-                <option>Internship — Early Career</option>
-                <option>Other / Open Application</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="career-exp">Experience Level *</label>
-              <select id="career-exp" name="Experience" required>
-                <option value="" disabled selected>Select experience...</option>
-                <option>Student / Fresh Graduate</option>
-                <option>1–3 Years</option>
-                <option>4–8 Years</option>
-                <option>8–15 Years</option>
-                <option>15+ Years</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group full" style="margin-bottom: 1rem;">
-            <label for="career-linkedin">LinkedIn Profile</label>
-            <input type="url" id="career-linkedin" name="LinkedIn" placeholder="https://linkedin.com/in/yourprofile">
-          </div>
-          <div class="form-group full" style="margin-bottom: 1rem;">
-            <label for="career-pitch">Your Pitch *</label>
-            <textarea id="career-pitch" name="Your Pitch" placeholder="Tell us what drives you, what you've accomplished, and what excites you about Beanz. Skip the corporate-speak — be yourself." required></textarea>
-          </div>
-          <div class="form-group full" style="margin-bottom: 1rem;">
-            <label for="career-resume">Resume / CV</label>
-            <div class="file-upload-wrapper">
-              <input type="file" id="career-resume" name="attachment" accept=".pdf,.doc,.docx" class="file-input">
-              <div class="file-upload-display" id="fileDisplay">
-                <span class="file-upload-icon">📄</span>
-                <span class="file-upload-text"><strong>Click to upload</strong> or drag &amp; drop</span>
-                <span class="file-upload-hint">PDF, DOC, DOCX up to 5 MB</span>
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="form-submit careers-submit">SUBMIT APPLICATION →</button>
-        </form>
       </div>
     </div>
   </div>
@@ -923,16 +895,17 @@ button { font-family: inherit; cursor: pointer; border: none; }
           <li><a href="#services">Executive Coaching</a></li>
           <li><a href="#services">Org Transformation</a></li>
           <li><a href="#services">Trainings &amp; Academies</a></li>
+          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h3>Company</h3>
         <ul>
-          <li><a href="#why-beanz">Why Beanz</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="/#why-beanz">Why Beanz</a></li>
+          <li><a href="/about.html">About</a></li>
           <li><a href="#results">Results</a></li>
           <li><a href="/insights.html">Insights</a></li>
-          <li><a href="#careers">Careers</a></li>
+          <li><a href="/careers.html">Careers</a></li>
           <li><a href="#contact">Contact Form</a></li>
           <li><a href="mailto:connect@beanz.in">Email Us</a></li>
         </ul>
@@ -940,7 +913,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Beanz Consulting. All rights reserved.</p>
-      <p>Beanz Enterprises — Building Global Capabilities</p>
+      <p><a href="/privacy-policy.html" style="color:rgba(255,255,255,0.35);transition:color 0.3s;">Privacy &amp; Cookie Policy</a></p>
     </div>
   </div>
 </footer>
@@ -1038,5 +1011,6 @@ if (fileInput && fileDisplay) {
 </script>
 
 <script src="/js/otp-forms.js"></script>
+<script src="/js/cookie-banner.js"></script>
 </body>
 </html>

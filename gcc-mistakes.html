@@ -341,6 +341,22 @@ a { text-decoration: none; color: inherit; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+  .container { width: 92vw; }
+  .article-hero { padding: 5.5rem 0 2.5rem; }
+  .article-hero-inner { padding: 0; }
+  [class*=hero] h1 { font-size: clamp(1.75rem, 6vw, 2.4rem) !important; }
+  .article-hero-sub { font-size: 0.95rem; }
+  .article-body p, .article-body li { font-size: 0.93rem; }
+  .pattern-block, .sign-block { padding: 1.25rem; }
+  .sign-header { flex-direction: row; gap: 0.75rem; }
+  .cta-buttons { flex-direction: column; align-items: center; gap: 0.75rem; }
+  .article-cta { padding: 2rem 1.25rem; }
+  .article-grid { grid-template-columns: 1fr; }
+  .insights-grid { grid-template-columns: 1fr; }
+  .insights-hero { padding: 5.5rem 0 2.5rem; }
+  .cta-strip-buttons { flex-direction: column; align-items: center; gap: 0.75rem; }
+
   .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-900); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; z-index: 999; }
   .nav-links.active { display: flex; }
   .nav-toggle { display: flex; }
@@ -364,11 +380,11 @@ a { text-decoration: none; color: inherit; }
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/#why-beanz">Why Beanz</a></li>
-      <li><a href="/#about">About</a></li>
+      <li><a href="/about.html">About</a></li>
       <li><a href="/#services">Services</a></li>
       <li><a href="/#results">Results</a></li>
       <li><a href="/insights.html" class="active">Insights</a></li>
-      <li><a href="/#careers">Careers</a></li>
+      <li><a href="/careers.html">Careers</a></li>
       <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -736,17 +752,17 @@ a { text-decoration: none; color: inherit; }
         <h3>Company</h3>
         <ul>
           <li><a href="/#why-beanz">Why Beanz</a></li>
-          <li><a href="/#about">About</a></li>
+          <li><a href="/about.html">About</a></li>
           <li><a href="/#results">Results</a></li>
           <li><a href="/insights.html">Insights</a></li>
-          <li><a href="/#careers">Careers</a></li>
+          <li><a href="/careers.html">Careers</a></li>
           <li><a href="mailto:connect@beanz.in">Email Us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Beanz Consulting. All rights reserved.</p>
-      <p>Beanz Enterprises — Building Global Capabilities</p>
+      <p><a href="/privacy-policy.html" style="color:rgba(255,255,255,0.35);">Privacy &amp; Cookie Policy</a></p>
     </div>
   </div>
 </footer>
@@ -765,5 +781,6 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 </script>
 
+<script src="/js/cookie-banner.js"></script>
 </body>
 </html>
