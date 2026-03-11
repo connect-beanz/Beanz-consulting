@@ -120,7 +120,7 @@ button{font-family:inherit;cursor:pointer;border:none}
   .wont-do-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
-  .nav-links{display:none;position:fixed;inset:0 0 0 30%;background:var(--navy-900);flex-direction:column;justify-content:center;padding:2.5rem;gap:1.75rem;border-left:1px solid rgba(255,255,255,.08)}
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999}
   .nav-links.open{display:flex}
   .nav-toggle{display:flex}
   .card-grid{grid-template-columns:1fr}
@@ -211,7 +211,7 @@ button{font-family:inherit;cursor:pointer;border:none}
         <a href="/gcc-advisory.html" class="svc-more">Learn More →</a>
       </div>
 
-      <div class="svc-card reveal" style="transition-delay:.08s">
+      <div class="svc-card reveal" id="service-03" style="transition-delay:.08s">
         <div class="svc-num">Service 03</div>
         <h2>Supply Chain &amp; Operational Excellence</h2>
         <p>We design networks that actually work — with the right cost structure, service levels, and balance between resilience and efficiency. Loss analysis, daily management systems, and HPO design included.</p>
@@ -224,7 +224,7 @@ button{font-family:inherit;cursor:pointer;border:none}
         </div>
       </div>
 
-      <div class="svc-card reveal" style="transition-delay:.12s">
+      <div class="svc-card reveal" id="service-04" style="transition-delay:.12s">
         <div class="svc-num">Service 04</div>
         <h2>Leadership &amp; Organisational Transformation</h2>
         <p>Strengthening culture, building operating rhythms, and designing governance for fast-growing organisations — from C-suite executive coaching through to high-potential programme design.</p>
@@ -279,8 +279,8 @@ button{font-family:inherit;cursor:pointer;border:none}
         <ul>
           <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
           <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
-          <li><a href="/services.html">Supply Chain &amp; OpEx</a></li>
-          <li><a href="/services.html">Leadership &amp; Transformation</a></li>
+          <li><a href="/services.html#service-03">Supply Chain &amp; OpEx</a></li>
+          <li><a href="/services.html#service-04">Leadership &amp; Transformation</a></li>
         </ul>
       </div>
       <div class="footer-col">

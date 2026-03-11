@@ -75,7 +75,8 @@ button{font-family:inherit;cursor:pointer;border:none}
 .founder-main{padding:var(--section-pad) 0;background:var(--white)}
 .founder-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:6rem;align-items:start}
 .founder-sticky{position:sticky;top:6rem}
-.founder-photo{width:100%;max-height:460px;border-radius:10px;object-fit:cover;object-position:center top;aspect-ratio:4/5;filter:grayscale(15%);box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.founder-photo-frame{background:var(--navy-900);border-radius:14px;padding:1.5rem 1.5rem 0;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.founder-photo{width:100%;max-height:280px;border-radius:8px 8px 0 0;object-fit:cover;object-position:center top;aspect-ratio:3/2;filter:grayscale(10%)}
 .founder-badge{margin-top:1.5rem;background:var(--navy-900);border-radius:8px;padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .badge-stat strong{font-family:var(--font-display);font-size:1.75rem;color:var(--gold-400);display:block;line-height:1}
 .badge-stat span{font-size:.72rem;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:.03em;margin-top:.2rem;display:block}
@@ -179,12 +180,14 @@ button{font-family:inherit;cursor:pointer;border:none}
   .founder-sticky{position:static!important}
   .founder-grid{grid-template-columns:1fr;gap:3rem}
   .founder-sticky{position:static}
-  .founder-photo{aspect-ratio:16/9;object-position:center top;max-height:380px}
+  .founder-photo{aspect-ratio:3/2;object-position:center top;max-height:220px}
   .philosophy-inner{grid-template-columns:1fr;gap:3rem}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.25rem}
   .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
 }
 @media(max-width:768px){
+  .why-beanz-grid{grid-template-columns:1fr!important}
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
   .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999}
   .nav-links.open{display:flex}
   .nav-toggle{display:flex}
@@ -240,12 +243,43 @@ button{font-family:inherit;cursor:pointer;border:none}
   </div>
 </section>
 
+
+<!-- WHY BEANZ -->
+<section style="padding:var(--section-pad) 0;background:var(--gray-50);border-bottom:1px solid var(--gray-200)">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;text-align:center" class="reveal">
+      <div class="label label--center" style="margin-bottom:1.5rem">Why Beanz</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.9rem,3.5vw,2.75rem);color:var(--navy-800);line-height:1.2;margin-bottom:1.5rem">The gap no one was filling.<br><em style="color:var(--gold-500)">Independent. Practitioner-led. Conflict-free.</em></h2>
+      <p style="font-size:1rem;color:var(--gray-500);line-height:1.9;margin-bottom:3rem">Most advisory firms either sell you a methodology or a headcount. Beanz was built to do neither. Every engagement starts from the practitioner's lens — from someone who has carried the P&L, managed the attrition numbers, and sat on the other side of the vendor contract.</p>
+    </div>
+    <div class="why-beanz-grid reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem">
+      <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:12px;padding:2rem">
+        <div style="width:44px;height:44px;border-radius:10px;background:var(--gold-100);display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1.25rem">🎯</div>
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--navy-800);margin-bottom:.6rem">No Conflicts of Interest</h3>
+        <p style="font-size:.88rem;color:var(--gray-500);line-height:1.75">We don't place staff. We don't take referral fees. We don't have vendor relationships to protect. When we recommend something, it's because it's right for you.</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:12px;padding:2rem">
+        <div style="width:44px;height:44px;border-radius:10px;background:var(--gold-100);display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1.25rem">🏗️</div>
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--navy-800);margin-bottom:.6rem">Built from the Inside</h3>
+        <p style="font-size:.88rem;color:var(--gray-500);line-height:1.75">20+ years inside Fortune 500 organisations — not advising from the outside. Every framework we use was stress-tested in environments where the outcome actually mattered.</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:12px;padding:2rem">
+        <div style="width:44px;height:44px;border-radius:10px;background:var(--gold-100);display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1.25rem">📐</div>
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--navy-800);margin-bottom:.6rem">Capability Transfer, Not Dependency</h3>
+        <p style="font-size:.88rem;color:var(--gray-500);line-height:1.75">We don't design engagements that keep you coming back. Every piece of work is structured to leave your team stronger and more self-sufficient than when we arrived.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOUNDER MAIN -->
 <section class="founder-main">
   <div class="container">
     <div class="founder-grid">
       <div class="founder-sticky reveal">
-        <img src="viraj-photo.jpg" alt="Viraj Mehta — Founder, Beanz Consulting" class="founder-photo">
+        <div class="founder-photo-frame">
+          <img src="viraj-photo.jpg" alt="Viraj Mehta — Founder, Beanz Consulting" class="founder-photo">
+        </div>
         <div class="founder-badge">
           <div class="badge-stat"><strong>20+</strong><span>Years Fortune 500</span></div>
           <div class="badge-stat"><strong>1,000+</strong><span>GCC Capacity Built</span></div>
@@ -476,8 +510,8 @@ button{font-family:inherit;cursor:pointer;border:none}
         <ul>
           <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
           <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
-          <li><a href="/#services">Supply Chain &amp; OpEx</a></li>
-          <li><a href="/#services">Leadership &amp; Transformation</a></li>
+          <li><a href="/services.html#service-03">Supply Chain &amp; OpEx</a></li>
+          <li><a href="/services.html#service-04">Leadership &amp; Transformation</a></li>
         </ul>
       </div>
       <div class="footer-col">

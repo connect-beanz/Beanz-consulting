@@ -352,8 +352,6 @@ button{font-family:inherit;cursor:pointer;border:none}
         <span class="logobar-item">Kraft Heinz</span>
         <span class="logobar-item">General Mills</span>
         <span class="logobar-item">Procter &amp; Gamble</span>
-        <span class="logobar-item">BCG</span>
-        <span class="logobar-item">Synfiny</span>
       </div>
     </div>
   </div>
@@ -597,8 +595,8 @@ button{font-family:inherit;cursor:pointer;border:none}
         <ul>
           <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
           <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
-          <li><a href="#services">Supply Chain &amp; OpEx</a></li>
-          <li><a href="#services">Leadership &amp; Transformation</a></li>
+          <li><a href="/services.html#service-03">Supply Chain &amp; OpEx</a></li>
+          <li><a href="/services.html#service-04">Leadership &amp; Transformation</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -639,6 +637,36 @@ links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.clas
 // Reveal
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Guide download
+const downloadBtn=document.getElementById('downloadBtn');
+if(downloadBtn){
+  downloadBtn.addEventListener('click',async()=>{
+    const input=downloadBtn.closest('.download-form').querySelector('.download-input');
+    const email=input.value.trim();
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      input.style.borderColor='rgba(255,100,100,.7)';
+      input.placeholder='Please enter a valid email';
+      setTimeout(()=>{input.style.borderColor='';input.placeholder='Your work email';},2500);
+      return;
+    }
+    downloadBtn.disabled=true;
+    downloadBtn.textContent='Sending…';
+    try{
+      const r=await fetch('/api/send-guide',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
+      const d=await r.json();
+      if(d.success){
+        downloadBtn.closest('.download-form').innerHTML='<p style="color:#fff;font-weight:600;font-size:.95rem;">✓ Check your inbox — guide is on its way.</p>';
+      }else{
+        downloadBtn.disabled=false;
+        downloadBtn.textContent='Send Me the Guide →';
+        input.placeholder=d.error||'Something went wrong, try again';
+      }
+    }catch{
+      downloadBtn.disabled=false;
+      downloadBtn.textContent='Send Me the Guide →';
+    }
+  });
+}
 // Contact form
 const form=document.getElementById('contactForm'),toastEl=document.getElementById('toast'),toastClose=document.getElementById('toastClose');
 form.addEventListener('submit',async e=>{
