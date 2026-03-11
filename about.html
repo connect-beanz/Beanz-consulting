@@ -76,7 +76,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .founder-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:6rem;align-items:start}
 .founder-sticky{position:sticky;top:6rem}
 .founder-photo-frame{background:var(--navy-900);border-radius:14px;padding:1.5rem 1.5rem 0;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.2)}
-.founder-photo{width:100%;max-height:280px;border-radius:8px 8px 0 0;object-fit:cover;object-position:center top;aspect-ratio:3/2;filter:grayscale(10%)}
+.founder-photo{width:100%;border-radius:8px 8px 0 0;object-fit:contain;object-position:center bottom;aspect-ratio:4/5;filter:grayscale(10%);max-height:320px}
 .founder-badge{margin-top:1.5rem;background:var(--navy-900);border-radius:8px;padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .badge-stat strong{font-family:var(--font-display);font-size:1.75rem;color:var(--gold-400);display:block;line-height:1}
 .badge-stat span{font-size:.72rem;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:.03em;margin-top:.2rem;display:block}
@@ -180,7 +180,7 @@ button{font-family:inherit;cursor:pointer;border:none}
   .founder-sticky{position:static!important}
   .founder-grid{grid-template-columns:1fr;gap:3rem}
   .founder-sticky{position:static}
-  .founder-photo{aspect-ratio:3/2;object-position:center top;max-height:220px}
+  .founder-photo{aspect-ratio:4/5;object-position:center bottom;max-height:280px}
   .philosophy-inner{grid-template-columns:1fr;gap:3rem}
   .stats-grid{grid-template-columns:1fr 1fr;gap:1.25rem}
   .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
@@ -503,7 +503,6 @@ button{font-family:inherit;cursor:pointer;border:none}
       <div class="footer-brand">
         <a href="/" class="footer-brand-logo">Beanz <span>Consulting.</span></a>
         <p>Independent. Evidence-based. Designed to make itself unnecessary.</p>
-        <div class="footer-accord-badge">BEANZ ACCORD™ Certified Audits</div>
       </div>
       <div class="footer-col">
         <h3>Services</h3>
@@ -529,13 +528,13 @@ button{font-family:inherit;cursor:pointer;border:none}
       <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
       <div class="footer-bottom-links">
         <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/cdn-cgi/l/email-protection#b7d4d8d9d9d2d4c3f7d5d2d6d9cd99ded9"><span class="__cf_email__" data-cfemail="33505c5d5d565047735156525d491d5a5d">[email&#160;protected]</span></a>
+        <a href="mailto:connect@beanz.in">connect&#64;beanz.in</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/cookie-banner.js" defer></script>
+<script src="/js/cookie-banner.js" defer></script>
 <script>
 document.documentElement.classList.add('js-ready');
 const navToggle = document.getElementById('navToggle');
