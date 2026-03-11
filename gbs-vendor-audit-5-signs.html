@@ -655,9 +655,20 @@ body { font-family: var(--font-body); }
     </div>
     <div class="footer-bottom">
       <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
-      <div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="mailto:connect@beanz.in">connect&#64;beanz.in</a></div>
+      <div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/cdn-cgi/l/email-protection#9efdf1f0f0fbfdeadefcfbfff0e4b0f7f0">connect&#64;beanz.in</a></div>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/script
+<script src="/js/cookie-banner.js"></script>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
+const toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
