@@ -24,7 +24,7 @@ a{text-decoration:none;color:inherit}
 .container{width:var(--container);margin:0 auto}
 
 /* NAV */
-.nav{padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#0f2240;border-bottom:2px solid rgba(200,151,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:var(--font-display);font-size:1.75rem;color:var(--white)}
 .nav-logo span{color:var(--gold-400)}
@@ -197,15 +197,10 @@ h1 em{color:var(--gold-400);font-style:italic}
   <div class="container">
     <div class="footer-inner">
       <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). All rights reserved.</p>
-      <a href="mailto:connect@beanz.in">connect@beanz.in</a>
+      <a href="/cdn-cgi/l/email-protection#0f6c6061616a6c7b4f6d6a6e6175216661"><span class="__cf_email__" data-cfemail="b8dbd7d6d6dddbccf8daddd9d6c296d1d6">[email&#160;protected]</span></a>
     </div>
   </div>
 </footer>
 
-<script>
-const toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
-toggle.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-</script>
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const toggle=document.getElementById('navToggle'),links
