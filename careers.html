@@ -100,6 +100,11 @@
   .form-group input,.form-group select,.form-group textarea{width:100%;padding:.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:4px;font-family:var(--font-body);font-size:.9rem;color:var(--gray-700);background:var(--white);transition:border-color .2s;outline:none}
   .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold-500)}
   .form-group textarea{resize:vertical;min-height:110px}
+  .file-upload-label{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border:1.5px dashed var(--gray-200);border-radius:4px;cursor:pointer;transition:border-color .2s;font-size:.88rem;color:var(--gray-500);background:var(--gray-50)}
+  .file-upload-label:hover{border-color:var(--gold-500);color:var(--gray-700)}
+  .file-upload-label input[type="file"]{display:none}
+  .file-upload-icon{font-size:1.1rem;flex-shrink:0}
+  .file-upload-text span{display:block;font-size:.72rem;color:var(--gray-400);margin-top:.15rem}
   .form-submit{width:100%;padding:1rem;background:var(--gold-500);color:var(--white);border:none;border-radius:4px;font-family:var(--font-body);font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .2s}
   .form-submit:hover{background:var(--gold-400)}
   /* CTA */
@@ -227,7 +232,7 @@
         <div class="label">Apply</div>
         <h2 class="section-title">Submit Your<br><em>Application</em></h2>
         <p style="font-size:.95rem;color:var(--gray-500);line-height:1.85;margin-top:1rem">We read every application personally. If there's a fit — now or in the future — we'll be in touch. No automated rejection emails. No HR screening decks.</p>
-        <p style="font-size:.82rem;color:var(--gray-400);margin-top:1.5rem">Or email directly:<br><a href="/cdn-cgi/l/email-protection#6f0c0001010a0c1b2f0d0a0e0115410601" style="color:var(--gold-500)"><span class="__cf_email__" data-cfemail="9ffcf0f1f1fafcebdffdfafef1e5b1f6f1">[email&#160;protected]</span></a></p>
+        <p style="font-size:.82rem;color:var(--gray-400);margin-top:1.5rem">Or email directly:<br><a href="mailto:connect@beanz.in" style="color:inherit">connect@beanz.in</a></p>
       </div>
       <div class="form-wrap">
         <form id="careers-form" aria-label="Career application form">
@@ -275,6 +280,17 @@
             <label for="career-message">Why Beanz Consulting? *</label>
             <textarea id="career-message" name="Message" placeholder="Tell us why you want to work with Beanz, what you'd bring, and what you're looking for..." required></textarea>
           </div>
+          <div class="form-group">
+            <label>Resume / CV <span style="font-weight:400;color:var(--gray-400)">(PDF, DOC or DOCX — max 5MB)</span></label>
+            <label class="file-upload-label" id="resume-label">
+              <input type="file" id="career-resume" name="Resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+              <span class="file-upload-icon">📎</span>
+              <span class="file-upload-text">
+                <strong id="resume-filename">Click to attach your resume</strong>
+                <span>PDF, DOC or DOCX accepted</span>
+              </span>
+            </label>
+          </div>
           <button type="submit" class="form-submit" id="careers-submit">Submit Application →</button>
           <p id="careers-status" style="font-size:.82rem;margin-top:1rem;text-align:center;color:var(--gray-500)"></p>
         </form>
@@ -305,7 +321,7 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
-      <div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/cdn-cgi/l/email-protection#3d5e525353585e497d5f585c5347135453">connect&#64;beanz.in</a></div>
+      <div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="mailto:connect@beanz.in">connect&#64;beanz.in</a></div>
     </div>
   </div>
 </footer>
@@ -321,6 +337,16 @@ toggle.addEventListener('click',()=>{links.classList.toggle('open');toggle.class
 links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.classList.remove('open')}));
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Resume file label update
+const resumeInput=document.getElementById('career-resume');
+if(resumeInput){resumeInput.addEventListener('change',function(){
+  const fn=document.getElementById('resume-filename');
+  if(this.files&&this.files[0]){
+    fn.textContent=this.files[0].name;
+    document.querySelector('.file-upload-label').style.borderColor='var(--gold-500)';
+    document.querySelector('.file-upload-label').style.borderStyle='solid';
+  }else{fn.textContent='Click to attach your resume';}
+});}
 // Careers form
 const cf=document.getElementById('careersForm');
 if(cf){cf.addEventListener('submit',async function(e){
