@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.beanz.in/</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.beanz.in/about.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.beanz.in/services.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.beanz.in/gbs-vendor-audit.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.beanz.in/gcc-advisory.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.beanz.in/service-supply-chain.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.beanz.in/service-leadership.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.beanz.in/service-capability.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.beanz.in/results.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.beanz.in/insights.html</loc><lastmod>2026-03-12</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.beanz.in/careers.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.beanz.in/gbs-vendor-audit-5-signs.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.beanz.in/gbs-vendor-audit-7-signs.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.beanz.in/gcc-mistakes.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.beanz.in/gcc-vs-outsourcing-india.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.beanz.in/how-to-set-up-gcc-india.html</loc><lastmod>2026-03-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.beanz.in/privacy-policy.html</loc><lastmod>2026-03-12</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <url>
+    <loc>https://www.beanz.in/</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.beanz.in/gcc-advisory.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.beanz.in/gbs-vendor-audit.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.beanz.in/insights.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.beanz.in/how-to-set-up-gcc-india.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.beanz.in/gcc-mistakes.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.beanz.in/gcc-vs-outsourcing-india.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

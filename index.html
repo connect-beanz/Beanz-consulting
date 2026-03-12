@@ -4,573 +4,806 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GCC Setup & Advisory Consultant India | Beanz Consulting</title>
-<meta name="description" content="Viraj Mehta — India's leading GCC consultant. BEANZ ACCORD™ GBS vendor audit. 20+ years at Kraft Heinz, P&G & General Mills. No conflicts of interest.">
+<meta name="description" content="GCC advisory and consulting for Fortune 500 companies. Beanz Consulting helps multinationals set up and transform Global Capability Centers in India.">
+<meta name="keywords" content="GCC consultant India, global capability center setup India, GCC advisory, GCC strategy consultant, Fortune 500 GCC India">
+<meta name="author" content="Beanz Consulting">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://www.beanz.in/">
+
+<!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.beanz.in/">
 <meta property="og:title" content="GCC Setup & Advisory Consultant India | Beanz Consulting">
-<meta property="og:description" content="Viraj Mehta — India's leading GCC consultant. BEANZ ACCORD™ vendor audit. Transparent pricing. No conflicts of interest.">
+<meta property="og:description" content="Viraj Mehta — India's leading GCC consultant. 20+ years at Kraft Heinz, P&G & General Mills. Expert GCC setup and advisory for global enterprises.">
 <meta property="og:image" content="https://www.beanz.in/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="robots" content="index, follow">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Beanz Consulting">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GCC Setup & Advisory Consultant India | Beanz Consulting">
-<meta name="twitter:description" content="Viraj Mehta — India's leading GCC consultant. BEANZ ACCORD™ GBS vendor audit. 20+ years at Kraft Heinz, P&G & General Mills.">
+<meta name="twitter:description" content="Viraj Mehta — India's leading GCC consultant. 20+ years at Kraft Heinz, P&G & General Mills. Expert GCC setup and advisory for global enterprises.">
 <meta name="twitter:image" content="https://www.beanz.in/og-image.jpg">
+
+<!-- Geo / Local SEO -->
+<meta name="geo.region" content="IN-GJ">
+<meta name="geo.placename" content="Ahmedabad">
+<meta name="geo.position" content="23.0225;72.5714">
+<meta name="ICBM" content="23.0225, 72.5714">
+
+<!-- Favicons -->
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#0a1628">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7DZMPX4XJM"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7DZMPX4XJM');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-<style>
-/* ── TOKENS ─────────────────────────────────────────────────────────── */
-:root {
-  --navy-900:#0a1628; --navy-800:#0f2240; --navy-700:#162d50;
-  --gold-500:#c8973e; --gold-400:#d4a84f; --gold-300:#e0be72; --gold-100:#f7f0dc;
-  --white:#ffffff;
-  --gray-50:#f8f9fb; --gray-100:#f0f2f5; --gray-200:#e2e5eb;
-  --gray-400:#9aa2b1; --gray-500:#6b7589; --gray-600:#4a5568; --gray-700:#2d3748;
-  --font-display:'DM Serif Display',Georgia,serif;
-  --font-body:'Plus Jakarta Sans',-apple-system,sans-serif;
-  --section-pad:clamp(4rem,8vw,7rem);
-  --container:min(1200px,90vw);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--gray-700);background:var(--white);overflow-x:hidden}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-button{font-family:inherit;cursor:pointer;border:none}
-.container{width:var(--container);margin:0 auto}
-
-/* ── SHARED ─────────────────────────────────────────────────────────── */
-.label{font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-500);display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1rem}
-.label::before{content:'';width:2rem;height:2px;background:var(--gold-500);flex-shrink:0}
-.label--center{justify-content:center}.label--center::before{display:none}
-.label--light{color:var(--gold-300)}.label--light::before{background:var(--gold-300)}
-.title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.1rem);line-height:1.18;color:var(--navy-800);margin-bottom:1.25rem}
-.title em{color:var(--gold-500);font-style:italic}
-.title--white{color:var(--white)}.title--white em{color:var(--gold-400)}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.9rem;border-radius:4px;font-size:.82rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;transition:all .3s;cursor:pointer}
-.btn-gold{background:var(--gold-500);color:var(--white)}.btn-gold:hover{background:var(--gold-400);transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,151,62,.35)}
-.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3)}.btn-outline-white:hover{border-color:var(--gold-400);color:var(--gold-400)}
-.btn-navy{background:var(--navy-900);color:var(--white)}.btn-navy:hover{background:var(--navy-700);transform:translateY(-2px)}
-.reveal{opacity:1;transform:none;transition:opacity .65s ease,transform .65s ease}
-.js-ready .reveal{opacity:0;transform:translateY(20px)}
-.js-ready .reveal.visible{opacity:1;transform:none}
-
-/* ── NAV ─────────────────────────────────────────────────────────────── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#0f2240;border-bottom:2px solid rgba(200,151,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
-.nav.scrolled{padding:.4rem 0;background:#0a1628;border-bottom:2px solid rgba(200,151,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
-.nav-inner{width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:var(--font-display);font-size:1.8rem;color:var(--white);white-space:nowrap;transition:font-size .3s}
-.nav.scrolled .nav-logo{font-size:1.45rem}
-.nav-logo span{color:var(--gold-400)}
-.nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
-.nav-links a{font-size:.85rem;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.02em;transition:color .3s;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold-400);transition:width .3s}
-.nav-links a:hover{color:var(--white)}.nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--gold-500)!important;color:var(--white)!important;padding:.55rem 1.4rem;border-radius:4px;font-weight:700!important;font-size:.78rem!important;letter-spacing:.06em!important;text-transform:uppercase}
-.nav-cta::after{display:none!important}.nav-cta:hover{background:var(--gold-400)!important}
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
-.nav-toggle span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
-
-/* ── HERO ─────────────────────────────────────────────────────────────── */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy-900);overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-image:radial-gradient(ellipse 80% 60% at 110% 50%,rgba(200,151,62,.07) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at -10% 60%,rgba(22,45,80,.8) 0%,transparent 60%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:100% 100%,100% 100%,70px 70px,70px 70px}
-.hero-content{position:relative;z-index:2;width:var(--container);margin:0 auto;padding:9rem 0 5rem}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;background:rgba(200,151,62,.1);border:1px solid rgba(200,151,62,.22);padding:.35rem 1rem;border-radius:100px;font-size:.7rem;font-weight:700;color:var(--gold-300);letter-spacing:.12em;text-transform:uppercase;margin-bottom:2.25rem;animation:fadeIn .8s ease both}
-.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--gold-400);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-@keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.hero h1{font-family:var(--font-display);font-size:clamp(2.75rem,5.5vw,4.75rem);line-height:1.1;color:var(--white);margin-bottom:2rem;max-width:880px;animation:fadeIn .8s .1s ease both}
-.hero h1 em{color:var(--gold-400);font-style:italic}
-.hero-sub{font-size:1.05rem;line-height:1.85;color:rgba(255,255,255,.58);max-width:560px;margin-bottom:2.75rem;animation:fadeIn .8s .2s ease both}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeIn .8s .3s ease both;margin-bottom:4rem}
-.hero-proof{display:grid;grid-template-columns:repeat(4,1fr);gap:0;animation:fadeIn .8s .4s ease both;border-top:1px solid rgba(255,255,255,.08);padding-top:3rem}
-.hero-proof-item{padding-right:2rem}
-.hero-proof-item:not(:last-child){border-right:1px solid rgba(255,255,255,.07);margin-right:2rem}
-.hero-proof-num{font-family:var(--font-display);font-size:2.25rem;color:var(--gold-400);line-height:1;display:block}
-.hero-proof-label{font-size:.75rem;color:rgba(255,255,255,.38);font-weight:500;letter-spacing:.03em;margin-top:.3rem}
-
-/* ── LOGO BAR ─────────────────────────────────────────────────────────── */
-.logobar{padding:1.5rem 0;background:var(--navy-800);border-bottom:1px solid rgba(255,255,255,.05)}
-.logobar-inner{display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap}
-.logobar-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);white-space:nowrap;flex-shrink:0}
-.logobar-list{display:flex;gap:2.5rem;flex-wrap:wrap;align-items:center}
-.logobar-item{font-family:var(--font-display);font-size:1.05rem;color:rgba(255,255,255,.32);letter-spacing:.02em;white-space:nowrap}
-
-/* ── WHY BEANZ ───────────────────────────────────────────────────────── */
-.why{padding:var(--section-pad) 0;background:var(--white);border-top:1px solid var(--gray-200)}
-.why-inner{display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start}
-.why-left{position:sticky;top:7rem}
-.why-left .label{margin-bottom:1rem}
-.why-left p{font-size:.95rem;color:var(--gray-500);line-height:1.85;margin:1rem 0 2rem}
-.why-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--gray-200);border:1px solid var(--gray-200);border-radius:10px;overflow:hidden}
-.why-pillar{background:var(--white);padding:2rem 1.75rem;transition:background .25s}
-.why-pillar:hover{background:var(--gray-50)}
-.why-pillar-icon{font-size:1.6rem;margin-bottom:1rem}
-.why-pillar-num{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-500);margin-bottom:.5rem;display:block}
-.why-pillar h3{font-family:var(--font-display);font-size:1.15rem;color:var(--navy-800);margin-bottom:.65rem;line-height:1.3}
-.why-pillar p{font-size:.85rem;color:var(--gray-500);line-height:1.8}
-.why-pillar--dark{background:var(--navy-900)}
-.why-pillar--dark:hover{background:var(--navy-800)}
-.why-pillar--dark h3{color:var(--white)}
-.why-pillar--dark p{color:rgba(255,255,255,.45)}
-.why-pillar--dark .why-pillar-num{color:var(--gold-400)}
-
-/* ── RECOMMENDATIONS ─────────────────────────────────────────────────── */
-
-/* ── CLIENT VOICES ────────────────────────────────────────────────────── */
-.voices{padding:var(--section-pad) 0;background:var(--navy-900);position:relative;overflow:hidden}
-.voices::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:80px 80px}
-.voices .container{position:relative;z-index:2}
-.voices-header{text-align:center;margin-bottom:2.75rem}
-.voices-note{font-size:.75rem;color:rgba(255,255,255,.22);margin-top:.5rem;font-style:italic}
-.voices-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.voice-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:2.25rem 2.25rem 2rem;position:relative;transition:box-shadow .3s}
-.voice-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.25)}
-.voice-quote-mark{font-family:var(--font-display);font-size:5rem;line-height:.8;color:var(--gold-500);opacity:.25;position:absolute;top:1.5rem;right:1.75rem;font-style:italic;pointer-events:none}
-.voice-body{font-size:.92rem;color:rgba(255,255,255,.55);line-height:1.9;margin-bottom:1.75rem;font-style:italic}
-.voice-attr{display:flex;align-items:center;gap:1rem;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem}
-.voice-avatar{width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(200,151,62,.15);border:1px solid rgba(200,151,62,.25);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.1rem;color:var(--gold-400);flex-shrink:0}
-.voice-name{font-size:.88rem;font-weight:700;color:var(--white);margin-bottom:.15rem}
-.voice-role{font-size:.78rem;color:rgba(255,255,255,.38)}
-.voice-engagement{font-size:.68rem;font-weight:600;color:var(--gold-500);letter-spacing:.04em;margin-top:.3rem;text-transform:uppercase}
-
-.recommendations{padding:var(--section-pad) 0;background:var(--gray-50);border-top:1px solid var(--gray-200)}
-.rec-header{text-align:center;margin-bottom:3.5rem}
-.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.rec{background:var(--white);border:1px solid var(--gray-200);border-radius:10px;padding:2rem 2rem 1.75rem;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(0,0,0,.04);transition:box-shadow .3s,transform .3s}
-.rec:hover{box-shadow:0 8px 30px rgba(0,0,0,.09);transform:translateY(-3px)}
-.rec-badge{display:flex;align-items:center;gap:.45rem;margin-bottom:1.25rem}
-.rec-rel{font-size:.65rem;color:var(--gray-400);margin-left:auto;font-style:italic;background:var(--gray-50);padding:.18rem .5rem;border-radius:100px;border:1px solid var(--gray-200);white-space:nowrap}
-.rec-body{font-size:.9rem;line-height:1.85;color:var(--gray-600);margin-bottom:1.5rem;font-style:italic;flex:1}
-.rec-body::before{content:'\201C';font-family:var(--font-display);font-size:1.4rem;color:var(--gold-400);line-height:0;vertical-align:-.4rem;margin-right:.15rem}
-.rec-body::after{content:'\201D';font-family:var(--font-display);font-size:1.4rem;color:var(--gold-400);line-height:0;vertical-align:-.4rem;margin-left:.15rem}
-.rec-attr{display:flex;align-items:flex-start;gap:.85rem;padding-top:1.25rem;border-top:1px solid var(--gray-100)}
-.rec-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy-900);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.rec-avatar span{font-family:var(--font-display);font-size:.95rem;color:var(--gold-400)}
-.rec-name{font-size:.85rem;font-weight:700;color:var(--navy-800)}
-.rec-role{font-size:.7rem;color:var(--gray-500);margin-top:.15rem;line-height:1.4}
-
-
-/* ── CONTACT ─────────────────────────────────────────────────────────── */
-.contact{padding:var(--section-pad) 0;background:var(--white);border-top:1px solid var(--gray-200)}
-.contact-grid{display:grid;grid-template-columns:.45fr .55fr;gap:5rem;align-items:start}
-.contact-left .label{margin-bottom:1rem}
-.contact-sub{font-size:.95rem;color:var(--gray-500);line-height:1.85;margin-bottom:2.25rem}
-.contact-rows{display:flex;flex-direction:column;gap:.9rem}
-.contact-row{display:flex;align-items:center;gap:1rem}
-.contact-icon{width:38px;height:38px;border-radius:8px;background:var(--navy-900);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
-.contact-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400)}
-.contact-val{font-size:.9rem;color:var(--navy-800);font-weight:500;margin-top:.1rem}
-.contact-val a{color:inherit;transition:color .3s}.contact-val a:hover{color:var(--gold-500)}
-.contact-form-wrap{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;padding:2.25rem}
-.contact-form-wrap h3{font-family:var(--font-display);font-size:1.25rem;color:var(--navy-800);margin-bottom:.3rem}
-.form-sub{font-size:.83rem;color:var(--gray-400);margin-bottom:1.75rem}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:.85rem}
-.form-group{display:flex;flex-direction:column;gap:.35rem}
-.form-group.full{grid-column:1/-1}
-.form-group label{font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gray-600)}
-.form-group input,.form-group select,.form-group textarea{font-family:var(--font-body);font-size:.88rem;padding:.72rem .95rem;border:1px solid var(--gray-200);border-radius:6px;background:var(--white);color:var(--gray-700);transition:border-color .3s,box-shadow .3s;outline:none}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold-500);box-shadow:0 0 0 3px rgba(200,151,62,.1)}
-.form-group textarea{resize:vertical;min-height:100px}
-.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%236b7589' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.25rem}
-.form-submit{width:100%;background:var(--navy-900);color:var(--white);padding:.9rem;border-radius:6px;font-size:.82rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-top:.25rem;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:.5rem}
-.form-submit:hover{background:var(--navy-700);transform:translateY(-1px);box-shadow:0 8px 25px rgba(10,22,40,.2)}
-
-
-/* ── FORM TOAST ──────────────────────────────────────────────────────── */
-.toast-overlay{position:fixed;inset:0;background:rgba(10,22,40,.7);backdrop-filter:blur(6px);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s}
-.toast-overlay.show{opacity:1;pointer-events:auto}
-.toast{background:var(--white);border-radius:16px;padding:2.75rem 2.5rem;max-width:420px;width:90%;text-align:center;transform:translateY(20px) scale(.97);transition:transform .35s;box-shadow:0 25px 60px rgba(0,0,0,.3)}
-.toast-overlay.show .toast{transform:translateY(0) scale(1)}
-.toast-icon{width:52px;height:52px;background:var(--gold-500);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.1rem;font-size:1.4rem;color:var(--white)}
-.toast h3{font-family:var(--font-display);font-size:1.35rem;color:var(--navy-800);margin-bottom:.45rem}
-.toast p{font-size:.9rem;color:var(--gray-600);line-height:1.65;margin-bottom:1.5rem}
-.toast-close{background:var(--navy-900);color:var(--white);border:none;padding:.65rem 1.85rem;border-radius:6px;font-size:.83rem;font-weight:600;cursor:pointer}
-
-/* ── RESPONSIVE ──────────────────────────────────────────────────────── */
-@media(max-width:1024px){
-  .why-inner{grid-template-columns:1fr;gap:3rem}
-  .why-left{position:static}
-  .hero-proof{grid-template-columns:repeat(2,1fr);gap:1.5rem;padding-top:2.5rem}
-  .hero-proof-item{border-right:none!important;margin-right:0!important;padding-right:0}
-  .problem-cols{grid-template-columns:1fr}
-  .problem-col+.problem-col{border-left:none;border-top:1px solid var(--gray-200)}
-  .problem-col--dark+.problem-col{border-top:1px solid rgba(255,255,255,.1)}
-  .svc-grid{grid-template-columns:1fr 1fr}
-  .results-nums{grid-template-columns:repeat(2,1fr)}
-  .rec-grid{grid-template-columns:1fr 1fr}
-  .contact-grid{grid-template-columns:1fr;gap:3rem}
-}
-@media(max-width:1024px){
-  .svc-grid{grid-template-columns:1fr 1fr}
-  .why-pillars{grid-template-columns:1fr 1fr}
-  .hero-inner{grid-template-columns:1fr}
-  .voices-grid{grid-template-columns:1fr}
-}
-@media(max-width:768px){
-  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999}
-  .nav-links.open{display:flex}
-  .nav-toggle{display:flex}
-  .svc-grid{grid-template-columns:1fr}
-  .why-pillars{grid-template-columns:1fr}
-  .rec-grid{grid-template-columns:1fr}
-  .voices-grid{grid-template-columns:1fr}
-  .hero-content{padding:7.5rem 0 4rem}
-  .hero h1{font-size:2.25rem}
-  .logobar-inner{gap:1rem;justify-content:center}.logobar-list{gap:1.25rem;flex-wrap:wrap;justify-content:center}
-}
-@media(max-width:480px){
-  :root{--section-pad:2.5rem}
-  .container{padding:0 1.2rem}
-  .hero-content{padding:6.5rem 0 3.5rem}
-  .hero h1{font-size:1.95rem;line-height:1.15}
-  .hero-sub{font-size:.88rem}
-  .hero-proof{grid-template-columns:1fr 1fr}
-  .hero-proof-num{font-size:1.85rem}
-  .problem-col{padding:1.75rem 1.25rem}
-  .svc{padding:1.75rem 1.5rem}
-  .results-nums{grid-template-columns:1fr 1fr;gap:1rem}
-  .result-num{padding:1.75rem 1rem}
-  .result-num-big{font-size:2.25rem}
-  .rec{padding:1.5rem}
-  .voice-card{padding:1.75rem}
-
-  .form-row{grid-template-columns:1fr}
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .hero-actions .btn{justify-content:center;text-align:center}
-}
-
-
-  /* ── FOOTER (inlined) ── */
-  
-@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.footer-brand{grid-column:1/-1}}
-@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.75rem}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
-
-  /* RECOMMENDATIONS */
-  .recommendations{padding:var(--section-pad) 0;background:var(--gray-50);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
-  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--gray-200);border:1px solid var(--gray-200)}
-  .rec{background:var(--white);padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.75rem}
-  .rec-rel{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-500);margin-bottom:.75rem}
-  .rec-quote{font-family:var(--font-display);font-size:.98rem;color:var(--navy-800);line-height:1.75;font-style:italic}
-  .rec-badge{display:flex;align-items:center;gap:.85rem;padding-top:1.25rem;border-top:1px solid var(--gray-100)}
-  .rec-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy-800);color:var(--gold-400);font-family:var(--font-display);font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .rec-name{font-size:.85rem;font-weight:700;color:var(--navy-800)}
-  .rec-role{font-size:.72rem;color:var(--gray-500);margin-top:.15rem;line-height:1.4}
-    .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0a1628;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d4a84f}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d4a84f}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d4a84f}
-  </style>
-
+<!-- Structured Data: Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.beanz.in/#organization",
-      "name": "Beanz Consulting",
-      "url": "https://www.beanz.in",
-      "logo": "https://www.beanz.in/og-image.jpg",
-      "description": "Independent GCC advisory and GBS vendor audit firm. Practitioner-led, conflict-free consulting by Viraj Mehta.",
-      "foundingDate": "2024",
-      "founder": {
-        "@type": "Person",
-        "name": "Viraj Mehta",
-        "jobTitle": "Founder & Principal Advisor",
-        "alumniOf": "IIT Bombay",
-        "url": "https://www.linkedin.com/in/virajmehta21/"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "connect@beanz.in",
-        "contactType": "customer service"
-      },
-      "areaServed": "Worldwide",
-      "sameAs": ["https://www.linkedin.com/in/virajmehta21/"]
+  "@type": "ProfessionalService",
+  "name": "Beanz Consulting",
+  "alternateName": "Beanz Enterprises",
+  "url": "https://www.beanz.in",
+  "logo": "https://www.beanz.in/og-image.jpg",
+  "image": "https://www.beanz.in/og-image.jpg",
+  "description": "India's leading GCC consultant. Expert GCC setup, location strategy & advisory for Fortune 500 companies. 20+ years at Kraft Heinz, P&G & General Mills. Serving globally from India.",
+  "email": "connect@beanz.in",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 23.0225,
+    "longitude": 72.5714
+  },
+  "areaServed": ["India", "United Kingdom", "United Arab Emirates", "Global"],
+  "serviceType": ["GCC Advisory", "Supply Chain Transformation", "Operational Excellence", "Executive Coaching", "Lean Manufacturing", "Organisational Transformation"],
+  "founder": {
+    "@type": "Person",
+    "name": "Viraj Mehta",
+    "jobTitle": "Founder & Principal Advisor",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "IIT Bombay"
     },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://www.beanz.in/#service",
-      "name": "Beanz Consulting",
-      "url": "https://www.beanz.in",
-      "description": "Independent GCC advisory and GBS vendor audit by a practitioner with 20+ years at Fortune 500 companies.",
-      "provider": {"@id": "https://www.beanz.in/#organization"},
-      "areaServed": "Worldwide",
-      "serviceType": ["GCC Advisory", "GBS Vendor Audit", "Supply Chain Consulting", "Leadership Consulting"],
-      "priceRange": "Fixed-fee"
-    }
-  ]
+    "knowsAbout": ["Global Capability Centers", "Supply Chain Management", "Operational Excellence", "Executive Coaching", "Lean Manufacturing"]
+  },
+  "sameAs": ["https://www.linkedin.com/in/virajmehta21/"]
 }
 </script>
-<link rel="stylesheet" href="/css/footer.css">
+
+<!-- Structured Data: Website -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Beanz Consulting",
+  "url": "https://www.beanz.in",
+  "description": "GCC Setup & Advisory Consultant India. Expert GCC setup, location strategy & advisory for Fortune 500 companies."
+}
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7DZMPX4XJM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7DZMPX4XJM');</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   CSS CUSTOM PROPERTIES
+   ======================================== */
+:root {
+  --navy-900: #0a1628;
+  --navy-800: #0f2240;
+  --navy-700: #162d50;
+  --navy-600: #1c3a66;
+  --navy-500: #24507f;
+  --gold-500: #c8973e;
+  --gold-400: #d4a84f;
+  --gold-300: #e0be72;
+  --gold-200: #ecdaa5;
+  --gold-100: #f7f0dc;
+  --white: #ffffff;
+  --gray-50: #f8f9fb;
+  --gray-100: #f0f2f5;
+  --gray-200: #e2e5eb;
+  --gray-300: #c8cdd6;
+  --gray-400: #9aa2b1;
+  --gray-500: #6b7589;
+  --gray-600: #4a5568;
+  --gray-700: #2d3748;
+  --gray-800: #1a202c;
+  --green-500: #38a169;
+  --green-100: #e6f7ed;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --section-pad: clamp(4rem, 8vw, 7rem);
+  --container: min(1200px, 90vw);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--gray-700); background: var(--white); overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; }
+
+.container { width: var(--container); margin: 0 auto; }
+
+.section-label {
+  font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-500);
+  margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;
+}
+.section-label::before { content: ''; width: 2rem; height: 2px; background: var(--gold-500); display: inline-block; }
+
+.section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; color: var(--navy-800); margin-bottom: 1.5rem; }
+.section-title em { color: var(--gold-500); font-style: italic; }
+
+.reveal { opacity: 1; transform: translateY(0); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.animate { opacity: 0; transform: translateY(30px); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 0; transition: padding 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; background-color: transparent; border-bottom: 1px solid transparent; }
+.nav.scrolled { background-color: #0a1628; padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: 0 1px 12px rgba(0,0,0,0.4); }
+.nav-inner { width: var(--container); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--font-display); font-size: 1.85rem; color: var(--white); letter-spacing: -0.01em; transition: font-size 0.3s ease; white-space: nowrap; }
+.nav.scrolled .nav-logo { font-size: 1.45rem; }
+.nav-logo span { color: var(--gold-400); }
+.nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.875rem; font-weight: 500; color: rgba(255,255,255,0.8); letter-spacing: 0.02em; transition: color 0.3s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--gold-400); transition: width 0.3s ease; }
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta { background: var(--gold-500) !important; color: var(--white) !important; padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 600 !important; font-size: 0.8rem !important; letter-spacing: 0.05em !important; text-transform: uppercase; transition: background 0.3s, transform 0.2s !important; }
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--gold-400) !important; transform: translateY(-1px); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; padding: 4px; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+
+/* HERO */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 50%, var(--navy-800) 100%); overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 80%, rgba(200,151,62,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(200,151,62,0.05) 0%, transparent 50%); }
+.hero::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
+.hero-content { position: relative; z-index: 2; width: var(--container); margin: 0 auto; padding: 8rem 0 4rem; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+.hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(200,151,62,0.12); border: 1px solid rgba(200,151,62,0.25); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; font-weight: 600; color: var(--gold-300); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2rem; animation: fadeInDown 0.8s ease; }
+.hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-400); animation: pulse 2s ease infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.75rem); line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.1s both; }
+.hero h1 em { color: var(--gold-400); font-style: italic; }
+.hero-sub { font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,0.65); max-width: 540px; margin-bottom: 2.5rem; animation: fadeInUp 0.8s ease 0.2s both; }
+.hero-buttons { display: flex; gap: 1rem; animation: fadeInUp 0.8s ease 0.3s both; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold-500); color: var(--white); padding: 0.9rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s; }
+.btn-primary:hover { background: var(--gold-400); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(200,151,62,0.3); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.25); transition: all 0.3s; }
+.btn-secondary:hover { border-color: var(--gold-400); color: var(--gold-400); }
+.hero-right { animation: fadeInUp 0.8s ease 0.4s both; }
+.credential-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 2.5rem; backdrop-filter: blur(10px); }
+.credential-card h3, .credential-name { font-family: var(--font-display); font-size: 1.4rem; color: var(--white); margin-bottom: 0.5rem; letter-spacing: 0.02em; background: linear-gradient(135deg, var(--white) 40%, var(--gold-300)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.credential-card .subtitle { font-size: 0.85rem; color: var(--gold-400); font-weight: 500; margin-bottom: 2rem; letter-spacing: 0.02em; }
+.credential-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+.cred-stat { padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+.cred-stat .number { font-family: var(--font-display); font-size: 1.8rem; color: var(--gold-400); display: block; }
+.cred-stat .label { font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 500; letter-spacing: 0.03em; margin-top: 0.25rem; }
+.credential-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.cred-badge { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 0.35rem 0.75rem; border-radius: 3px; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }
+
+/* LOGO BAR */
+.logo-bar { background: var(--navy-900); border-top: 1px solid rgba(255,255,255,0.05); padding: 1.5rem 0; }
+.logo-bar-inner { width: var(--container); margin: 0 auto; display: flex; align-items: center; gap: 3rem; }
+.logo-bar-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); white-space: nowrap; }
+.logo-list { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+.logo-item { font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.25); transition: color 0.3s; }
+.logo-item:hover { color: rgba(255,255,255,0.5); }
+
+/* WHY BEANZ */
+.why-beanz { padding: var(--section-pad) 0; background: var(--white); }
+.why-grid { display: grid; grid-template-columns: 0.45fr 0.55fr; gap: 5rem; align-items: start; }
+.why-left .section-title { margin-bottom: 1.5rem; }
+.why-text { color: var(--gray-600); font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.5rem; }
+.why-quote { font-family: var(--font-display); font-size: 1.25rem; font-style: italic; color: var(--navy-700); padding: 1.5rem 0 1.5rem 1.5rem; border-left: 3px solid var(--gold-500); margin: 2rem 0; line-height: 1.6; }
+.why-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.pillar { padding: 1.75rem; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200); transition: all 0.3s ease; }
+.pillar:hover { border-color: var(--gold-300); box-shadow: 0 8px 30px rgba(0,0,0,0.06); transform: translateY(-3px); }
+.pillar-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.pillar h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--navy-800); margin-bottom: 0.5rem; }
+.pillar p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.6; }
+
+/* ABOUT */
+.about { padding: var(--section-pad) 0; background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+.founder-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.08); border: 1px solid var(--gray-200); position: sticky; top: 6rem; }
+.founder-visual { background: linear-gradient(135deg, var(--navy-800), var(--navy-600)); padding: 3rem; text-align: center; }
+.founder-initials { width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 2px solid var(--gold-400); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: var(--font-display); font-size: 2rem; color: var(--gold-400); }
+.founder-visual h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); margin-bottom: 0.3rem; letter-spacing: 0.02em; background: linear-gradient(135deg, var(--white) 40%, var(--gold-300)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.founder-visual .role { font-size: 0.85rem; color: var(--gold-300); font-weight: 500; }
+.founder-info { padding: 2rem; }
+.founder-creds { display: flex; flex-direction: column; gap: 0.5rem; }
+.founder-cred { display: flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; color: var(--gray-600); padding: 0.5rem 0; border-bottom: 1px solid var(--gray-100); }
+.founder-cred:last-child { border: none; }
+.founder-cred .icon { width: 28px; height: 28px; border-radius: 6px; background: var(--gold-100); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0; }
+.about-content .section-title { margin-bottom: 2rem; }
+.about-narrative { font-size: 1rem; line-height: 1.85; color: var(--gray-600); margin-bottom: 1.5rem; }
+.about-narrative strong { color: var(--navy-800); font-weight: 600; }
+.about-highlight { border-left: 3px solid var(--gold-500); padding: 0.25rem 0 0.25rem 1.5rem; margin: 1.5rem 0; }
+.about-highlight p { font-size: 1rem; color: var(--gray-600); font-weight: 400; line-height: 1.85; }
+.about-highlight p strong { color: var(--navy-800); font-weight: 600; }
+.about-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2.5rem 0; }
+.about-stat { text-align: center; padding: 1.25rem 1rem; background: var(--white); border-radius: 8px; border: 1px solid var(--gray-200); }
+.about-stat .num { font-family: var(--font-display); font-size: 1.75rem; color: var(--navy-800); }
+.about-stat .lbl { font-size: 0.75rem; color: var(--gray-500); font-weight: 500; margin-top: 0.25rem; }
+
+/* SERVICES */
+.services { padding: var(--section-pad) 0; background: var(--white); }
+.services-header { text-align: center; max-width: 650px; margin: 0 auto 3.5rem; }
+.services-header .section-label { justify-content: center; }
+.services-header .section-label::before { display: none; }
+.services-header .section-title { margin-bottom: 1rem; }
+.services-header p { color: var(--gray-500); font-size: 1.05rem; line-height: 1.7; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.service-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; padding: 2.25rem; transition: all 0.4s ease; position: relative; overflow: hidden; }
+.service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold-500); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+.service-card:hover { border-color: var(--gold-300); box-shadow: 0 12px 40px rgba(0,0,0,0.08); transform: translateY(-4px); background: var(--white); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; color: var(--gold-500); margin-bottom: 1.25rem; }
+.service-card h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--navy-800); margin-bottom: 0.75rem; line-height: 1.3; }
+.service-card p { font-size: 0.88rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 1.25rem; }
+.service-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.service-tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy-600); background: var(--white); border: 1px solid var(--gray-200); padding: 0.25rem 0.6rem; border-radius: 3px; }
+.service-card:hover .service-tag { background: var(--gold-100); border-color: var(--gold-200); }
+.service-link { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 1rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; color: var(--gold-500); transition: color 0.3s, gap 0.3s; }
+.service-link:hover { color: var(--navy-900); gap: 0.5rem; }
+
+/* RESULTS */
+.results { padding: var(--section-pad) 0; background: var(--navy-900); position: relative; overflow: hidden; }
+.results::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 80px 80px; }
+.results-inner { position: relative; z-index: 2; }
+.results-header { text-align: center; margin-bottom: 3.5rem; }
+.results-header .section-label { justify-content: center; }
+.results-header .section-label::before { display: none; }
+.results-header .section-title { color: var(--white); }
+.results-header p { color: rgba(255,255,255,0.5); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+.case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+.case-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 0; transition: all 0.4s ease; overflow: hidden; position: relative; }
+.case-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(200,151,62,0.35); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+.case-card-inner { display: flex; gap: 0; height: 100%; }
+.case-accent { width: 5px; flex-shrink: 0; background: linear-gradient(180deg, var(--gold-500), var(--gold-300)); opacity: 0.5; transition: opacity 0.4s; }
+.case-card:hover .case-accent { opacity: 1; }
+.case-body { padding: 2rem 2.25rem; flex: 1; }
+.case-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.case-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-400); background: rgba(200,151,62,0.1); padding: 0.3rem 0.7rem; border-radius: 3px; display: inline-block; }
+.case-industry { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.case-ind-tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.35); border: 1px solid rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 2px; }
+.case-card h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--white); margin-bottom: 0.6rem; line-height: 1.35; }
+.case-card p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 1.5rem; }
+.case-stats-row { display: flex; gap: 0; border-top: 1px solid rgba(255,255,255,0.06); margin: 0 -2.25rem -2rem; }
+.case-stat-block { flex: 1; padding: 1.25rem 1.5rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.06); transition: background 0.3s; }
+.case-stat-block:last-child { border-right: none; }
+.case-card:hover .case-stat-block { background: rgba(255,255,255,0.02); }
+.case-stat-block .stat-num { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold-400); display: block; line-height: 1.2; }
+.case-stat-block .stat-desc { font-size: 0.68rem; color: rgba(255,255,255,0.4); font-weight: 500; margin-top: 0.3rem; line-height: 1.4; letter-spacing: 0.02em; }
+.case-outcomes { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+.case-outcome { font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 0.25rem 0.65rem; border-radius: 100px; display: flex; align-items: center; gap: 0.35rem; }
+.case-outcome::before { content: '→'; font-size: 0.6rem; color: var(--gold-400); }
+.results-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.result-stat { text-align: center; padding: 2rem 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; }
+.result-stat .big-num { font-family: var(--font-display); font-size: 2.5rem; color: var(--gold-400); display: block; }
+.result-stat .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.45); font-weight: 500; margin-top: 0.5rem; }
+
+/* APPROACH */
+.approach { padding: var(--section-pad) 0; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+.approach-header { text-align: center; max-width: 600px; margin: 0 auto 3rem; }
+.approach-header .section-label { justify-content: center; }
+.approach-header .section-label::before { display: none; }
+.approach-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.approach-steps::before { content: ''; position: absolute; top: 2.25rem; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--gold-500), var(--gold-300), var(--gold-500)); opacity: 0.3; }
+.step { text-align: center; padding: 0 1.5rem; position: relative; }
+.step-number { width: 4.5rem; height: 4.5rem; border-radius: 50%; background: var(--white); border: 2px solid var(--gold-500); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: var(--font-display); font-size: 1.25rem; color: var(--gold-500); position: relative; z-index: 2; transition: all 0.3s; }
+.step:hover .step-number { background: var(--gold-500); color: var(--white); box-shadow: 0 8px 25px rgba(200,151,62,0.3); }
+.step h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--navy-800); margin-bottom: 0.5rem; }
+.step p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.7; }
+
+/* NOT DO */
+.not-do { padding: 3.5rem 0; background: var(--white); border-top: 1px solid var(--gray-200); }
+.not-do-inner { display: flex; align-items: center; gap: 3rem; }
+.not-do-title { font-family: var(--font-display); font-size: 1.3rem; color: var(--navy-800); white-space: nowrap; flex-shrink: 0; }
+.not-do-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.not-do-item { font-size: 0.78rem; font-weight: 500; color: var(--gray-400); background: var(--gray-50); border: 1px solid var(--gray-200); padding: 0.4rem 1rem; border-radius: 100px; text-decoration: line-through; text-decoration-color: rgba(0,0,0,0.15); }
+
+/* CONTACT */
+.contact { padding: var(--section-pad) 0; background: var(--white); border-top: 1px solid var(--gray-200); }
+.contact-grid { display: grid; grid-template-columns: 0.45fr 0.55fr; gap: 4rem; align-items: start; }
+.contact-left .section-title { margin-bottom: 1.5rem; }
+.contact-text { font-size: 1rem; color: var(--gray-500); line-height: 1.8; margin-bottom: 2.5rem; }
+.contact-info { display: flex; flex-direction: column; gap: 1.25rem; }
+.contact-info-item { display: flex; align-items: center; gap: 1rem; }
+.contact-icon { width: 44px; height: 44px; border-radius: 8px; background: var(--navy-900); display: flex; align-items: center; justify-content: center; color: var(--gold-400); font-size: 0.9rem; flex-shrink: 0; }
+.contact-info-item .info-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); }
+.contact-info-item .info-value { font-size: 0.95rem; color: var(--navy-800); font-weight: 500; }
+.contact-form { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 2.5rem; }
+.contact-form h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--navy-800); margin-bottom: 0.5rem; }
+.contact-form .form-sub { font-size: 0.88rem; color: var(--gray-500); margin-bottom: 2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group.full { grid-column: 1 / -1; }
+.form-group label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-600); }
+.form-group input, .form-group select, .form-group textarea { font-family: var(--font-body); font-size: 0.9rem; padding: 0.75rem 1rem; border: 1px solid var(--gray-200); border-radius: 6px; background: var(--white); color: var(--gray-800); transition: border-color 0.3s, box-shadow 0.3s; outline: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold-500); box-shadow: 0 0 0 3px rgba(200,151,62,0.1); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%236b7589' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+.form-submit { width: 100%; background: var(--navy-900); color: var(--white); padding: 0.9rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 0.5rem; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.form-submit:hover { background: var(--navy-700); transform: translateY(-1px); box-shadow: 0 8px 25px rgba(10,22,40,0.2); }
+
+/* CAREERS */
+.careers { padding: var(--section-pad) 0; background: var(--navy-900); position: relative; overflow: hidden; }
+.careers::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 80% 20%, rgba(200,151,62,0.05) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(200,151,62,0.03) 0%, transparent 50%); }
+.careers-inner { position: relative; z-index: 2; }
+.careers-header { text-align: center; margin-bottom: 2.5rem; }
+.careers-header .section-label { justify-content: center; }
+.careers-header .section-label::before { display: none; }
+.careers-header .section-title { color: var(--white); }
+.careers-intro { color: rgba(255,255,255,0.5); font-size: 1.05rem; max-width: 680px; margin: 0 auto; line-height: 1.7; }
+.careers-philosophy { margin-bottom: 3.5rem; }
+.careers-quote blockquote { font-family: var(--font-display); font-size: 1.35rem; font-style: italic; color: var(--gold-400); text-align: center; max-width: 600px; margin: 0 auto; padding: 2rem; border-top: 1px solid rgba(200,151,62,0.2); border-bottom: 1px solid rgba(200,151,62,0.2); }
+.careers-tracks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3.5rem; }
+.track-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 2.5rem; transition: all 0.4s ease; }
+.track-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(200,151,62,0.3); transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.25); }
+.track-icon { font-size: 2rem; margin-bottom: 1rem; }
+.track-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-400); background: rgba(200,151,62,0.1); padding: 0.3rem 0.7rem; border-radius: 3px; display: inline-block; margin-bottom: 1rem; }
+.track-card h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--white); margin-bottom: 0.75rem; line-height: 1.3; }
+.track-card p { font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 1.25rem; }
+.track-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.track-tags span { font-size: 0.68rem; font-weight: 600; color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 0.25rem 0.65rem; border-radius: 100px; }
+.careers-what { margin-bottom: 3.5rem; }
+.careers-what h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--white); text-align: center; margin-bottom: 2rem; }
+.what-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.what-item { display: flex; gap: 1.25rem; padding: 1.5rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; transition: border-color 0.3s; }
+.what-item:hover { border-color: rgba(200,151,62,0.25); }
+.what-num { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold-500); opacity: 0.5; line-height: 1; flex-shrink: 0; }
+.what-item strong { font-size: 0.92rem; color: var(--white); display: block; margin-bottom: 0.35rem; }
+.what-item p { font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.6; margin: 0; }
+.careers-form-section { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 3rem; }
+.careers-form-header { text-align: center; margin-bottom: 2rem; }
+.careers-form-header h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--white); margin-bottom: 0.5rem; }
+.careers-form-header p { font-size: 0.9rem; color: rgba(255,255,255,0.45); max-width: 550px; margin: 0 auto; line-height: 1.6; }
+.careers-form-section .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.careers-form-section .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.careers-form-section label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.careers-form-section input, .careers-form-section select, .careers-form-section textarea { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.8rem 1rem; color: var(--white); font-family: var(--font-body); font-size: 0.88rem; transition: border-color 0.3s, background 0.3s; }
+.careers-form-section input:focus, .careers-form-section select:focus, .careers-form-section textarea:focus { outline: none; border-color: var(--gold-500); background: rgba(255,255,255,0.08); }
+.careers-form-section textarea { min-height: 120px; resize: vertical; }
+.careers-form-section select option { background: var(--navy-900); color: var(--white); }
+.careers-form-section input::placeholder, .careers-form-section textarea::placeholder { color: rgba(255,255,255,0.25); }
+.file-upload-wrapper { position: relative; cursor: pointer; }
+.file-input { position: absolute; inset: 0; opacity: 0; cursor: pointer; z-index: 2; }
+.file-upload-display { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; padding: 1.5rem; background: rgba(255,255,255,0.03); border: 2px dashed rgba(255,255,255,0.12); border-radius: 8px; transition: all 0.3s; text-align: center; }
+.file-upload-wrapper:hover .file-upload-display, .file-input:focus + .file-upload-display { border-color: var(--gold-500); background: rgba(200,151,62,0.06); }
+.file-upload-display.has-file { border-color: var(--gold-500); background: rgba(200,151,62,0.08); border-style: solid; }
+.file-upload-icon { font-size: 1.6rem; }
+.file-upload-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+.file-upload-text strong { color: var(--gold-400); }
+.file-upload-hint { font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+.careers-submit { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* FOOTER */
+.footer { background: var(--navy-900); padding: 3.5rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-brand .nav-logo { font-size: 1.7rem; margin-bottom: 1rem; display: inline-block; }
+.footer-brand p { font-size: 0.88rem; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 320px; }
+.footer-col h3 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1.25rem; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-col ul a { font-size: 0.88rem; color: rgba(255,255,255,0.4); transition: color 0.3s; }
+.footer-col ul a:hover { color: var(--gold-400); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
+.footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .founder-card { position: static; }
+  .services-grid, .case-grid { grid-template-columns: repeat(2, 1fr); }
+  .careers-tracks { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy-900); padding: 1.5rem 5vw 2rem; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
+  .hero { min-height: auto; padding: 8rem 0 3rem; }
+  .hero-content { padding: 0; }
+  .services-grid, .case-grid { grid-template-columns: 1fr; }
+  .case-stats-row { flex-wrap: wrap; }
+  .case-stat-block { min-width: 33%; }
+  .results-stats { grid-template-columns: repeat(2, 1fr); }
+  .approach-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .approach-steps::before { display: none; }
+  .about-stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .why-pillars, .what-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .logo-bar-inner, .not-do-inner { flex-direction: column; gap: 1rem; }
+  .not-do-inner { text-align: center; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+  .credential-stats { grid-template-columns: repeat(2, 1fr); }
+  .careers-form-section { padding: 2rem 1.25rem; }
+  .careers-form-section .form-row { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
+<a href="#hero" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:1rem;background:var(--navy-900);color:var(--white);font-size:0.9rem;text-decoration:none;border-radius:0 0 8px 0;">Skip to content</a>
+
 <header>
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">Beanz <span>Consulting.</span></a>
+    <a href="#" class="nav-logo">Beanz <span>Consulting.</span></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/services.html">Services</a></li>
-      <li><a href="/results.html">Results</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#why-beanz">Why Beanz</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
       <li><a href="/insights.html">Insights</a></li>
-      <li><a href="/careers.html">Careers</a></li>
+      <li><a href="#careers">Careers</a></li>
       <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 </header>
 
 <main>
-
-<!-- ①  HERO -->
-<section class="hero" id="hero">
-  <div class="hero-bg"></div>
+<!-- HERO -->
+<section class="hero" id="hero" aria-label="Introduction">
   <div class="hero-content">
-    <div class="hero-eyebrow"><span class="hero-dot"></span>Practitioner-Led Management Consulting</div>
-    <h1>Building Capabilities That Last.<br><em>By someone who has built them —<br>from the inside.</em></h1>
-    <p class="hero-sub">Independent GCC advisory and GBS vendor audit — by a practitioner with 20 years inside Fortune 500 operations. Transparent pricing. No conflicts of interest. No borrowed frameworks.</p>
-    <div class="hero-actions">
-      <a href="/services.html" class="btn btn-gold">Explore Our Services →</a>
-      <a href="#contact" class="btn btn-outline-white">Schedule a Consultation</a>
-    </div>
-    <div class="hero-proof">
-      <div class="hero-proof-item">
-        <span class="hero-proof-num">1,000+</span>
-        <span class="hero-proof-label">GCC Capacity Built</span>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <h1>India's GCC Consultant. <em>Building Capabilities That Last.</em></h1>
+        <p class="hero-sub">GCC setup, supply chain transformation, and operational excellence — we help Fortune 500 companies and high-growth enterprises build, scale, and run Global Capability Centers in India, with the practitioner's lens most advisory firms can't offer.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Schedule a Consultation →</a>
+          <a href="#services" class="btn-secondary">Explore Services</a>
+        </div>
       </div>
-      <div class="hero-proof-item">
-        <span class="hero-proof-num">&lt;5%</span>
-        <span class="hero-proof-label">Attrition vs. 20% Industry</span>
-      </div>
-      <div class="hero-proof-item">
-        <span class="hero-proof-num">$6M+</span>
-        <span class="hero-proof-label">Savings Delivered</span>
-      </div>
-      <div class="hero-proof-item">
-        <span class="hero-proof-num">20+</span>
-        <span class="hero-proof-label">Years Fortune 500</span>
+      <div class="hero-right">
+        <div class="credential-card">
+          <div class="credential-name">Viraj Mehta</div>
+          <div class="subtitle">Founder &amp; Principal Advisor</div>
+          <div class="credential-stats">
+            <div class="cred-stat"><span class="number">2,000+</span><span class="label">Team Members Scaled</span></div>
+            <div class="cred-stat"><span class="number">20+</span><span class="label">Functions Established</span></div>
+            <div class="cred-stat"><span class="number">$6M+</span><span class="label">Savings Delivered</span></div>
+            <div class="cred-stat"><span class="number">10+</span><span class="label">GCC Startups Consulted</span></div>
+          </div>
+          <div class="credential-badges">
+            <span class="cred-badge">IIT Bombay</span>
+            <span class="cred-badge">20+ Yrs Fortune 500</span>
+            <span class="cred-badge">Gallup Coach</span>
+            <span class="cred-badge">APICS CPIM</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- LOGO BAR -->
-<div class="logobar">
-  <div class="container">
-    <div class="logobar-inner">
-      <span class="logobar-label">Practitioner experience at</span>
-      <div class="logobar-list">
-        <span class="logobar-item">Kraft Heinz</span>
-        <span class="logobar-item">General Mills</span>
-        <span class="logobar-item">Procter &amp; Gamble</span>
-      </div>
+<div class="logo-bar" role="complementary" aria-label="Companies we have worked with">
+  <div class="logo-bar-inner">
+    <span class="logo-bar-label">Experience With</span>
+    <div class="logo-list">
+      <span class="logo-item">Kraft Heinz</span>
+      <span class="logo-item">General Mills</span>
+      <span class="logo-item">P&amp;G</span>
+      <span class="logo-item">BCG</span>
+      <span class="logo-item">Synfiny</span>
     </div>
   </div>
 </div>
 
-<!-- ②  WHY BEANZ -->
-<section class="why" id="why-beanz">
+<!-- WHY BEANZ -->
+<section class="why-beanz" id="why-beanz" aria-label="Why Beanz Consulting">
   <div class="container">
-    <div class="why-inner">
-
+    <div class="why-grid">
       <div class="why-left reveal">
-        <div class="label">Why Beanz</div>
-        <h2 class="title">The practitioner's<br><em>difference.</em></h2>
-        <p>Most advisors study organisations from the outside. Viraj Mehta spent 20 years running them from the inside — at Kraft Heinz, General Mills, and Procter &amp; Gamble. That distinction changes every answer we give.</p>
-        <a href="/about.html" class="btn btn-navy">About the Founder →</a>
+        <div class="section-label">Our Philosophy</div>
+        <h2 class="section-title">Why <em>Beanz?</em></h2>
+        <p class="why-text">Every enduring enterprise begins with a single, well-planted bean. We founded Beanz Consulting on a simple conviction: sustainable transformation starts with getting the fundamentals right.</p>
+        <p class="why-text">The right foundation, the right people, the right systems — planted with precision and nurtured with discipline.</p>
+        <blockquote class="why-quote">When the roots are strong, the tree takes care of itself.</blockquote>
+        <p class="why-text">We don't offer quick fixes or borrowed templates. We build from the ground up — ensuring every capability we establish is designed to endure and compound over time.</p>
       </div>
-
-      <div class="why-pillars reveal" style="animation-delay:.1s">
-        <div class="why-pillar why-pillar--dark">
-          <div class="why-pillar-icon">🏗️</div>
-          <span class="why-pillar-num">01</span>
-          <h3>Built from a blank page — not a template.</h3>
-          <p>Viraj built Kraft Heinz's first GCC from zero to 1,000+ capacity, 20+ Centres of Excellence, under 5% attrition. The frameworks he uses are the ones he created doing the actual work.</p>
-        </div>
-        <div class="why-pillar">
-          <div class="why-pillar-icon">🔍</div>
-          <span class="why-pillar-num">02</span>
-          <h3>Forensic rigour. No conflicts of interest.</h3>
-          <p>BEANZ ACCORD™ is the only independent audit framework designed specifically for GBS vendor relationships. We have no referral arrangements, no vendor affiliations, no commercial conflicts. Just the truth about what you're paying for.</p>
-        </div>
-        <div class="why-pillar">
-          <div class="why-pillar-icon">📌</div>
-          <span class="why-pillar-num">03</span>
-          <h3>Transparent pricing. No surprises.</h3>
-          <p>Our preference is fixed-fee engagements with a defined scope and a clear deliverable. Where the nature of the work calls for a time-based arrangement, the structure is agreed upfront. No open-ended retainers. No ambiguous billing.</p>
-        </div>
-        <div class="why-pillar why-pillar--dark">
-          <div class="why-pillar-icon">🎯</div>
-          <span class="why-pillar-num">04</span>
-          <h3>Designed to make itself unnecessary.</h3>
-          <p>Every engagement ends with your team capable of carrying forward what we built together. We don't engineer dependency. We build capability — then leave, because that was always the point.</p>
+      <div class="why-right reveal" style="animation-delay:0.2s;">
+        <div class="why-pillars">
+          <div class="pillar"><div class="pillar-icon">🫘</div><h3>Foundation</h3><p>Every great capability starts with the right bean — planted with intent, not expediency.</p></div>
+          <div class="pillar"><div class="pillar-icon">🌿</div><h3>Roots</h3><p>Strong systems, governance, and culture form the invisible architecture of enduring centres.</p></div>
+          <div class="pillar"><div class="pillar-icon">🌳</div><h3>Growth</h3><p>Capability compounds. We design organisations that grow stronger with scale, not weaker.</p></div>
+          <div class="pillar"><div class="pillar-icon">🏔️</div><h3>Endurance</h3><p>We optimise for time to self-sufficiency — our work outlasts our engagement.</p></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ③  CLIENT VOICES -->
-<section class="voices">
+<!-- ABOUT -->
+<section class="about" id="about" aria-label="About the founder">
   <div class="container">
-    <div class="voices-header reveal">
-      <div class="label label--center label--light">Client Voices</div>
-      <h2 class="title title--white" style="text-align:center;max-width:540px;margin:0 auto .75rem">What clients say about <em>working with Beanz.</em></h2>
-      <p class="voices-note">Names withheld at clients' request. Engagement context and outcomes are accurate.</p>
-    </div>
-    <div class="voices-grid">
-
-      <div class="voice-card reveal">
-        <div class="voice-quote-mark">"</div>
-        <p class="voice-body">We were scaling fast and the cracks were showing in our leadership team — not in skills, but in how they worked together and carried accountability. Viraj came in and spent real time understanding our culture before proposing anything. What he built was ours — not something recycled from a playbook. Twelve months on, my leadership team runs differently. I keep Viraj engaged because at the pace we grow, the work is never really finished.</p>
-        <div class="voice-attr">
-          <div class="voice-avatar">F</div>
-          <div>
-            <div class="voice-name">Founder &amp; CEO</div>
-            <div class="voice-role">High-Growth Technology Company</div>
-            <div class="voice-engagement">Leadership Upgradation Programme · Repeat Client</div>
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="founder-card">
+          <div class="founder-visual">
+            <img src="viraj-photo.jpg" alt="Viraj Mehta — Founder, Beanz Consulting" style="width:100%;border-radius:12px;">
+            <h3>Viraj Mehta</h3>
+            <div class="role">Founder &amp; Principal Advisor</div>
+          </div>
+          <div class="founder-info">
+            <div class="founder-creds">
+              <div class="founder-cred"><span class="icon">🎓</span><span>IIT Bombay Alumnus</span></div>
+              <div class="founder-cred"><span class="icon">🏢</span><span>Ex — Kraft Heinz · General Mills · P&amp;G</span></div>
+              <div class="founder-cred"><span class="icon">🧭</span><span>Gallup Certified Strengths Coach</span></div>
+              <div class="founder-cred"><span class="icon">📊</span><span>APICS CPIM Certified</span></div>
+              <div class="founder-cred"><span class="icon">🤝</span><span>Advisor to BCG &amp; Synfiny</span></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="voice-card reveal" style="animation-delay:.1s">
-        <div class="voice-quote-mark">"</div>
-        <p class="voice-body">We were close to a location decision based on internal analysis. Viraj's independent review surfaced considerations that hadn't come up internally — two around long-term talent sustainability, one around a regulatory nuance specific to our sector. We changed our decision. Early operations are tracking ahead of our original assumptions.</p>
-        <div class="voice-attr">
-          <div class="voice-avatar">C</div>
-          <div>
-            <div class="voice-name">Chief Financial Officer</div>
-            <div class="voice-role">Fortune 500 Global Enterprise</div>
-            <div class="voice-engagement">GCC Location Strategy &amp; Advisory</div>
-          </div>
+      <div class="about-content reveal" style="animation-delay:0.15s;">
+        <div class="section-label">Meet the Founder</div>
+        <h2 class="section-title">Most consultants talk about GCCs. <em>Viraj has actually built one.</em></h2>
+        <p class="about-narrative">An IIT Bombay alumnus and engineer at heart — Viraj spent <strong>twenty years inside the machine</strong>. Not advising from the outside. Not reviewing decks in a boardroom. But building, scaling, and fixing things from the inside — across three continents, multiple Fortune 500 companies, and some of the most complex supply chain and capability challenges in the industry.</p>
+        <p class="about-narrative">It started at <strong>Procter &amp; Gamble</strong>, where he cut his teeth across procurement, contract manufacturing, planning, and logistics. He helped launch P&amp;G's Planning Service Centres (GCC) in China and Singapore from scratch.</p>
+        <p class="about-narrative">At <strong>General Mills</strong>, he took charge of the entire IMEA and India supply chain — launching 9 sites in 18 months and driving S&amp;OP excellence across the region.</p>
+        <div class="about-highlight">
+          <p>Then came the big one. Kraft Heinz handed him a blank page and a mandate: <strong>build Kraft Heinz's first-ever Global Capability Center</strong>. Not in Bangalore or Hyderabad — but in a tier-2 city. He built a centre with 1,000+ installed capacity across 20+ Centres of Excellence, achieving under 5% attrition against an industry average of 20%.</p>
         </div>
+        <div class="about-stats-grid">
+          <div class="about-stat"><div class="num">1,000+</div><div class="lbl">Installed Capacity</div></div>
+          <div class="about-stat"><div class="num">&lt;5%</div><div class="lbl">Attrition Rate</div></div>
+          <div class="about-stat"><div class="num">85%+</div><div class="lbl">Engagement Score</div></div>
+        </div>
+        <p class="about-narrative">Today, Viraj runs Beanz Consulting — helping companies build for themselves, the right way, in the right place. In just the last two years, he has advised <strong>10+ global enterprises</strong> — with the instinct of someone who's sat in the chair, made the calls, and knows exactly what it takes to make a GCC actually work.</p>
+        <a href="#contact" class="btn-primary" style="margin-top:1rem;">Start a Conversation →</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ⑤  LINKEDIN RECOMMENDATIONS -->
-<!-- RECOMMENDATIONS -->
-<section class="recommendations">
+<!-- SERVICES -->
+<section class="services" id="services" aria-label="Our services">
   <div class="container">
-    <div class="rec-header reveal">
-      <div class="label" style="justify-content:center">What Senior Leaders Say</div>
-      <h2 class="section-title" style="text-align:center;max-width:580px;margin:0 auto 3rem">Recommendations from<br><em>people who worked with Viraj directly.</em></h2>
+    <div class="services-header reveal">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">We don't sell services.<br>We build <em>capabilities.</em></h2>
+      <p>Every engagement is designed to leave your organisation stronger and more self-sufficient — without us staying forever.</p>
     </div>
-    <div class="rec-grid">
-
-      <div class="rec reveal">
-        <div class="rec-body">
-          <div class="rec-rel">Viraj's mentor at P&amp;G</div>
-          <p class="rec-quote">"I've known and worked with Viraj during our time together in Procter &amp; Gamble, during his early career. He was young, full of energy, curious, and eager to learn. He struck me as one of those who had the potential to one day grow and mature to become a terrific leader. I am very pleased to see that he has accomplished that and wish him the very best in developing the next generation of leaders."</p>
-        </div>
-        <div class="rec-badge">
-          <div class="rec-avatar">J</div>
-          <div class="rec-info">
-            <div class="rec-name">Jet Antonio</div>
-            <div class="rec-role">Managing Partner, Synfiny Advisors</div>
-          </div>
-        </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">SERVICE 01</div>
+        <h3>GCC Advisory</h3>
+        <p>From feasibility and location strategy to organisational design, culture architecture, and governance — we advise across the full GCC lifecycle.</p>
+        <div class="service-tags"><span class="service-tag">Setup &amp; Startup</span><span class="service-tag">Location Strategy</span><span class="service-tag">Talent Architecture</span><span class="service-tag">Attrition Control</span></div>
+        <a href="/gcc-advisory.html" class="service-link">Learn More →</a>
       </div>
-
-      <div class="rec reveal" style="animation-delay:.1s">
-        <div class="rec-body">
-          <div class="rec-rel">Managed Viraj directly at P&amp;G</div>
-          <p class="rec-quote">"Viraj is a highly knowledgeable professional whose working experience allowed him to gain pockets of excellence in leading improvements and breakthroughs in supply chain."</p>
-        </div>
-        <div class="rec-badge">
-          <div class="rec-avatar">J</div>
-          <div class="rec-info">
-            <div class="rec-name">Jen Aberilla</div>
-            <div class="rec-role">Director, Regional Supply Network Operations · Procter &amp; Gamble</div>
-          </div>
-        </div>
+      <div class="service-card reveal" style="animation-delay:0.1s;">
+        <div class="service-num">SERVICE 02</div>
+        <h3>Supply Chain Transformation</h3>
+        <p>We design networks that actually work — with the right cost structure, service levels, and balance between resilience and efficiency.</p>
+        <div class="service-tags"><span class="service-tag">Network Design</span><span class="service-tag">S&amp;OP Excellence</span><span class="service-tag">TCO Reduction</span><span class="service-tag">Planning &amp; Logistics</span></div>
       </div>
-
-      <div class="rec reveal" style="animation-delay:.2s">
-        <div class="rec-body">
-          <div class="rec-rel">Viraj's mentor at P&amp;G</div>
-          <p class="rec-quote">"Viraj is a mature and seasoned professional with deep mastery in supply chain and operations. He is entrepreneurial in finding solutions and has the ability to build and lead high-performing teams across cultures and geographies."</p>
-        </div>
-        <div class="rec-badge">
-          <div class="rec-avatar">R</div>
-          <div class="rec-info">
-            <div class="rec-name">Rahul Pundir</div>
-            <div class="rec-role">Chief Supply Chain Officer, Bajaj Electricals · Former Japan Executive Officer, Procter &amp; Gamble</div>
-          </div>
-        </div>
+      <div class="service-card reveal" style="animation-delay:0.2s;">
+        <div class="service-num">SERVICE 03</div>
+        <h3>Operational Excellence &amp; Lean</h3>
+        <p>Loss analysis, daily management systems, and HPO design — transforming how your teams think, measure, and improve permanently.</p>
+        <div class="service-tags"><span class="service-tag">Lean Manufacturing</span><span class="service-tag">Loss Analysis</span><span class="service-tag">HPO Design</span><span class="service-tag">Daily Management</span></div>
       </div>
-
-    
-    <p style="text-align:center;font-size:.78rem;color:var(--gray-400);margin-top:2rem">These recommendations are publicly visible on <a href="https://www.linkedin.com/in/virajmehta21/" target="_blank" rel="noopener" style="color:var(--gold-500);text-decoration:none">Viraj's LinkedIn profile</a>.</p>
+      <div class="service-card reveal" style="animation-delay:0.05s;">
+        <div class="service-num">SERVICE 04</div>
+        <h3>Executive Coaching &amp; Leadership</h3>
+        <p>As a Gallup Certified Strengths Coach, Viraj works directly with C-suite executives and high-potential managers to unlock performance.</p>
+        <div class="service-tags"><span class="service-tag">CliftonStrengths</span><span class="service-tag">1:1 Coaching</span><span class="service-tag">Team Development</span><span class="service-tag">Leadership Programmes</span></div>
+      </div>
+      <div class="service-card reveal" style="animation-delay:0.15s;">
+        <div class="service-num">SERVICE 05</div>
+        <h3>Organisational Transformation</h3>
+        <p>Strengthening culture, building operating rhythms, and designing governance for fast-growing organisations scaling without breakage.</p>
+        <div class="service-tags"><span class="service-tag">Culture Design</span><span class="service-tag">Change Mgmt</span><span class="service-tag">GBS Blueprint</span><span class="service-tag">Org Design</span></div>
+      </div>
+      <div class="service-card reveal" style="animation-delay:0.25s;">
+        <div class="service-num">SERVICE 06</div>
+        <h3>Trainings &amp; Academies</h3>
+        <p>Structured capability programmes — with curricula, assessments, progression paths, and real impact metrics that compound over time.</p>
+        <div class="service-tags"><span class="service-tag">Supply Chain Academy</span><span class="service-tag">Lean Training</span><span class="service-tag">Custom Programmes</span><span class="service-tag">Capability Uplift</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- RESULTS -->
+<section class="results" id="results" aria-label="Case studies and results">
+  <div class="container results-inner">
+    <div class="results-header reveal">
+      <div class="section-label">Case Studies</div>
+      <h2 class="section-title">Impact that speaks <em>for itself.</em></h2>
+      <p>Real outcomes from real engagements across industries — built from the inside, not borrowed from a framework.</p>
+    </div>
+    <div class="case-grid">
+      <div class="case-card reveal">
+        <div class="case-card-inner"><div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-top"><div class="case-label">Capability Building</div><div class="case-industry"><span class="case-ind-tag">Conglomerate</span><span class="case-ind-tag">Multi-BU</span></div></div>
+          <h3>Live Supply Chain Academy for a Multinational Conglomerate</h3>
+          <p>Designed a comprehensive supply chain academy from scratch for one of the world's largest diversified conglomerates — creating a live, enterprise-wide capability engine deployed across business units and geographies.</p>
+          <div class="case-outcomes"><span class="case-outcome">Custom Curricula Design</span><span class="case-outcome">Assessment Framework</span><span class="case-outcome">Progression Pathways</span><span class="case-outcome">Cross-BU Standardisation</span></div>
+          <div class="case-stats-row">
+            <div class="case-stat-block"><span class="stat-num">10,000+</span><span class="stat-desc">Employees Impacted</span></div>
+            <div class="case-stat-block"><span class="stat-num">Ground-Up</span><span class="stat-desc">Built From Scratch</span></div>
+            <div class="case-stat-block"><span class="stat-num">Live</span><span class="stat-desc">In Active Deployment</span></div>
+          </div>
+        </div></div>
+      </div>
+      <div class="case-card reveal" style="animation-delay:0.1s;">
+        <div class="case-card-inner"><div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-top"><div class="case-label">GCC Advisory</div><div class="case-industry"><span class="case-ind-tag">Health</span><span class="case-ind-tag">Insurance</span><span class="case-ind-tag">Energy</span><span class="case-ind-tag">Banking</span></div></div>
+          <h3>GCC Location Strategy &amp; Deployment for Multiple Fortune 500s</h3>
+          <p>Designed end-to-end GCC location strategies and deployed them for Fortune 500 companies across four distinct industries — each with unique talent, regulatory, and operational considerations.</p>
+          <div class="case-outcomes"><span class="case-outcome">Location Feasibility</span><span class="case-outcome">Talent Landscape Analysis</span><span class="case-outcome">Regulatory Navigation</span><span class="case-outcome">Deployment Execution</span></div>
+          <div class="case-stats-row">
+            <div class="case-stat-block"><span class="stat-num">4</span><span class="stat-desc">Industries Served</span></div>
+            <div class="case-stat-block"><span class="stat-num">Fortune 500</span><span class="stat-desc">Client Profile</span></div>
+            <div class="case-stat-block"><span class="stat-num">End-to-End</span><span class="stat-desc">Strategy to Deployment</span></div>
+          </div>
+        </div></div>
+      </div>
+      <div class="case-card reveal" style="animation-delay:0.15s;">
+        <div class="case-card-inner"><div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-top"><div class="case-label">Leadership &amp; Coaching</div><div class="case-industry"><span class="case-ind-tag">High-Growth Startup</span></div></div>
+          <h3>Leadership Upgradation for a 10x Growth Startup</h3>
+          <p>Led a sustained leadership development programme for a fast-scaling startup growing at 10x year-over-year — keeping leaders upgraded, aligned, and equipped to handle exponential growth and expanding accountability.</p>
+          <div class="case-outcomes"><span class="case-outcome">CliftonStrengths Coaching</span><span class="case-outcome">Accountability Frameworks</span><span class="case-outcome">Leadership Readiness</span><span class="case-outcome">Scale-Ready Culture</span></div>
+          <div class="case-stats-row">
+            <div class="case-stat-block"><span class="stat-num">10x</span><span class="stat-desc">YoY Growth Managed</span></div>
+            <div class="case-stat-block"><span class="stat-num">Sustained</span><span class="stat-desc">Ongoing Programme</span></div>
+            <div class="case-stat-block"><span class="stat-num">C-Suite</span><span class="stat-desc">To Mid-Management</span></div>
+          </div>
+        </div></div>
+      </div>
+      <div class="case-card reveal" style="animation-delay:0.2s;">
+        <div class="case-card-inner"><div class="case-accent"></div>
+        <div class="case-body">
+          <div class="case-top"><div class="case-label">Operational Excellence</div><div class="case-industry"><span class="case-ind-tag">European MNC</span><span class="case-ind-tag">Manufacturing</span></div></div>
+          <h3>Manufacturing Capability Transformation for a Global European Giant</h3>
+          <p>Led end-to-end manufacturing capability transformation for a major European multinational — embedding Lean, loss analysis, and value stream mapping culture across the plant to drive measurable gains in efficiency and effectiveness.</p>
+          <div class="case-outcomes"><span class="case-outcome">Lean Deployment</span><span class="case-outcome">Loss Analysis</span><span class="case-outcome">Value Stream Mapping</span><span class="case-outcome">Daily Management Systems</span></div>
+          <div class="case-stats-row">
+            <div class="case-stat-block"><span class="stat-num">Lean</span><span class="stat-desc">Culture Embedded</span></div>
+            <div class="case-stat-block"><span class="stat-num">VSM</span><span class="stat-desc">End-to-End Mapping</span></div>
+            <div class="case-stat-block"><span class="stat-num">Plant-Wide</span><span class="stat-desc">Efficiency &amp; Effectiveness</span></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="results-stats reveal">
+      <div class="result-stat"><span class="big-num">2,000+</span><span class="stat-label">Team Members Scaled</span></div>
+      <div class="result-stat"><span class="big-num">20+</span><span class="stat-label">Functions Established</span></div>
+      <div class="result-stat"><span class="big-num">$6M+</span><span class="stat-label">Savings Delivered</span></div>
+      <div class="result-stat"><span class="big-num">10+</span><span class="stat-label">Global Clients Advised</span></div>
+    </div>
+  </div>
+</section>
 
-<!-- ⑦  CONTACT -->
-<section class="contact" id="contact">
+<!-- APPROACH -->
+<section class="approach" id="approach" aria-label="Our approach">
+  <div class="container">
+    <div class="approach-header reveal">
+      <div class="section-label">Our Approach</div>
+      <h2 class="section-title">How we <em>actually</em> work</h2>
+    </div>
+    <div class="approach-steps reveal">
+      <div class="step"><div class="step-number">01</div><h3>Diagnose</h3><p>Deep assessment of your current state, pain points, and untapped potential. We listen before we prescribe.</p></div>
+      <div class="step"><div class="step-number">02</div><h3>Design</h3><p>Tailored strategy built around your specific context — not a recycled template from another client.</p></div>
+      <div class="step"><div class="step-number">03</div><h3>Deliver</h3><p>Shoulder-to-shoulder implementation. We don't hand off a plan and disappear — we build it with you.</p></div>
+      <div class="step"><div class="step-number">04</div><h3>Sustain</h3><p>Knowledge transfer and governance systems that ensure the work outlasts our engagement.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DON'T DO -->
+<section class="not-do" aria-label="What we do not do">
+  <div class="container">
+    <div class="not-do-inner">
+      <div class="not-do-title">What we don't do →</div>
+      <div class="not-do-list">
+        <span class="not-do-item">BPO / Body Shopping</span>
+        <span class="not-do-item">Order Management Outsourcing</span>
+        <span class="not-do-item">Staff Augmentation</span>
+        <span class="not-do-item">Project Supervision Only</span>
+        <span class="not-do-item">Liaison Services</span>
+        <span class="not-do-item">Temporary Staffing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-label="Contact us">
   <div class="container">
     <div class="contact-grid">
-      <div class="reveal">
-        <div class="label">Get In Touch</div>
-        <h2 class="title">Let's talk about<br><em>your challenge.</em></h2>
-        <p class="contact-sub">A 30-minute conversation costs nothing and clarifies everything — whether you're questioning a vendor relationship, planning a GCC, or fixing something that isn't working.</p>
-        <div class="contact-rows">
-          <div class="contact-row">
+      <div class="contact-left reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Ready to transform your <em>operations?</em></h2>
+        <p class="contact-text">Schedule a complimentary consultation to explore how we can help you build global capabilities and drive sustainable growth. Whether you're building from scratch or fixing what's not working — we bring the practitioner's perspective.</p>
+        <div class="contact-info">
+          <div class="contact-info-item">
             <div class="contact-icon">✉</div>
-            <div><div class="contact-label">Email</div><div class="contact-val"><a href="/cdn-cgi/l/email-protection#ec8f838282898f98ac8e898d8296c28582">connect&#64;beanz.in</a></div></div>
+            <div><div class="info-label">Email</div><div class="info-value"><a href="/cdn-cgi/l/email-protection#35565a5b5b505641755750545b4f1b5c5b"><span class="__cf_email__" data-cfemail="6e0d0100000b0d1a2e0c0b0f0014400700">[email&#160;protected]</span></a></div></div>
           </div>
-          <div class="contact-row">
+          <div class="contact-info-item">
             <div class="contact-icon">📍</div>
-            <div><div class="contact-label">Location</div><div class="contact-val">India · Serving globally</div></div>
+            <div><div class="info-label">Location</div><div class="info-value">India</div></div>
           </div>
-          <div class="contact-row">
-            <div class="contact-icon">🔗</div>
-            <div><div class="contact-label">LinkedIn</div><div class="contact-val">Viraj Mehta →</div></div>
+          <div class="contact-info-item">
+            <div class="contact-icon">🌐</div>
+            <div><div class="info-label">Website</div><div class="info-value">www.beanz.in</div></div>
           </div>
         </div>
       </div>
-      <div class="reveal" style="animation-delay:.15s">
-        <div class="contact-form-wrap">
+      <div class="reveal" style="animation-delay:0.15s;">
+        <div class="contact-form">
           <h3>Start a Conversation</h3>
           <p class="form-sub">Tell us about your challenge — we'll take it from there.</p>
-          <form id="contact-form">
+          <form id="contact-form" aria-label="Contact form">
             <div class="form-row">
-              <div class="form-group"><label for="fname">Full Name *</label><input type="text" id="fname" name="Full Name" placeholder="Your full name" required></div>
-              <div class="form-group"><label for="femail">Work Email *</label><input type="email" id="femail" name="Email" placeholder="name@company.com" required></div>
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="Full Name" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="Email" placeholder="name@company.com" required>
+              </div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label for="fcompany">Company *</label><input type="text" id="fcompany" name="Company" placeholder="Your company" required></div>
               <div class="form-group">
-                <label for="fservice">I'm interested in *</label>
-                <select id="fservice" name="Service" required>
-                  <option value="" disabled selected>Select…</option>
-                  <option>GBS Vendor Audit — BEANZ ACCORD™</option>
+                <label for="company">Company *</label>
+                <input type="text" id="company" name="Company" placeholder="Your company" required>
+              </div>
+              <div class="form-group">
+                <label for="service">Service Interest *</label>
+                <select id="service" name="Service Interest" required>
+                  <option value="" disabled selected>Select a service...</option>
                   <option>GCC Advisory</option>
-                  <option>Supply Chain &amp; Operational Excellence</option>
-                  <option>Leadership, Culture &amp; Transformation</option>
+                  <option>Supply Chain Transformation</option>
+                  <option>Operational Excellence &amp; Lean</option>
+                  <option>Executive Coaching &amp; Leadership</option>
+                  <option>Organisational Transformation</option>
+                  <option>Trainings &amp; Academies</option>
                   <option>General Inquiry</option>
                 </select>
               </div>
             </div>
-            <div class="form-group full" style="margin-bottom:.85rem">
-              <label for="fmsg">Your Challenge</label>
-              <textarea id="fmsg" name="Message" placeholder="Briefly describe what you're working on…" rows="4"></textarea>
+            <div class="form-group full" style="margin-bottom:1rem;">
+              <label for="message">Message *</label>
+              <textarea id="message" name="Message" placeholder="Tell us about your challenge, timeline, and what you're looking to achieve..." required></textarea>
             </div>
             <button type="submit" class="form-submit">Send Message →</button>
           </form>
@@ -580,50 +813,227 @@ button{font-family:inherit;cursor:pointer;border:none}
   </div>
 </section>
 
+<!-- CAREERS -->
+<section class="careers" id="careers" aria-label="Career opportunities">
+  <div class="container">
+    <div class="careers-inner">
+      <div class="careers-header reveal">
+        <div class="section-label">Careers</div>
+        <h2 class="section-title">We don't hire résumés.<br><em>We find exceptional talent.</em></h2>
+        <p class="careers-intro">Beanz Consulting is a lean, high-impact advisory firm — and we intend to keep it that way. We don't do large bench teams or mediocre talent. We look for exceptional people who bring fire, curiosity, and craft to everything they do.</p>
+      </div>
+      <div class="careers-philosophy reveal">
+        <div class="careers-quote">
+          <blockquote>"We'd rather work with five exceptional minds than fifty average ones."</blockquote>
+        </div>
+      </div>
+      <div class="careers-tracks reveal">
+        <div class="track-card">
+          <div class="track-icon">⚡</div>
+          <div class="track-label">Independent Advisors</div>
+          <h3>Seasoned Operators &amp; Domain Experts</h3>
+          <p>You've built GCCs, turned around supply chains, or led operational transformations at scale. You don't need a playbook — you write them. We partner with independent advisors who bring deep, practitioner-grade expertise to our client engagements.</p>
+          <div class="track-tags"><span>GCC &amp; Shared Services</span><span>Supply Chain &amp; S&amp;OP</span><span>Lean &amp; Operational Excellence</span><span>Executive Coaching</span><span>Change Management</span></div>
+        </div>
+        <div class="track-card">
+          <div class="track-icon">🚀</div>
+          <div class="track-label">Internships</div>
+          <h3>Hungry Minds, Early Careers</h3>
+          <p>If you're an MBA student or early-career professional who thinks consulting is about PowerPoints — this isn't for you. But if you want front-row access to real strategy work with Fortune 500 clients, a founder who mentors hands-on, and a steep learning curve you'll actually enjoy — let's talk.</p>
+          <div class="track-tags"><span>MBA / PGDM Students</span><span>Research &amp; Analysis</span><span>Client Engagement Support</span><span>3–6 Month Stints</span></div>
+        </div>
+      </div>
+      <div class="careers-what reveal">
+        <h3>What we look for</h3>
+        <div class="what-grid">
+          <div class="what-item"><span class="what-num">01</span><div><strong>Intellectual Horsepower</strong><p>You think in frameworks but aren't trapped by them. You ask "why" five times before accepting an answer.</p></div></div>
+          <div class="what-item"><span class="what-num">02</span><div><strong>Builder's Mindset</strong><p>You'd rather create something from scratch than optimise someone else's deck. You ship, not just strategise.</p></div></div>
+          <div class="what-item"><span class="what-num">03</span><div><strong>No-Ego Collaboration</strong><p>The best idea wins, regardless of where it comes from. You check your title at the door.</p></div></div>
+          <div class="what-item"><span class="what-num">04</span><div><strong>Skin in the Game</strong><p>You care about outcomes, not hours logged. You own problems end-to-end and don't wait to be told.</p></div></div>
+        </div>
+      </div>
+      <div class="careers-form-section reveal">
+        <div class="careers-form-header">
+          <h3>Submit Your Application</h3>
+          <p>All fields marked * are required. We'll be in touch.</p>
+        </div>
+        <form id="careers-form" aria-label="Career application form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="career-name">Full Name *</label>
+              <input type="text" id="career-name" name="Full Name" placeholder="e.g. Priya Sharma" required>
+            </div>
+            <div class="form-group">
+              <label for="career-email">Email *</label>
+              <input type="email" id="career-email" name="Email" placeholder="priya@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="career-track">I'm Interested In *</label>
+              <select id="career-track" name="Track Interest" required>
+                <option value="" disabled selected>Select a role type...</option>
+                <option>Independent Advisor — GCC &amp; Shared Services</option>
+                <option>Independent Advisor — Supply Chain</option>
+                <option>Independent Advisor — Operational Excellence</option>
+                <option>Independent Advisor — Executive Coaching</option>
+                <option>Internship — MBA / PGDM</option>
+                <option>Internship — Early Career</option>
+                <option>Other / Open Application</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="career-exp">Experience Level *</label>
+              <select id="career-exp" name="Experience" required>
+                <option value="" disabled selected>Select experience...</option>
+                <option>Student / Fresh Graduate</option>
+                <option>1–3 Years</option>
+                <option>4–8 Years</option>
+                <option>8–15 Years</option>
+                <option>15+ Years</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group full" style="margin-bottom:1rem;">
+            <label for="career-linkedin">LinkedIn Profile</label>
+            <input type="url" id="career-linkedin" name="LinkedIn" placeholder="https://linkedin.com/in/yourprofile">
+          </div>
+          <div class="form-group full" style="margin-bottom:1rem;">
+            <label for="career-pitch">Your Pitch *</label>
+            <textarea id="career-pitch" name="Your Pitch" placeholder="Tell us what drives you, what you've accomplished, and what excites you about Beanz. Skip the corporate-speak — be yourself." required></textarea>
+          </div>
+          <div class="form-group full" style="margin-bottom:1rem;">
+            <label for="career-resume">Resume / CV</label>
+            <div class="file-upload-wrapper">
+              <input type="file" id="career-resume" name="attachment" accept=".pdf,.doc,.docx" class="file-input">
+              <div class="file-upload-display" id="fileDisplay">
+                <span class="file-upload-icon">📄</span>
+                <span class="file-upload-text"><strong>Click to upload</strong> or drag &amp; drop</span>
+                <span class="file-upload-hint">PDF, DOC, DOCX up to 5 MB</span>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="form-submit careers-submit">SUBMIT APPLICATION →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-container">
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a href="/" class="footer-logo">Beanz <span>Consulting.</span></a></div>
-      <div class="footer-col"><h4>Services</h4><ul>
-        <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
-        <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
-        <li><a href="/service-supply-chain.html">Supply Chain &amp; OpEx</a></li>
-        <li><a href="/service-leadership.html">Leadership &amp; Transformation</a></li>
-        <li><a href="/service-capability.html">Capability Building</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Company</h4><ul>
-        <li><a href="/about.html">About the Founder</a></li>
-        <li><a href="/results.html">Case Studies</a></li>
-        <li><a href="/insights.html">Insights</a></li>
-        <li><a href="/careers.html">Careers</a></li>
-        <li><a href="/#contact">Contact</a></li>
-        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-      </ul></div>
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Beanz <span>Consulting.</span></a>
+        <p>Strategic growth through operational excellence. Transforming global operations for Fortune 500 companies and high-growth enterprises.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
+          <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
+          <li><a href="#services">Supply Chain &amp; OpEx</a></li>
+          <li><a href="#services">Leadership &amp; Transformation</a></li>
+          <li><a href="#services">Capability Building</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About the Founder</a></li>
+          <li><a href="#results">Case Studies</a></li>
+          <li><a href="/insights.html">Insights</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#97f4f8f9f9f2f4e3d7f5f2f6f9edb9fef9">Email Us</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Beanz Consulting (BEANZ ENTERPRISES). BEANZ ACCORD™ is a proprietary methodology. All rights reserved.</p>
-      <div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/cdn-cgi/l/email-protection#34575b5a5a515740745651555a4e1a5d5a">connect&#64;beanz.in</a></div>
+      <p>&copy; 2026 Beanz Consulting. All rights reserved.</p>
+      <p>Beanz Enterprises — Building Global Capabilities</p>
     </div>
   </div>
 </footer>
 
-<!-- TOAST -->
-<div class="toast-overlay" id="toast"><div class="toast"><div class="toast-icon">✓</div><h3>Message Received</h3><p>Thank you for reaching out. Viraj will respond personally within one business day.</p><button class="toast-close" id="toastClose">Close</button></div></div>
+<!-- JAVASCRIPT -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
 
-<script src="/js/otp-forms.js"></script>
-<script src="/js/cookie-banner.js"></script>
-<script>
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
-const toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
-toggle.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.getElementById('toastClose').addEventListener('click',()=>document.getElementById('toast').style.opacity=0);
-</script>
-</body>
-</html>
+// Mobile toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// Scroll reveal
+const revealElements = document.querySelectorAll('.reveal');
+revealElements.forEach(el => el.classList.add('animate'));
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+revealElements.forEach(el => observer.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Counter animation
+const countElements = document.querySelectorAll('.big-num, .number, .num');
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.counted) {
+      entry.target.dataset.counted = 'true';
+      const text = entry.target.textContent;
+      const match = text.match(/[\d.]+/);
+      if (match) {
+        const target = parseFloat(match[0]);
+        const prefix = text.slice(0, text.indexOf(match[0]));
+        const suffix = text.slice(text.indexOf(match[0]) + match[0].length);
+        let current = 0;
+        const increment = target / 40;
+        const isDecimal = match[0].includes('.');
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) { current = target; clearInterval(timer); }
+          entry.target.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+        }, 30);
+      }
+    }
+  });
+}, { threshold: 0.3 });
+countElements.forEach(el => countObserver.observe(el));
+
+// Resume file upload display
+const fileInput = document.getElementById('career-resume');
+const fileDisplay = document.getElementById('fileDisplay');
+if (fileInput && fileDisplay) {
+  fileInput.addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) { alert('File size must be under 5MB'); this.value = ''; return; }
+      fileDisplay.classList.add('has-file');
+      fileDisplay.querySelector('.file-upload-icon').textContent = '✅';
+      fileDisplay.querySelector('.file-upload-text').textContent = file.name;
+      fileDisplay.querySelector('.file-upload-hint').textContent = (file.size / 1024 / 1024).toFixed(1) + ' MB';
+    } else {
+      fileDisplay.classList.remove('has-file');
+      fileDisplay.querySelector('.file-upload-icon').textContent = '📄';
+      fileDisplay.querySelector('.file-upload-tex

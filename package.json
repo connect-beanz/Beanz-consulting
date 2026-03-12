@@ -1,7 +1,8 @@
 {
   "name": "beanz-consulting",
   "version": "1.0.0",
+  "description": "Beanz Consulting website",
   "engines": {
-    "node": "22.x"
+    "node": ">=18.x"
   }
 }
