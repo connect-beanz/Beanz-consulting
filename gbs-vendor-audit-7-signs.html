@@ -88,6 +88,9 @@ button{font-family:inherit;cursor:pointer;border:none}
 .nav-cta::after{display:none!important}.nav-cta:hover{background:var(--gold-400)!important}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
 .nav-toggle span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* ── ARTICLE HERO ─────────────────────────────────────────────────────── */
 .article-hero{background:var(--navy-900);padding:9rem 0 5rem;position:relative;overflow:hidden}
@@ -186,6 +189,7 @@ button{font-family:inherit;cursor:pointer;border:none}
   .author-box{flex-direction:column;gap:1rem}
 }
 @media(max-width:480px){
+  .container{padding:0 1.2rem}
   .article-hero{padding:7rem 0 3.5rem}
   .article-hero h1{font-size:1.7rem}
   .article-cta{padding:1.75rem}
@@ -213,7 +217,7 @@ button{font-family:inherit;cursor:pointer;border:none}
       <li><a href="/about.html">About</a></li>
       <li><a href="/services.html">Services</a></li>
       <li><a href="/results.html">Results</a></li>
-      <li><a href="/insights.html">Insights</a></li>
+      <li><a href="/insights.html" class="active">Insights</a></li>
       <li><a href="/careers.html">Careers</a></li>
       <li><a href="/#contact" class="nav-cta">Let's Talk</a></li>
     </ul>
@@ -469,8 +473,8 @@ button{font-family:inherit;cursor:pointer;border:none}
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
 const toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
-toggle.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+toggle.addEventListener('click',()=>{links.classList.toggle('open');toggle.classList.toggle('open')});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.classList.remove('open')}));
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
