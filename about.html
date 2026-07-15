@@ -48,7 +48,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .title em{color:var(--gold-500);font-style:italic}
 .title--white{color:var(--white)}.title--white em{color:var(--gold-400)}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;border-radius:4px;font-size:.82rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;transition:all .3s;cursor:pointer}
-.btn-gold{background:var(--gold-500);color:var(--white)}.btn-gold:hover{background:var(--gold-400);transform:translateY(-2px);box-shadow:0 8px 28px rgba(192,138,62,.35)}
+.btn-gold{background:var(--gold-500);color:var(--white)}.btn-gold:hover{background:var(--gold-400);transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,151,62,.35)}
 .btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3)}.btn-outline-white:hover{border-color:var(--gold-400);color:var(--gold-400)}
 .btn-outline-navy{background:transparent;color:var(--navy-900);border:1.5px solid var(--navy-900)}.btn-outline-navy:hover{background:var(--navy-900);color:var(--white)}
 .reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
@@ -57,8 +57,8 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#12342a;border-bottom:2px solid rgba(192,138,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
-.nav.scrolled{padding:.4rem 0;background:#0e2820;border-bottom:2px solid rgba(192,138,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#12342a;border-bottom:2px solid rgba(200,151,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
+.nav.scrolled{padding:.4rem 0;background:#0e2820;border-bottom:2px solid rgba(200,151,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
 .nav.scrolled .nav-logo{font-size:1.4rem}
 .nav-inner{width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:var(--font-display);font-size:1.45rem;color:var(--white)}
@@ -78,7 +78,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 /* HERO */
 .about-hero{background:var(--navy-900);padding:9rem 0 5rem;position:relative;overflow:hidden}
-.about-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 100% 50%,rgba(192,138,62,.06) 0%,transparent 60%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:100% 100%,70px 70px,70px 70px}
+.about-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 100% 50%,rgba(200,151,62,.06) 0%,transparent 60%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:100% 100%,70px 70px,70px 70px}
 .about-hero-inner{position:relative;z-index:2;max-width:820px}
 .about-hero h1{font-family:var(--font-display);font-size:clamp(2.75rem,6vw,4.5rem);color:var(--white);line-height:1.1;margin-bottom:1.5rem}
 .about-hero h1 em{color:var(--gold-400);font-style:italic}
@@ -108,7 +108,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .philosophy{padding:var(--section-pad) 0;background:var(--gray-50);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
 .philosophy-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .philosophy-quote-block{background:var(--navy-900);border-radius:12px;padding:3rem;position:relative;overflow:hidden}
-.philosophy-quote-block::before{content:'\201C';font-family:var(--font-display);font-size:8rem;color:rgba(192,138,62,.1);position:absolute;top:-1rem;left:1.5rem;line-height:1}
+.philosophy-quote-block::before{content:'\201C';font-family:var(--font-display);font-size:8rem;color:rgba(200,151,62,.1);position:absolute;top:-1rem;left:1.5rem;line-height:1}
 .philosophy-quote{font-family:var(--font-display);font-size:1.55rem;color:var(--white);line-height:1.45;font-style:italic;position:relative;z-index:2;margin-bottom:1.5rem}
 .philosophy-quote em{color:var(--gold-400)}
 .philosophy-attr{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.35);letter-spacing:.08em;text-transform:uppercase;position:relative;z-index:2}
@@ -125,7 +125,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .stats-header{text-align:center;margin-bottom:4rem}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-bottom:4rem}
 .stat-card{text-align:center;padding:2.5rem 1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;transition:all .3s}
-.stat-card:hover{background:rgba(255,255,255,.06);border-color:rgba(192,138,62,.25);transform:translateY(-3px)}
+.stat-card:hover{background:rgba(255,255,255,.06);border-color:rgba(200,151,62,.25);transform:translateY(-3px)}
 .stat-card-num{font-family:var(--font-display);font-size:2.75rem;color:var(--gold-400);display:block;line-height:1;margin-bottom:.5rem}
 .stat-card-label{font-size:.8rem;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:.04em;line-height:1.4}
 .timeline{display:flex;flex-direction:column;gap:0;border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden}
@@ -137,7 +137,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .timeline-content{padding:1.5rem 2rem}
 .timeline-content h4{font-family:var(--font-display);font-size:1.1rem;color:var(--white);margin-bottom:.35rem}
 .timeline-content p{font-size:.85rem;color:rgba(255,255,255,.42);line-height:1.7}
-.timeline-content .tl-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(192,138,62,.12);border:1px solid rgba(192,138,62,.2);color:var(--gold-300);padding:.2rem .6rem;border-radius:3px;margin-bottom:.5rem}
+.timeline-content .tl-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(200,151,62,.12);border:1px solid rgba(200,151,62,.2);color:var(--gold-300);padding:.2rem .6rem;border-radius:3px;margin-bottom:.5rem}
 
 /* LINKEDIN RECOMMENDATIONS */
 .recommendations { padding: var(--section-pad) 0; background: var(--white); border-top: 1px solid var(--gray-200); }
@@ -195,8 +195,8 @@ button{font-family:inherit;cursor:pointer;border:none}
 
   /* ── FOOTER (inlined) ── */
   
-@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.footer-brand{grid-column:1/-1}}
-@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.75rem}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.footer-brand{grid-column:1/-1}.footer-col--services ul{columns:2}}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.75rem}.footer-col--services ul{columns:1}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
 
   /* RECOMMENDATIONS */
   .recommendations{padding:var(--section-pad) 0;background:var(--gray-50);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
@@ -208,7 +208,7 @@ button{font-family:inherit;cursor:pointer;border:none}
   .rec-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy-800);color:var(--gold-400);font-family:var(--font-display);font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
   .rec-name{font-size:.85rem;font-weight:700;color:var(--navy-800)}
   .rec-role{font-size:.72rem;color:var(--gray-500);margin-top:.15rem;line-height:1.4}
-    .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0e2820;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d8a85c}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d8a85c}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d8a85c}
+    .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0e2820;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.4fr 1.7fr 1fr;gap:3rem;margin-bottom:2.75rem}/* two-column services list */.footer-col--services ul{columns:2;column-gap:2rem}.footer-col--services ul li{break-inside:avoid}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d8a85c}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col--services h4{text-align:center}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col--services ul{display:block;columns:2;column-gap:2.5rem}.footer-col--services ul li{margin-bottom:.55rem;break-inside:avoid}@media(max-width:600px){.footer-col--services ul{columns:1}}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d8a85c}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d8a85c}
   </style>
 
 <script type="application/ld+json">
@@ -385,7 +385,7 @@ button{font-family:inherit;cursor:pointer;border:none}
     <div class="founder-grid">
       <div class="founder-sticky reveal">
         <div class="founder-photo-frame">
-          <img src="kartiksinh-photo.jpg" alt="Kartiksinh Sarvaiya — Co-Founder &amp; Tech Lead (Data &amp; AI), Beanz Consulting" class="founder-photo" style="object-fit:cover;object-position:center top">
+          <img src="kartiksinh-photo.jpg" alt="Kartiksinh Sarvaiya — Co-Founder &amp; Tech Lead (Data &amp; AI), Beanz Consulting" class="founder-photo">
         </div>
         <div class="founder-badge">
           <div class="badge-stat"><strong>20+</strong><span>Years Tech &amp; Data</span></div>
@@ -663,7 +663,7 @@ button{font-family:inherit;cursor:pointer;border:none}
   <div class="footer-container">
     <div class="footer-grid">
       <div class="footer-brand"><a href="/" class="footer-logo">Beanz <span>Consulting.</span></a></div>
-      <div class="footer-col"><h4>Services</h4><ul>
+      <div class="footer-col footer-col--services"><h4>Services</h4><ul>
         <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
         <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
         <li><a href="/service-supply-chain.html">Supply Chain &amp; OpEx</a></li>
@@ -672,7 +672,6 @@ button{font-family:inherit;cursor:pointer;border:none}
         <li><a href="/service-data-analytics.html">Data &amp; Analytics Capability</a></li>
         <li><a href="/service-ai-advisory.html">AI &amp; Advanced Analytics</a></li>
         <li><a href="/service-data-governance.html">Data Strategy &amp; Governance</a></li>
-        <li><a href="/service-bcp.html">Business Continuity Planning</a></li>
         <li><a href="/service-custom-software.html">Custom Software Development</a></li>
         <li><a href="/service-startup-advisory.html">Start-up Advisory</a></li>
       </ul></div>
