@@ -73,11 +73,11 @@ h1 em{color:var(--gold-400);font-style:italic}
 /* FOOTER */
 .footer-container{width:92%;max-width:1200px;margin:0 auto}
 .footer{background:#0e2820;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1.7fr 1fr;gap:3rem;margin-bottom:2.75rem}
 .footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}
 .footer-logo span{color:#d8a85c}
-.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
-.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}
+.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col--services h4{text-align:center}
+.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col--services ul{display:block;columns:2;column-gap:2.5rem}.footer-col--services ul li{margin-bottom:.55rem;break-inside:avoid}@media(max-width:600px){.footer-col--services ul{columns:1}}
 .footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}
 .footer-col ul a:hover{color:#d8a85c}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
@@ -95,9 +95,7 @@ h1 em{color:var(--gold-400);font-style:italic}
 
 /* MOBILE */
 @media(max-width:768px){
-  .nav-links{display:none;position:fixed;inset:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999
-  .main-inner{grid-template-columns:1fr}
-}
+  .nav-links{display:none;position:fixed;inset:0;background:var(--navy-900);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:999}
   .nav-links.open{display:flex}
   .nav-toggle{display:flex}
   .main-inner{grid-template-columns:1fr;gap:3rem;padding:4rem 0}
@@ -224,7 +222,7 @@ h1 em{color:var(--gold-400);font-style:italic}
       <div class="footer-brand">
         <a href="/" class="footer-logo">Beanz <span>Consulting.</span></a>
       </div>
-      <div class="footer-col">
+      <div class="footer-col footer-col--services">
         <h4>Services</h4>
         <ul>
           <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
@@ -232,12 +230,17 @@ h1 em{color:var(--gold-400);font-style:italic}
           <li><a href="/service-supply-chain.html">Supply Chain &amp; OpEx</a></li>
           <li><a href="/service-leadership.html">Leadership &amp; Transformation</a></li>
           <li><a href="/service-capability.html">Capability Building</a></li>
+          <li><a href="/service-data-analytics.html">Data &amp; Analytics Capability</a></li>
+          <li><a href="/service-ai-advisory.html">AI &amp; Advanced Analytics</a></li>
+          <li><a href="/service-data-governance.html">Data Strategy &amp; Governance</a></li>
+          <li><a href="/service-custom-software.html">Custom Software Development</a></li>
+          <li><a href="/service-startup-advisory.html">Start-up Advisory</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="/about.html">About the Founder</a></li>
+          <li><a href="/about.html">About the Founders</a></li>
           <li><a href="/results.html">Case Studies</a></li>
           <li><a href="/insights.html">Insights</a></li>
           <li><a href="/careers.html">Careers</a></li>
