@@ -21,7 +21,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#0a1628">
+<meta name="theme-color" content="#0e2820">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DZMPX4XJM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7DZMPX4XJM');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,10 +30,10 @@
 
 <style>
 :root {
-  --navy-900:#0a1628; --navy-800:#0f2240; --navy-700:#162d50;
-  --gold-500:#c8973e; --gold-400:#d4a84f; --gold-300:#e0be72;
+  --navy-900:#0e2820; --navy-800:#12342a; --navy-700:#1b4636;
+  --gold-500:#c08a3e; --gold-400:#d8a85c; --gold-300:#e3c485;
   --white:#ffffff;
-  --gray-50:#f8f9fb; --gray-200:#e2e5eb; --gray-400:#9aa2b1;
+  --gray-50:#f6f4ee; --gray-200:#e2e5eb; --gray-400:#9aa2b1;
   --gray-500:#6b7589; --gray-600:#4a5568; --gray-700:#2d3748;
   --font-display:'DM Serif Display',Georgia,serif;
   --font-body:'Plus Jakarta Sans',-apple-system,sans-serif;
@@ -53,15 +53,15 @@ button{font-family:inherit;cursor:pointer;border:none}
 .label--center{justify-content:center}.label--center::before{display:none}
 .label--light{color:var(--gold-300)}.label--light::before{background:var(--gold-300)}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.9rem;border-radius:4px;font-size:.82rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;transition:all .3s;cursor:pointer}
-.btn-gold{background:var(--gold-500);color:var(--white)}.btn-gold:hover{background:var(--gold-400);transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,151,62,.35)}
+.btn-gold{background:var(--gold-500);color:var(--white)}.btn-gold:hover{background:var(--gold-400);transform:translateY(-2px);box-shadow:0 8px 28px rgba(192,138,62,.35)}
 .btn-navy{background:var(--navy-900);color:var(--white)}.btn-navy:hover{background:var(--navy-700);transform:translateY(-2px)}
 .reveal{opacity:1;transform:none;transition:opacity .65s ease,transform .65s ease}
 .js-ready .reveal{opacity:0;transform:translateY(20px)}
 .js-ready .reveal.visible{opacity:1;transform:none}
 
 /* ── NAV ── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#0f2240;border-bottom:2px solid rgba(200,151,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
-.nav.scrolled{padding:.4rem 0;background:#0a1628;border-bottom:2px solid rgba(200,151,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#12342a;border-bottom:2px solid rgba(192,138,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
+.nav.scrolled{padding:.4rem 0;background:#0e2820;border-bottom:2px solid rgba(192,138,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
 .nav-inner{width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:var(--font-display);font-size:1.8rem;color:var(--white);transition:font-size .3s}
 .nav.scrolled .nav-logo{font-size:1.45rem}
@@ -81,7 +81,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 /* ── PAGE HERO ── */
 .page-hero{background:var(--navy-900);padding:9rem 0 5rem;position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse 70% 60% at 110% 50%,rgba(200,151,62,.07) 0%,transparent 60%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:100%,70px 70px,70px 70px}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse 70% 60% at 110% 50%,rgba(192,138,62,.07) 0%,transparent 60%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:100%,70px 70px,70px 70px}
 .page-hero-inner{position:relative;z-index:2}
 .page-hero h1{font-family:var(--font-display);font-size:clamp(2.25rem,4.5vw,3.5rem);line-height:1.15;color:var(--white);margin-bottom:1rem}
 .page-hero h1 em{color:var(--gold-400);font-style:italic}
@@ -115,15 +115,15 @@ button{font-family:inherit;cursor:pointer;border:none}
 .case-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.3)}
 
 /* featured */
-.case-card--featured{grid-column:1/-1;border-color:rgba(200,151,62,.3);background:linear-gradient(135deg,rgba(200,151,62,.06) 0%,rgba(255,255,255,.02) 60%)}
-.case-card--featured:hover{box-shadow:0 16px 48px rgba(200,151,62,.15)}
+.case-card--featured{grid-column:1/-1;border-color:rgba(192,138,62,.3);background:linear-gradient(135deg,rgba(192,138,62,.06) 0%,rgba(255,255,255,.02) 60%)}
+.case-card--featured:hover{box-shadow:0 16px 48px rgba(192,138,62,.15)}
 
 .case-card-body{padding:1.75rem;flex:1;display:flex;flex-direction:column}
 
 /* top row: service label + industry pills */
 .case-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;margin-bottom:1.1rem;flex-wrap:wrap}
-.case-label{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-400);background:rgba(200,151,62,.1);border:1px solid rgba(200,151,62,.2);padding:.2rem .65rem;border-radius:100px;white-space:nowrap}
-.case-label--accord{background:rgba(200,151,62,.2);border-color:rgba(200,151,62,.45);color:var(--gold-300)}
+.case-label{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-400);background:rgba(192,138,62,.1);border:1px solid rgba(192,138,62,.2);padding:.2rem .65rem;border-radius:100px;white-space:nowrap}
+.case-label--accord{background:rgba(192,138,62,.2);border-color:rgba(192,138,62,.45);color:var(--gold-300)}
 .case-ind-row{display:flex;gap:.3rem;flex-wrap:wrap;justify-content:flex-end}
 .case-ind-tag{font-size:.6rem;font-weight:600;color:rgba(255,255,255,.3);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);padding:.15rem .5rem;border-radius:100px}
 
@@ -135,7 +135,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .case-desc{font-size:.84rem;color:rgba(255,255,255,.42);line-height:1.8;margin-bottom:1.1rem;flex:1}
 
 /* ACCORD savings table */
-.accord-savings{background:rgba(0,0,0,.25);border:1px solid rgba(200,151,62,.15);border-radius:8px;padding:1rem 1.1rem;margin-bottom:1.1rem}
+.accord-savings{background:rgba(0,0,0,.25);border:1px solid rgba(192,138,62,.15);border-radius:8px;padding:1rem 1.1rem;margin-bottom:1.1rem}
 .accord-savings-title{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:.7rem}
 .accord-row{display:flex;justify-content:space-between;align-items:center;padding:.38rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
 .accord-row:last-child{border-bottom:none}
@@ -211,7 +211,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.75rem
   .case-stats-row{grid-template-columns:1fr}
 }.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
-  .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0a1628;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d4a84f}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d4a84f}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d4a84f}
+  .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0e2820;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d8a85c}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d8a85c}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d8a85c}
   </style>
 
 <script type="application/ld+json">
@@ -485,6 +485,12 @@ button{font-family:inherit;cursor:pointer;border:none}
         <li><a href="/service-supply-chain.html">Supply Chain &amp; OpEx</a></li>
         <li><a href="/service-leadership.html">Leadership &amp; Transformation</a></li>
         <li><a href="/service-capability.html">Capability Building</a></li>
+        <li><a href="/service-data-analytics.html">Data &amp; Analytics Capability</a></li>
+        <li><a href="/service-ai-advisory.html">AI &amp; Advanced Analytics</a></li>
+        <li><a href="/service-data-governance.html">Data Strategy &amp; Governance</a></li>
+        <li><a href="/service-bcp.html">Business Continuity Planning</a></li>
+        <li><a href="/service-custom-software.html">Custom Software Development</a></li>
+        <li><a href="/service-startup-advisory.html">Start-up Advisory</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="/about.html">About the Founder</a></li>

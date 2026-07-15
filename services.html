@@ -21,14 +21,14 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#0a1628">
+<meta name="theme-color" content="#0e2820">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DZMPX4XJM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7DZMPX4XJM');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--navy-900:#0a1628;--navy-800:#0f2240;--navy-700:#162d50;--gold-500:#c8973e;--gold-400:#d4a84f;--gold-300:#e0be72;--white:#ffffff;--gray-50:#f4f5f7;--gray-200:#e2e5eb;--gray-500:#6b7589;--gray-600:#4a5568;--gray-700:#2d3748;--font-display:'DM Serif Display',Georgia,serif;--font-body:'Plus Jakarta Sans',-apple-system,sans-serif;--container:min(1100px,90vw)}
+:root{--navy-900:#0e2820;--navy-800:#12342a;--navy-700:#1b4636;--gold-500:#c08a3e;--gold-400:#d8a85c;--gold-300:#e3c485;--white:#ffffff;--gray-50:#f6f4ee;--gray-200:#e2e5eb;--gray-500:#6b7589;--gray-600:#4a5568;--gray-700:#2d3748;--font-display:'DM Serif Display',Georgia,serif;--font-body:'Plus Jakarta Sans',-apple-system,sans-serif;--container:min(1100px,90vw)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--gray-700);background:var(--white);overflow-x:hidden}
@@ -41,8 +41,8 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#0f2240;border-bottom:2px solid rgba(200,151,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
-.nav.scrolled{padding:.4rem 0;background:#0a1628;border-bottom:2px solid rgba(200,151,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#12342a;border-bottom:2px solid rgba(192,138,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
+.nav.scrolled{padding:.4rem 0;background:#0e2820;border-bottom:2px solid rgba(192,138,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
 .nav-inner{width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:var(--font-display);font-size:1.75rem;color:var(--white);transition:font-size .3s}
 .nav.scrolled .nav-logo{font-size:1.4rem}
@@ -82,9 +82,9 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 /* ACCORD BLOCK */
 .accord-block{background:var(--navy-900);border-radius:8px;padding:2.5rem 2.8rem;position:relative;overflow:hidden;margin-bottom:3rem}
-.accord-block::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 100% 50%,rgba(200,151,62,.08) 0%,transparent 60%)}
+.accord-block::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 100% 50%,rgba(192,138,62,.08) 0%,transparent 60%)}
 .accord-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
-.accord-new{display:inline-flex;align-items:center;gap:.4rem;background:rgba(200,151,62,.15);border:1px solid rgba(200,151,62,.3);color:var(--gold-300);padding:.3rem .8rem;border-radius:100px;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+.accord-new{display:inline-flex;align-items:center;gap:.4rem;background:rgba(192,138,62,.15);border:1px solid rgba(192,138,62,.3);color:var(--gold-300);padding:.3rem .8rem;border-radius:100px;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
 .accord-num{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.6rem}
 .accord-block h2{font-family:var(--font-display);font-size:1.45rem;color:var(--white);margin-bottom:.75rem;line-height:1.2}
 .accord-block h2 span{color:var(--gold-400)}
@@ -135,7 +135,7 @@ button{font-family:inherit;cursor:pointer;border:none}
   
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.footer-brand{grid-column:1/-1}}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.75rem}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
-  .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0a1628;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d4a84f}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d4a84f}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d4a84f}
+  .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0e2820;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d8a85c}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d8a85c}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d8a85c}
   </style>
 
 <script type="application/ld+json">
@@ -148,7 +148,14 @@ button{font-family:inherit;cursor:pointer;border:none}
     {"@type": "ListItem", "position": 1, "name": "GBS Vendor Audit — BEANZ ACCORD™", "url": "https://www.beanz.in/gbs-vendor-audit.html"},
     {"@type": "ListItem", "position": 2, "name": "GCC Advisory & Setup", "url": "https://www.beanz.in/gcc-advisory.html"},
     {"@type": "ListItem", "position": 3, "name": "Supply Chain & Operational Excellence", "url": "https://www.beanz.in/services.html#service-03"},
-    {"@type": "ListItem", "position": 4, "name": "Leadership, Culture & Transformation", "url": "https://www.beanz.in/services.html#service-04"}
+    {"@type": "ListItem", "position": 4, "name": "Leadership, Culture & Transformation", "url": "https://www.beanz.in/services.html#service-04"},
+    {"@type": "ListItem", "position": 5, "name": "Capability Building & Academies", "url": "https://www.beanz.in/service-capability.html"},
+    {"@type": "ListItem", "position": 6, "name": "Data & Analytics Capability Build", "url": "https://www.beanz.in/service-data-analytics.html"},
+    {"@type": "ListItem", "position": 7, "name": "AI & Advanced Analytics Advisory", "url": "https://www.beanz.in/service-ai-advisory.html"},
+    {"@type": "ListItem", "position": 8, "name": "Data Strategy & Governance", "url": "https://www.beanz.in/service-data-governance.html"},
+    {"@type": "ListItem", "position": 9, "name": "Business Continuity Planning", "url": "https://www.beanz.in/service-bcp.html"},
+    {"@type": "ListItem", "position": 10, "name": "Custom Software Development", "url": "https://www.beanz.in/service-custom-software.html"},
+    {"@type": "ListItem", "position": 11, "name": "Start-up Advisory", "url": "https://www.beanz.in/service-startup-advisory.html"}
   ]
 }
 </script>
@@ -261,6 +268,87 @@ button{font-family:inherit;cursor:pointer;border:none}
         <a href="/service-capability.html" class="svc-more">Learn More →</a>
       </div>
 
+      <div class="svc-card reveal" id="service-06" style="transition-delay:.2s">
+        <div class="svc-num">Service 06</div>
+        <h2>Data &amp; Analytics Capability Build</h2>
+        <p>Standing up analytics teams and Centres of Excellence inside GCCs — operating model, talent architecture, and capability uplift that turns dashboards into decisions and compounds over time.</p>
+        <div class="tags">
+          <span class="tag">Analytics COE</span>
+          <span class="tag">Data Teams</span>
+          <span class="tag">Capability Uplift</span>
+          <span class="tag">Operating Model</span>
+        </div>
+        <a href="/service-data-analytics.html" class="svc-more">Learn More →</a>
+      </div>
+
+      <div class="svc-card reveal" id="service-07" style="transition-delay:.24s">
+        <div class="svc-num">Service 07</div>
+        <h2>AI &amp; Advanced Analytics Advisory</h2>
+        <p>AI and GenAI use-case identification, adoption roadmaps, and the capability and guardrails to deliver them — built to find where AI actually creates value and get it into production, not onto a slide.</p>
+        <div class="tags">
+          <span class="tag">AI Roadmap</span>
+          <span class="tag">Use-Case Design</span>
+          <span class="tag">GenAI Adoption</span>
+          <span class="tag">ML Capability</span>
+        </div>
+        <a href="/service-ai-advisory.html" class="svc-more">Learn More →</a>
+      </div>
+
+      <div class="svc-card reveal" id="service-08" style="transition-delay:.28s">
+        <div class="svc-num">Service 08</div>
+        <h2>Data Strategy &amp; Governance</h2>
+        <p>The foundation AI depends on: data strategy, scalable architecture, clear ownership, quality, and governance people actually follow — the unglamorous plumbing that makes analytics and AI work.</p>
+        <div class="tags">
+          <span class="tag">Data Strategy</span>
+          <span class="tag">Governance</span>
+          <span class="tag">Data Architecture</span>
+          <span class="tag">Quality</span>
+        </div>
+        <a href="/service-data-governance.html" class="svc-more">Learn More →</a>
+      </div>
+
+      <div class="svc-card reveal" id="service-09" style="transition-delay:.32s">
+        <div class="svc-num">Service 09</div>
+        <h2>Business Continuity Planning</h2>
+        <p>Resilience built for GCCs and IT organisations — risk assessment, continuity strategy, IT disaster recovery, and crisis management aligned to ISO 22301. Continuity that is tested, not just documented.</p>
+        <div class="tags">
+          <span class="tag">Risk Assessment</span>
+          <span class="tag">BC Strategy</span>
+          <span class="tag">Disaster Recovery</span>
+          <span class="tag">Crisis Management</span>
+          <span class="tag">ISO 22301</span>
+        </div>
+        <a href="/service-bcp.html" class="svc-more">Learn More →</a>
+      </div>
+
+      <div class="svc-card reveal" id="service-10" style="transition-delay:.36s">
+        <div class="svc-num">Service 10</div>
+        <h2>Custom Software Development</h2>
+        <p>Where advisory ends, engineering begins. When the roadmap calls for a system that doesn't exist yet, we build it — AI-ready ERP solutions, shop-floor automation, and purpose-built platforms. Designed by practitioners who have run the operations the software has to serve, not outsourced to a body shop.</p>
+        <div class="tags">
+          <span class="tag">AI-Ready ERP</span>
+          <span class="tag">Shop-Floor Automation</span>
+          <span class="tag">Product Development</span>
+          <span class="tag">Systems Integration</span>
+          <span class="tag">Digital Assets</span>
+        </div>
+        <a href="/service-custom-software.html" class="svc-more">Learn More →</a>
+      </div>
+
+      <div class="svc-card reveal" id="service-11" style="transition-delay:.42s">
+        <div class="svc-num">Service 11 · New</div>
+        <h2>Start-up Advisory</h2>
+        <p>Founder-to-founder guidance from people who have built and scaled two ventures from scratch. We help early-stage teams sharpen the value proposition, get investment-ready, and put a real go-to-market and scale-up plan in place — the operator's view, not the spectator's. For a select few promising ventures, Beanz's founders may also invest at the seed stage.</p>
+        <div class="tags">
+          <span class="tag">Founder Mentorship</span>
+          <span class="tag">Value Proposition</span>
+          <span class="tag">Investment Readiness</span>
+          <span class="tag">GTM Strategy</span>
+          <span class="tag">Structured Scale-Up</span>
+        </div>
+        <a href="/service-startup-advisory.html" class="svc-more">Learn More →</a>
+      </div>
+
     </div>
 
     <!-- WHAT WE DON'T DO -->
@@ -288,6 +376,12 @@ button{font-family:inherit;cursor:pointer;border:none}
         <li><a href="/service-supply-chain.html">Supply Chain &amp; OpEx</a></li>
         <li><a href="/service-leadership.html">Leadership &amp; Transformation</a></li>
         <li><a href="/service-capability.html">Capability Building</a></li>
+        <li><a href="/service-data-analytics.html">Data &amp; Analytics Capability</a></li>
+        <li><a href="/service-ai-advisory.html">AI &amp; Advanced Analytics</a></li>
+        <li><a href="/service-data-governance.html">Data Strategy &amp; Governance</a></li>
+        <li><a href="/service-bcp.html">Business Continuity Planning</a></li>
+        <li><a href="/service-custom-software.html">Custom Software Development</a></li>
+        <li><a href="/service-startup-advisory.html">Start-up Advisory</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="/about.html">About the Founder</a></li>
