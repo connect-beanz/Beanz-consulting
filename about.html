@@ -17,7 +17,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#0a1628">
+<meta name="theme-color" content="#0e2820">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DZMPX4XJM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7DZMPX4XJM');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +25,9 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy-900:#0a1628;--navy-800:#0f2240;--navy-700:#162d50;--navy-600:#1c3a66;
-  --gold-500:#c8973e;--gold-400:#d4a84f;--gold-300:#e0be72;--gold-100:#f7f0dc;
-  --white:#ffffff;--gray-50:#f8f9fb;--gray-100:#f0f2f5;--gray-200:#e2e5eb;
+  --navy-900:#0e2820;--navy-800:#12342a;--navy-700:#1b4636;--navy-600:#245a44;
+  --gold-500:#c08a3e;--gold-400:#d8a85c;--gold-300:#e3c485;--gold-100:#f3ead6;
+  --white:#ffffff;--gray-50:#f6f4ee;--gray-100:#f0f2f5;--gray-200:#e2e5eb;
   --gray-400:#9aa2b1;--gray-500:#6b7589;--gray-600:#4a5568;--gray-700:#2d3748;
   --font-display:'DM Serif Display',Georgia,serif;
   --font-body:'Plus Jakarta Sans',-apple-system,sans-serif;
@@ -57,8 +57,8 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#0f2240;border-bottom:2px solid rgba(200,151,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
-.nav.scrolled{padding:.4rem 0;background:#0a1628;border-bottom:2px solid rgba(200,151,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:9999;padding:.75rem 0;background:#12342a;border-bottom:2px solid rgba(200,151,62,.4);box-shadow:0 2px 16px rgba(0,0,0,.6);transition:padding .3s}
+.nav.scrolled{padding:.4rem 0;background:#0e2820;border-bottom:2px solid rgba(200,151,62,.3);box-shadow:0 2px 20px rgba(0,0,0,.7)}
 .nav.scrolled .nav-logo{font-size:1.4rem}
 .nav-inner{width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:var(--font-display);font-size:1.45rem;color:var(--white)}
@@ -195,8 +195,8 @@ button{font-family:inherit;cursor:pointer;border:none}
 
   /* ── FOOTER (inlined) ── */
   
-@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.footer-brand{grid-column:1/-1}}
-@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.75rem}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}.footer-brand{grid-column:1/-1}.footer-col--services ul{columns:2}}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.75rem}.footer-col--services ul{columns:1}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
 
   /* RECOMMENDATIONS */
   .recommendations{padding:var(--section-pad) 0;background:var(--gray-50);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
@@ -208,12 +208,14 @@ button{font-family:inherit;cursor:pointer;border:none}
   .rec-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy-800);color:var(--gold-400);font-family:var(--font-display);font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
   .rec-name{font-size:.85rem;font-weight:700;color:var(--navy-800)}
   .rec-role{font-size:.72rem;color:var(--gray-500);margin-top:.15rem;line-height:1.4}
-    .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0a1628;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;margin-bottom:2.75rem}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d4a84f}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d4a84f}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d4a84f}
+    .footer-container{width:92%;max-width:1200px;margin:0 auto}.footer{background:#0e2820;padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.07)}.footer-grid{display:grid;grid-template-columns:1.4fr 1.7fr 1fr;gap:3rem;margin-bottom:2.75rem}/* two-column services list */.footer-col--services ul{columns:2;column-gap:2rem}.footer-col--services ul li{break-inside:avoid}.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.65rem;color:#ffffff;display:block;text-decoration:none;margin-bottom:.75rem}.footer-logo span{color:#d8a85c}.footer-col h4{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}.footer-col--services h4{text-align:center}.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}.footer-col--services ul{display:block;columns:2;column-gap:2.5rem}.footer-col--services ul li{margin-bottom:.55rem;break-inside:avoid}@media(max-width:600px){.footer-col--services ul{columns:1}}.footer-col ul a{font-size:.84rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s}.footer-col ul a:hover{color:#d8a85c}.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);margin:0}.footer-links{display:flex;gap:1.5rem}.footer-links a{font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .3s}.footer-links a:hover{color:#d8a85c}
   </style>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@graph": [
+  {
   "@type": "Person",
   "@id": "https://www.beanz.in/about.html#viraj-mehta",
   "name": "Viraj Mehta",
@@ -233,6 +235,23 @@ button{font-family:inherit;cursor:pointer;border:none}
     {"@type": "EducationalOccupationalCredential", "name": "APICS CPIM — Supply Chain & Operations"}
   ],
   "knowsAbout": ["Global Capability Centers", "GBS Vendor Audits", "Supply Chain Management", "Leadership Development", "Operational Excellence"]
+  },
+  {
+  "@type": "Person",
+  "@id": "https://www.beanz.in/about.html#kartiksinh-sarvaiya",
+  "name": "Kartiksinh Sarvaiya",
+  "jobTitle": "Co-Founder & Tech Lead (Data & AI)",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Beanz Consulting",
+    "url": "https://www.beanz.in"
+  },
+  "description": "Kartiksinh Sarvaiya is a technology entrepreneur and AI leader who headed Enterprise Data & Analytics at Kraft Heinz's Global Capability Centre in Ahmedabad, and led large-scale analytics deployment for the Government of India at Amnex. Two decades across SAP ERP consulting, enterprise systems, and founding e-commerce and healthtech ventures.",
+  "url": "https://www.beanz.in/about.html",
+  "sameAs": ["https://www.linkedin.com/in/kartiksinh-sarvaiya-0989357"],
+  "knowsAbout": ["Data Governance", "Data & Analytics", "Artificial Intelligence", "Generative AI", "SAP ERP", "Custom Software Development", "Global Capability Centers"]
+  }
+  ]
 }
 </script>
 <link rel="stylesheet" href="/css/footer.css">
@@ -360,6 +379,61 @@ button{font-family:inherit;cursor:pointer;border:none}
   </div>
 </section>
 
+<!-- CO-FOUNDER -->
+<section class="founder-main" style="background:var(--gray-50);border-top:1px solid var(--gray-200)">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-sticky reveal">
+        <div class="founder-photo-frame">
+          <img src="kartiksinh-photo.jpg" alt="Kartiksinh Sarvaiya — Co-Founder &amp; Tech Lead (Data &amp; AI), Beanz Consulting" class="founder-photo">
+        </div>
+        <div class="founder-badge">
+          <div class="badge-stat"><strong>20+</strong><span>Years Tech &amp; Data</span></div>
+          <div class="badge-stat"><strong>Fortune 500</strong><span>GCC Analytics Built</span></div>
+          <div class="badge-stat"><strong>Govt of India</strong><span>National-Scale Analytics</span></div>
+          <div class="badge-stat"><strong>AI / GenAI</strong><span>Capability Leader</span></div>
+          <div class="badge-stat"><strong>Techpreneur</strong><span>E-com &amp; Healthtech</span></div>
+        </div>
+      </div>
+      <div class="founder-narrative">
+        <div class="reveal">
+          <div class="label">Kartiksinh Sarvaiya — Co-Founder &amp; Tech Lead (Data &amp; AI)</div>
+          <h2 class="founder-headline">
+            A technology entrepreneur<br>
+            <em>who builds intelligence into organisations.</em>
+          </h2>
+          <p class="founder-body">
+            Kartiksinh is a technology entrepreneur and AI leader who has spent his career building intelligence into organisations — and businesses of his own. Most recently he headed <strong>Enterprise Data &amp; Analytics at Kraft Heinz's Global Capability Centre in Ahmedabad</strong>, where he stood up the data, analytics, and AI capabilities that turn a captive centre from a cost play into a genuine source of enterprise advantage.
+          </p>
+
+          <div class="founder-pull">
+            "The model is the easy part.<br>Making it land is the work."
+          </div>
+
+          <p class="founder-body">
+            Before that, at <strong>Amnex</strong> he led the deployment of large-scale analytics solutions for the <strong>Government of India</strong> — programme management at national scale, where the constraint is never the model but the coordination, governance, and rollout discipline needed to make it work across the country.
+          </p>
+          <p class="founder-body">
+            That work sits on top of two decades across <strong>Consulting in SAP ERP</strong>, enterprise systems, and business expansion. Alongside it, he is a serial entrepreneur: he co-founded ventures spanning e-commerce and healthtech, and has built and scaled tech products from the ground up — so he understands not just the technology, but what it takes to ship it, scale it, and make it pay.
+          </p>
+          <p class="founder-body">
+            That dual instinct — the enterprise practitioner who has also been the entrepreneur betting his own time on a product — is rare. Applied to data and AI, the part of the modern GCC everyone now wants and few know how to build, it is exactly what he brings to Beanz.
+          </p>
+
+          <div class="founder-creds-list">
+            <div class="founder-cred-row"><span class="icon">🏢</span> Ex — Kraft Heinz · Enterprise Data &amp; Analytics, Global Capability Centre</div>
+            <div class="founder-cred-row"><span class="icon">🤖</span> Data, Analytics &amp; AI — GenAI &amp; Advanced Analytics</div>
+            <div class="founder-cred-row"><span class="icon">🧩</span> Two Decades — Consulting, SAP &amp; Enterprise Systems</div>
+            <div class="founder-cred-row"><span class="icon">🇮🇳</span> Amnex — Large-Scale Analytics Deployment for the Government of India</div>
+            <div class="founder-cred-row"><span class="icon">🚀</span> Serial Techpreneur — E-commerce &amp; Healthtech Ventures</div>
+            <a href="https://www.linkedin.com/in/kartiksinh-sarvaiya-0989357" target="_blank" rel="noopener" class="founder-cred-row" style="display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;transition:color .25s"><span class="icon">🔗</span> Connect on LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PHILOSOPHY -->
 <section class="philosophy">
   <div class="container">
@@ -400,56 +474,6 @@ button{font-family:inherit;cursor:pointer;border:none}
               <p>No ambiguity. No scope creep. No incentive to make the work last longer than it needs to. You know the price before the work begins.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS & CAREER TIMELINE -->
-<section class="about-stats">
-  <div class="container stats-inner">
-    <div class="stats-header reveal">
-      <div class="label label--center label--light">The Numbers</div>
-      <h2 class="title title--white" style="text-align:center;max-width:600px;margin:0 auto 1rem">Outcomes that speak<br><em>louder than credentials.</em></h2>
-    </div>
-    <div class="stats-grid reveal" style="animation-delay:.1s">
-      <div class="stat-card"><span class="stat-card-num">1,000+</span><span class="stat-card-label">GCC Capacity Built from a Blank Page</span></div>
-      <div class="stat-card"><span class="stat-card-num">&lt;5%</span><span class="stat-card-label">Attrition Achieved vs. 20% Industry Average</span></div>
-      <div class="stat-card"><span class="stat-card-num">20+</span><span class="stat-card-label">Centres of Excellence Established</span></div>
-      <div class="stat-card"><span class="stat-card-num">$6M+</span><span class="stat-card-label">Verified Savings Delivered to Clients</span></div>
-    </div>
-    <div class="timeline reveal" style="animation-delay:.2s">
-      <div class="timeline-item">
-        <div class="timeline-period"><span>P&amp;G</span><small>Early Career</small></div>
-        <div class="timeline-content">
-          <span class="tl-badge">Supply Chain</span>
-          <h4>Procter &amp; Gamble — Operations &amp; Supply Chain</h4>
-          <p>Built foundational expertise in supply chain management, manufacturing operations, and process improvement across multiple geographies.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-period"><span>General Mills</span><small>Mid-Career</small></div>
-        <div class="timeline-content">
-          <span class="tl-badge">GBS &amp; Transformation</span>
-          <h4>General Mills — GBS &amp; Operational Excellence</h4>
-          <p>Led supply chain transformation and GBS capability building. Deepened expertise in S&amp;OP, Lean, and organisational design across international operations.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-period"><span>Kraft Heinz</span><small>The GCC Chapter</small></div>
-        <div class="timeline-content">
-          <span class="tl-badge">GCC Build — Landmark Achievement</span>
-          <h4>Kraft Heinz — Built the Company's First-Ever GCC from Scratch</h4>
-          <p>The defining chapter. Designed, built, and scaled Kraft Heinz's inaugural Global Capability Centre — from mandate to 1,000+ capacity, 20+ CoEs, and &lt;5% attrition. Zero to full operational capability.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-period"><span>Beanz</span><small>Now</small></div>
-        <div class="timeline-content">
-          <span class="tl-badge">Founder &amp; Principal Advisor</span>
-          <h4>Beanz Consulting — Independent Boutique Advisory</h4>
-          <p>Taking 20 years of practitioner experience to clients who need the real thing — not borrowed frameworks. GCC Advisory, BEANZ ACCORD™ GBS Vendor Audit, Supply Chain &amp; Operational Excellence, Leadership &amp; Transformation.</p>
         </div>
       </div>
     </div>
@@ -531,12 +555,17 @@ button{font-family:inherit;cursor:pointer;border:none}
   <div class="footer-container">
     <div class="footer-grid">
       <div class="footer-brand"><a href="/" class="footer-logo">Beanz <span>Consulting.</span></a></div>
-      <div class="footer-col"><h4>Services</h4><ul>
+      <div class="footer-col footer-col--services"><h4>Services</h4><ul>
         <li><a href="/gbs-vendor-audit.html">GBS Vendor Audit — ACCORD™</a></li>
         <li><a href="/gcc-advisory.html">GCC Advisory</a></li>
         <li><a href="/service-supply-chain.html">Supply Chain &amp; OpEx</a></li>
         <li><a href="/service-leadership.html">Leadership &amp; Transformation</a></li>
         <li><a href="/service-capability.html">Capability Building</a></li>
+        <li><a href="/service-data-analytics.html">Data &amp; Analytics Capability</a></li>
+        <li><a href="/service-ai-advisory.html">AI &amp; Advanced Analytics</a></li>
+        <li><a href="/service-data-governance.html">Data Strategy &amp; Governance</a></li>
+        <li><a href="/service-custom-software.html">Custom Software Development</a></li>
+        <li><a href="/service-startup-advisory.html">Start-up Advisory</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="/about.html">About the Founder</a></li>
